@@ -49,6 +49,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -161,6 +163,7 @@
     <Content Include="fonts\icomoon\style.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\a.jpg" />
     <Content Include="images\hero_1.jpg" />
     <Content Include="images\hero_2.jpg" />
     <Content Include="images\img_1.jpg" />
@@ -328,6 +331,8 @@
     <Content Include="scss\_site-base.scss" />
     <Content Include="scss\_site-blocks.scss" />
     <Content Include="scss\_site-navbar.scss" />
+    <Content Include="Views\Home\Team.cshtml" />
+    <Content Include="Views\Home\Blog.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
