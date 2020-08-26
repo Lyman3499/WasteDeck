@@ -27,7 +27,7 @@ namespace IE_Web.Controllers
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult ContactUs()
         {
             ViewBag.Message = "Your contact page.";
 
