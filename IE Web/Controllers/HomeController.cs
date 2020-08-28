@@ -20,23 +20,9 @@ namespace IE_Web.Controllers
             return View();
         }
 
-        public ActionResult Blog()
-        {
-            ViewBag.Message = "Your Blog page.";
-
-            return View();
-        }
-
-        public ActionResult ContactUs()
+        public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
-
-        public ActionResult Team()
-        {
-            ViewBag.Message = "Your Team page.";
 
             return View();
         }
