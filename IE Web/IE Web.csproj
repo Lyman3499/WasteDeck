@@ -201,6 +201,7 @@
     <Content Include="js\aos.js" />
     <Content Include="js\bootstrap-datepicker.min.js" />
     <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\Go-top-button.js" />
     <Content Include="js\jquery-migrate-3.0.1.min.js" />
     <Content Include="js\jquery-ui.js" />
     <Content Include="js\jquery.animateNumber.min.js" />
