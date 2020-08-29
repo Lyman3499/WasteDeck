@@ -19,7 +19,14 @@ namespace IE_Web.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Description page.";
+
+            return View();
+        }
+
+        public ActionResult Services()
+        {
+            ViewBag.Message = "Services Page";
 
             return View();
         }
