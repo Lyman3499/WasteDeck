@@ -38,6 +38,13 @@ namespace IE_Web.Controllers
             return View();
         }
 
+        public ActionResult Plastic_Impact()
+        {
+            ViewBag.Message = "Services Page";
+
+            return View();
+        }
+
         public ActionResult Vendor()
         {
             ViewBag.Message = "Services Page";

@@ -56,7 +56,7 @@
                                                 <li><a href="~/Home/Plastic_Alternative">Plastic Alternatives</a></li>
                                                 <li><a href="~/Home/Vendor">Vendors List</a></li>
                                                 <li><a href="~/Home/Waste_Seperation">bin Classification</a></li>
-                                                <li><a href="~/Home/Services">Plastic Impact</a></li>
+                                                <li><a href="~/Home/Plastic_Impact">Plastic Impact</a></li>
                                             </ul>
                                         </li>
                                         <li><a href="~/Home/Contact">Contact</a></li>
@@ -165,5 +165,27 @@
     <script src="~/js/main.js"></script>
     @RenderSection("scripts", required: false)
     <!--jQuery Scripts-->
+    <script>
+        $(".yellow-bin").click(function () {
+            $(".yellow-bin-content").first().toggle(2000, function showNext() {
+                $(this).next(".yellow-bin-content").toggle(2000, showNext);
+            });
+        });
+        $(".green-bin").click(function () {
+            $(".green-bin-content").first().toggle(2000, function showNext() {
+                $(this).next(".green-bin-content").toggle(2000, showNext);
+            });
+        });
+        $(".red-bin").click(function () {
+            $(".red-bin-content").first().toggle(2000, function showNext() {
+                $(this).next(".red-bin-content").toggle(2000, showNext);
+            });
+        });
+        $(".purple-bin").click(function () {
+            $(".purple-bin-content").first().toggle(2000, function showNext() {
+                $(this).next(".purple-bin-content").toggle(2000, showNext);
+            });
+        });
+    </script>
 </body>
 </html>

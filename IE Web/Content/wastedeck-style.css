@@ -19,6 +19,69 @@ body .img-fluid.pic4 {
     height: 262px;
 }
 
+/*Bin Seperation*/
+.segregation-content-block{
+    text-align:center;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.segregation-content-block h5 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 15px 0 10px 0;
+}
+
+.yellow-bin-block, .green-bin-block, .red-bin-block {
+    margin: 0 0 20px 0;
+}
+
+.yellow-bin-content, .green-bin-content, .red-bin-content, .purple-bin-content {
+    display: none;
+    padding: 5px 8px;
+    border-radius: 2px;
+    width: 90%;
+    float: left;
+}
+
+.yellow-bin-content {
+    border: 2px solid #f9d953;
+}
+
+.green-bin-content {
+    border: 2px solid #8fb845;
+}
+
+.red-bin-content {
+    border: 2px solid #ce2d3a;
+}
+
+.purple-bin-content {
+    border: 2px solid #792b94;
+}
+
+.bin-img img {
+    display: block;
+    margin: 10px auto;
+    cursor: pointer;
+}
+
+.bin-block ul {
+    display: inline-block;
+    padding: 0;
+    width: 18%;
+    margin: 0 15px 0 0;
+}
+
+.bin-block ul li {
+    list-style: none;
+    text-align: left;
+    margin: 0 0 2px 0;
+    border-bottom: 1px solid #eee;
+}
+
 /*Vendor Page Layout*/
 .vendor-block {
     border-radius: 5px;
@@ -153,6 +216,47 @@ address {
     .solution-block {
         margin: 10px 0 0 0;
     }
+
+    .yellow-bin-block, .green-bin-block, .red-bin-block {
+        border-bottom: 1px solid #eee;
+    }
+
+    .yellow-bin-content, .green-bin-content, .red-bin-content, .purple-bin-content {
+        width: 100%;
+        margin: 0 0 15px 0;
+    }
+
+    .bin-block ul {
+        display: inline-block;
+        padding: 0;
+        width: 30%;
+        margin: 0 15px 15px 0;
+    }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) and (orientation:landscape) {
+    .bin-block ul {
+        display: inline-block;
+        padding: 0;
+        width: 22%;
+        margin: 0 15px 15px 0;
+    }
+
+    .yellow-bin-content, .green-bin-content, .red-bin-content, .purple-bin-content {
+        width: 86%;
+    }
+
+    .bin-img img {
+        display: block;
+        margin: 60px auto;
+        cursor: pointer;
+        width: 110px;
+        height: 110px;
+    }
+
+    .bin-img .green-bin {
+        margin: 5px auto;
+    }
 }
 
 /*Media Queries for ipad pro*/
@@ -181,6 +285,22 @@ address {
         height: 80px;
         text-align: center;
     }
+
+    .yellow-bin-block, .green-bin-block, .red-bin-block {
+        border-bottom: 1px solid #eee;
+    }
+
+    .yellow-bin-content, .green-bin-content, .red-bin-content, .purple-bin-content {
+        width: 100%;
+        margin: 0 0 15px 0;
+    }
+
+    .bin-block ul {
+        display: inline-block;
+        padding: 0;
+        width: 45%;
+        margin: 0 15px 15px 0;
+    }
 }
 
 /*Media Queries for iphone XS Max Landscape*/
@@ -192,15 +312,40 @@ address {
     .solution-block {
         margin: 0;
     }
+
+    .yellow-bin-content, .green-bin-content, .red-bin-content, .purple-bin-content {
+        width: 82%;
+    }
+
+    .bin-block ul {
+        display: inline-block;
+        padding: 0;
+        width: 45%;
+        margin: 0 15px 15px 0;
+    }
 }
 
 /*Media Queries for iphone X Portrait*/
-@media only screen and (max-width: 812px) and (min-width: 375px) and (orientation:portrait) {
+@media only screen and (max-width: 760px) and (min-width: 375px) and (orientation:portrait) {
     .plastic_prod {
         margin: 0 0 25px 0;
     }
 
     .solution-block {
         margin: 0;
+    }
+
+    .yellow-bin-block, .green-bin-block, .red-bin-block {
+        border-bottom: 1px solid #eee;
+    }
+
+    .yellow-bin-content, .green-bin-content, .red-bin-content, .purple-bin-content {
+        width: 100%;
+        margin: 0 0 15px 0;
+    }
+
+    .bin-block ul {
+        width: 100%;
+        margin: 0 15px 15px 0;
     }
 }
