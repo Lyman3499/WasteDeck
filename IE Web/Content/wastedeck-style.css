@@ -1,0 +1,206 @@
+﻿body {
+}
+
+.page-heading {
+    margin: 15px 0;
+}
+
+#sampleDropdownMenu{
+    width:100%;
+    height:46px;
+}
+
+#sampleDropdownMenu span{
+    text-align:left;
+}
+
+body .img-fluid.pic4 {
+    max-width: 100%;
+    height: 262px;
+}
+
+/*Vendor Page Layout*/
+.vendor-block {
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    margin: 0 0 25px 0;
+}
+
+.vendor-detail-block {
+    padding: 15px 8px;
+}
+
+.vendor-img-block img {
+    max-width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.vendor-detail-block h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 10px 0 0;
+}
+
+address {
+    margin: 5px 0;
+}
+
+.vendor-detail-block span {
+    display: block;
+}
+
+/*Packaging page*/
+.packaging-img-block {
+    background-image: url('../images/packing_banner.jpg');
+    max-width: 100%;
+    height: 220px;
+    background-position: center;
+    display: block;
+}
+
+.problem-block h5, .solution-block h5 {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0 0 8px 0;
+}
+
+.problem-block, .solution-block {
+    margin: 25px 0 15px;
+}
+
+.problem-block span {
+    margin: 0 0 6px 0;
+    display: block;
+}
+
+.problem-block ul {
+    padding: 0 0 0 15px;
+    margin: 0;
+}
+
+.problem-block ul li {
+    margin: 0 0 4px 0;
+}
+
+.plastic_prod {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.plastic_prod img {
+    max-width: 100%;
+    height: 120px;
+    display: block;
+    margin: 0 auto;
+}
+
+.modal-title {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.modal-body {
+    padding: 0 15px;
+}
+
+.plastic-alt-img img {
+    max-width: 100%;
+    height: 200px;
+    display: block;
+    margin: 0 auto;
+}
+
+.plastic_alt-content {
+    display: table-cell;
+    vertical-align: middle;
+    height: 220px;
+    padding: 5px;
+}
+
+.close_btn, .close_btn:hover {
+    background-color: #71bc42;
+    color: #ffffff;
+}
+
+.modal-dialog-centered {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    min-height: calc(100% - (.5rem * 2));
+}
+
+/*Media Queries for ipad*/
+@media only screen and (max-width: 1024px) and (min-width: 768px) and (orientation:portrait) {
+    .alternative {
+        margin: 25px 0 0 0;
+    }
+
+    .plastic_prod {
+        margin: 0 0 25px 0;
+    }
+
+    .problem-block {
+        margin: 25px 0 0 0;
+    }
+
+    .solution-block {
+        margin: 10px 0 0 0;
+    }
+}
+
+/*Media Queries for ipad pro*/
+@media only screen and (max-width: 1366px) and (min-width: 1024px) and (orientation:portrait) {
+    .plastic_prod {
+        margin: 25px 0 0 0;
+    }
+
+    .solution-block {
+        margin: 25px 0 0 0;
+    }
+}
+
+/*Media Queries for iphone XS Max Portrait*/
+@media only screen and (max-width: 896px) and (min-width: 414px) and (orientation:portrait) {
+    .plastic_prod {
+        margin: 0 0 25px 0;
+    }
+
+    .solution-block {
+        margin: 0;
+    }
+
+    .plastic_alt-content {
+        vertical-align: top;
+        height: 80px;
+        text-align: center;
+    }
+}
+
+/*Media Queries for iphone XS Max Landscape*/
+@media only screen and (max-width: 896px) and (min-width: 414px) and (orientation:landscape) {
+    .plastic_prod {
+        margin: 0 0 25px 0;
+    }
+
+    .solution-block {
+        margin: 0;
+    }
+}
+
+/*Media Queries for iphone X Portrait*/
+@media only screen and (max-width: 812px) and (min-width: 375px) and (orientation:portrait) {
+    .plastic_prod {
+        margin: 0 0 25px 0;
+    }
+
+    .solution-block {
+        margin: 0;
+    }
+}

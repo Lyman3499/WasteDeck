@@ -174,6 +174,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\wastedeck-style.css" />
     <Content Include="css\animate.css" />
     <Content Include="css\aos.css" />
     <Content Include="css\bootstrap-datepicker.css" />
@@ -204,8 +205,15 @@
     <Content Include="fonts\icomoon\style.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\3909426.jpg" />
+    <Content Include="images\about_us.jpg" />
+    <Content Include="images\commingled.png" />
+    <Content Include="images\ecofriendly.jpg" />
     <Content Include="images\hero_1.jpg" />
     <Content Include="images\content_2.jpg" />
+    <Content Include="images\organic_pulses.jpg" />
+    <Content Include="images\organic_vendor.jpg" />
+    <Content Include="images\packing_banner.jpg" />
     <Content Include="images\person_2.jpg" />
     <Content Include="images\person_1.jpg" />
     <Content Include="images\person_3.png" />
@@ -217,10 +225,18 @@
     <Content Include="images\img_3.jpg" />
     <Content Include="images\img_4.jpg" />
     <Content Include="images\img_6.jpg" />
+    <Content Include="images\plastic_bottle.png" />
+    <Content Include="images\plastic_bottle_alt.png" />
+    <Content Include="images\plastic_squeeze.png" />
+    <Content Include="images\plastic_squeeze_alt.png" />
+    <Content Include="images\plastic_wrap.png" />
+    <Content Include="images\plastic_wrap_alternatives.png" />
+    <Content Include="images\rubber-duck-4432703.jpg" />
     <Content Include="images\service_img_7.jpg" />
     <Content Include="images\content_4.jpg" />
     <Content Include="images\hero_2.jpg" />
     <Content Include="images\content_5.jpg" />
+    <Content Include="images\stop_plastic.jpg" />
     <Content Include="images\topography.png" />
     <Content Include="images\content_3.jpg" />
     <Content Include="images\content_6.jpg" />
@@ -401,6 +417,9 @@
     <Content Include="Views\Vendors\Details.cshtml" />
     <Content Include="Views\Vendors\Edit.cshtml" />
     <Content Include="Views\Vendors\Index.cshtml" />
+    <Content Include="Views\Home\Plastic_Alternative.cshtml" />
+    <Content Include="Views\Home\Vendor.cshtml" />
+    <Content Include="Views\Home\Waste_Seperation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

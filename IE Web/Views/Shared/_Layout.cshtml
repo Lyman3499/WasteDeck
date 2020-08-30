@@ -16,12 +16,10 @@
     <link rel="stylesheet" href="~/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="~/css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="~/css/animate.css">
-
     <link rel="stylesheet" href="~/fonts/flaticon/font/flaticon.css">
-
     <link rel="stylesheet" href="~/css/aos.css">
-
     <link rel="stylesheet" href="~/css/style.css">
+    <link href="~/Content/wastedeck-style.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -36,10 +34,8 @@
             </div>
             <div class="site-mobile-menu-body"></div>
         </div> <!-- .site-mobile-menu -->
-
-
+        <!--Bootstrap Navigation menu-->
         <div class="site-navbar-wrap js-site-navbar bg-white">
-
             <div class="container">
                 <div class="site-navbar bg-light">
                     <div class="row align-items-center">
@@ -55,12 +51,12 @@
                                         <li class="active"><a href="~/Home">Home</a></li>
                                         <li><a href="~/Home/About">About</a></li>
                                         <li class="has-children">
-                                            <a href="~/Home/Services">Services</a>
+                                            <a href="~/Home/Plastic_Alternative">Services</a>
                                             <ul class="dropdown arrow-top">
-                                                <li><a href="~/Home/Services">function 1</a></li>
-                                                <li><a href="~/Home/Services">function 2</a></li>
-                                                <li><a href="~/Home/Services">function 3</a></li>
-                                                <li><a href="~/Home/Services">function 4</a></li>
+                                                <li><a href="~/Home/Plastic_Alternative">Plastic Alternatives</li>
+                                                <li><a href="~/Home/Vendor">Vendors List</a></li>
+                                                <li><a href="~/Home/Waste_Seperation">Garbage Classification</a></li>
+                                                <li><a href="~/Home/Services">Plastic Impact</a></li>
                                             </ul>
                                         </li>
                                         <li><a href="~/Home/Contact">Contact</a></li>
@@ -73,15 +69,15 @@
                 </div>
             </div>
         </div>
-
+        <!--Bootstrap Navigation menu-->
 
 
         <div>
             @RenderBody()
             <hr />
+            <!--Footer-->
             <footer class="site-footer bg-dark">
                 <div class="container">
-
                     <div class="row">
                         <div class="col-md-4 mb-4 mb-md-0">
                             <h3 class="footer-heading mb-4 text-white">Brand Vision</h3>
@@ -95,7 +91,7 @@
                                     <ul class="list-unstyled">
                                         <li><a href="~/Home">Home</a></li>
                                         <li><a href="~/Home/About">About</a></li>
-                                        <li><a href="#">Serives</a></li>
+                                        <li><a href="#">Services</a></li>
                                         <li><a href="~/Home/Contact">Contact</a></li>
                                     </ul>
                                 </div>
@@ -147,16 +143,15 @@
                             <p>
                                 Copyright Owned by Team Poka Carbon
                             </p>
-
-
                         </div>
-
                     </div>
                 </div>
             </footer>
         </div>
     </div>
 
+
+    <!--jQuery Scripts-->
     <script src="~/js/jquery-3.3.1.min.js"></script>
     <script src="~/js/jquery-migrate-3.0.1.min.js"></script>
     <script src="~/js/jquery-ui.js"></script>
@@ -164,12 +159,11 @@
     <script src="~/js/bootstrap.min.js"></script>
     <script src="~/js/owl.carousel.min.js"></script>
     <script src="~/js/jquery.stellar.min.js"></script>
-
     <script src="~/js/jquery.waypoints.min.js"></script>
     <script src="~/js/jquery.animateNumber.min.js"></script>
     <script src="~/js/aos.js"></script>
-
     <script src="~/js/main.js"></script>
     @RenderSection("scripts", required: false)
+    <!--jQuery Scripts-->
 </body>
 </html>

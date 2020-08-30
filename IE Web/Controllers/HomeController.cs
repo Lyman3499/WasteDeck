@@ -31,6 +31,26 @@ namespace IE_Web.Controllers
             return View();
         }
 
+        public ActionResult Plastic_Alternative()
+        {
+            ViewBag.Message = "Services Page";
+
+            return View();
+        }
+
+        public ActionResult Vendor()
+        {
+            ViewBag.Message = "Services Page";
+
+            return View();
+        }
+
+        public ActionResult Waste_Seperation()
+        {
+            ViewBag.Message = "Services Page";
+
+            return View();
+        }
         public ActionResult Contact()
         {
             return View(new Models.SendEmailViewModel());
