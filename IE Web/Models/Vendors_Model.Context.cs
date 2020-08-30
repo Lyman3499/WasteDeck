@@ -13,10 +13,10 @@ namespace IE_Web.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Vendors_dbEntities : DbContext
+    public partial class Vendors_dbEntities1 : DbContext
     {
-        public Vendors_dbEntities()
-            : base("name=Vendors_dbEntities")
+        public Vendors_dbEntities1()
+            : base("name=Vendors_dbEntities1")
         {
         }
     
@@ -25,6 +25,6 @@ namespace IE_Web.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Table> Tables { get; set; }
+        public virtual DbSet<Vendor> Vendors { get; set; }
     }
 }

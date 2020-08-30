@@ -12,10 +12,8 @@ namespace IE_Web.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Table
+    public partial class Vendor
     {
-        public decimal Longitude { get; set; }
-        public decimal latitude { get; set; }
         public string Name { get; set; }
         public string category { get; set; }
         public string suburb { get; set; }
@@ -23,5 +21,7 @@ namespace IE_Web.Models
         public string address { get; set; }
         public string phone { get; set; }
         public string website { get; set; }
+        public Nullable<decimal> Longitude { get; set; }
+        public Nullable<decimal> latitude { get; set; }
     }
 }

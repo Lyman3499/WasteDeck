@@ -12,12 +12,12 @@ namespace IE_Web.Controllers
 {
     public class VendorsController : Controller
     {
-        private Vendors_dbEntities db = new Vendors_dbEntities();
+        private Vendors_dbEntities1 db = new Vendors_dbEntities1();
 
         // GET: Vendors
         public ActionResult Index()
         {
-            return View(db.Tables.ToList());
+            return View(db.Vendors.ToList());
         }
 
         // GET: Vendors/Details/5
@@ -27,12 +27,12 @@ namespace IE_Web.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Table table = db.Tables.Find(id);
-            if (table == null)
+            Vendor vendor = db.Vendors.Find(id);
+            if (vendor == null)
             {
                 return HttpNotFound();
             }
-            return View(table);
+            return View(vendor);
         }
 
         // GET: Vendors/Create
@@ -46,16 +46,16 @@ namespace IE_Web.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Longitude,latitude,Name,category,suburb,postcode,address,phone,website")] Table table)
+        public ActionResult Create([Bind(Include = "Name,category,suburb,postcode,address,phone,website,Longitude,latitude")] Vendor vendor)
         {
             if (ModelState.IsValid)
             {
-                db.Tables.Add(table);
+                db.Vendors.Add(vendor);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(table);
+            return View(vendor);
         }
 
         // GET: Vendors/Edit/5
@@ -65,12 +65,12 @@ namespace IE_Web.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Table table = db.Tables.Find(id);
-            if (table == null)
+            Vendor vendor = db.Vendors.Find(id);
+            if (vendor == null)
             {
                 return HttpNotFound();
             }
-            return View(table);
+            return View(vendor);
         }
 
         // POST: Vendors/Edit/5
@@ -78,15 +78,15 @@ namespace IE_Web.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Longitude,latitude,Name,category,suburb,postcode,address,phone,website")] Table table)
+        public ActionResult Edit([Bind(Include = "Name,category,suburb,postcode,address,phone,website,Longitude,latitude")] Vendor vendor)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(table).State = EntityState.Modified;
+                db.Entry(vendor).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(table);
+            return View(vendor);
         }
 
         // GET: Vendors/Delete/5
@@ -96,12 +96,12 @@ namespace IE_Web.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Table table = db.Tables.Find(id);
-            if (table == null)
+            Vendor vendor = db.Vendors.Find(id);
+            if (vendor == null)
             {
                 return HttpNotFound();
             }
-            return View(table);
+            return View(vendor);
         }
 
         // POST: Vendors/Delete/5
@@ -109,8 +109,8 @@ namespace IE_Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
-            Table table = db.Tables.Find(id);
-            db.Tables.Remove(table);
+            Vendor vendor = db.Vendors.Find(id);
+            db.Vendors.Remove(vendor);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\SJX\Desktop\FIT5120 Industry experience studio project\Web MVC\IE Web\IE Web\Models\Vendor_DB_Model.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\SJX\Desktop\FIT5120 Industry experience studio project\Web MVC\IE Web\IE Web\Models\Vendors_Model.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
