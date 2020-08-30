@@ -1,59 +1,60 @@
-﻿@{
-    ViewBag.Title = "Home";
-}
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
+﻿@model IEnumerable<IE_Web.Models.Vendors_dbEntities1>
 
-<a id="go-top-button"></a>
+    @{
+        ViewBag.Title = "Home";
+    }
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
 
-<div class="site-wrap">
+    <a id="go-top-button"></a>
 
-    <div class="slide-one-item home-slider owl-carousel">
+    <div class="site-wrap">
 
-        <div class="site-blocks-cover inner-page overlay" style="background-image: url(images/hero_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
-            <div class="container">
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-md-6 text-center" data-aos="fade">
-                        <h1 class="font-secondary  font-weight-bold text-uppercase">Plastic or Planet</h1>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div class="slide-one-item home-slider owl-carousel">
 
-        <div class="site-blocks-cover inner-page overlay" style="background-image: url(images/hero_2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
-            <div class="container">
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-md-6 text-center" data-aos="fade">
-                        <h1 class="font-secondary  font-weight-bold text-uppercase">Oceans Killed by Plastic</h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="site-blocks-cover inner-page overlay" style="background-image: url(images/hero_3.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
-            <div class="container">
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-md-7 text-center" data-aos="fade">
-                        <h1 class="font-secondary font-weight-bold text-uppercase">Reducing Plastic Starts with US</h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="slant-1"></div>
-
-    <div class="site-section first-section">
-        <div class="container">
-            <div class="col-md-12 text-center">
-                <h2 class="site-section-heading text-center font-secondary">Search Nearby Eco-Friendly Shops</h2>
-            </div>
-        </div>
-
-        <div class="py-5 bg-primary">
-            <div class="container">
-
+            <div class="site-blocks-cover inner-page overlay" style="background-image: url(images/hero_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
                 <div class="container">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-md-6 text-center" data-aos="fade">
+                            <h1 class="font-secondary  font-weight-bold text-uppercase">Plastic or Planet</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="site-blocks-cover inner-page overlay" style="background-image: url(images/hero_2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+                <div class="container">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-md-6 text-center" data-aos="fade">
+                            <h1 class="font-secondary  font-weight-bold text-uppercase">Oceans Killed by Plastic</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="site-blocks-cover inner-page overlay" style="background-image: url(images/hero_3.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+                <div class="container">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-md-7 text-center" data-aos="fade">
+                            <h1 class="font-secondary font-weight-bold text-uppercase">Reducing Plastic Starts with US</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slant-1"></div>
+
+        <div class="site-section first-section">
+            <div class="container">
+                <div class="col-md-12 text-center">
+                    <h2 class="site-section-heading text-center font-secondary">Search Nearby Eco-Friendly Shops</h2>
+                </div>
+            </div>
+
+            <div class="py-5 bg-primary">
+                <div class="container">
+
                     <div class="row">
                         <form class="form-search col-md-12">
                             <div class="row border-responsive">
@@ -96,8 +97,8 @@
                                 </div>
 
                                 <div class="col-md-4 text-center">
-                                    <h4 class="text-uppercase text-white mb-4"><br/></h4>
-                                    
+                                    <h4 class="text-uppercase text-white mb-4"><br /></h4>
+
                                     <input type="submit" href="#" class="btn btn-bg-primary font-secondary text-uppercase" value="Search">
                                 </div>
 
@@ -105,101 +106,98 @@
                         </form>
                     </div>
                 </div>
-
-
             </div>
         </div>
-    </div>
 
 
 
-    <div class="site-half" id="start">
-        <div class="img-bg-1" style="background-image: url('images/content_1.jpg');" data-aos="fade"></div>
-        <div class="container">
-            <div class="row no-gutters align-items-stretch">
-                <div class="col-lg-5 ml-lg-auto py-5">
-                    <span class="caption d-block mb-2 font-secondary font-weight-bold">Imapact of Plastic</span>
-                    <h2 class="site-section-heading text-uppercase font-secondary mb-5">Into our Food</h2>
-                    <p>Orchestia gammarellus—tiny shrimplike crustaceans that are common in European coastal waters—devour pieces of plastic bags and determined they could shred a single bag into 1.75 million microscopic fragments. </p>
+        <div class="site-half" id="start">
+            <div class="img-bg-1" style="background-image: url('images/content_1.jpg');" data-aos="fade"></div>
+            <div class="container">
+                <div class="row no-gutters align-items-stretch">
+                    <div class="col-lg-5 ml-lg-auto py-5">
+                        <span class="caption d-block mb-2 font-secondary font-weight-bold">Imapact of Plastic</span>
+                        <h2 class="site-section-heading text-uppercase font-secondary mb-5">Into our Food</h2>
+                        <p>Orchestia gammarellus—tiny shrimplike crustaceans that are common in European coastal waters—devour pieces of plastic bags and determined they could shred a single bag into 1.75 million microscopic fragments. </p>
 
-                    <p>The little creatures chewed through plastic especially fast, Thompson’s team found, when it was coated with the microbial slime that is their normal food. They spat out or eventually excreted the plastic bits.</p>
+                        <p>The little creatures chewed through plastic especially fast, Thompson’s team found, when it was coated with the microbial slime that is their normal food. They spat out or eventually excreted the plastic bits.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="site-half block">
-        <div class="img-bg-1 right" style="background-image: url('images/content_2.jpg');" data-aos="fade"></div>
-        <div class="container">
-            <div class="row no-gutters align-items-stretch">
-                <div class="col-lg-5 mr-lg-auto py-5">
-                    <span class="caption d-block mb-2 font-secondary font-weight-bold">Imapact of Plastic</span>
-                    <h2 class="site-section-heading text-uppercase font-secondary mb-5">Killing Marine Animals</h2>
-                    <p>Millions of animals are killed by plastics every year, from birds to fish to other marine organisms. </p>
+        <div class="site-half block">
+            <div class="img-bg-1 right" style="background-image: url('images/content_2.jpg');" data-aos="fade"></div>
+            <div class="container">
+                <div class="row no-gutters align-items-stretch">
+                    <div class="col-lg-5 mr-lg-auto py-5">
+                        <span class="caption d-block mb-2 font-secondary font-weight-bold">Imapact of Plastic</span>
+                        <h2 class="site-section-heading text-uppercase font-secondary mb-5">Killing Marine Animals</h2>
+                        <p>Millions of animals are killed by plastics every year, from birds to fish to other marine organisms. </p>
 
-                    <p>Nearly 700 species, including endangered ones, are known to have been affected by plastics. Nearly every species of seabird eats plastics.</p>
+                        <p>Nearly 700 species, including endangered ones, are known to have been affected by plastics. Nearly every species of seabird eats plastics.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="site-section ">
-        <div class="container">
+        <div class="site-section ">
+            <div class="container">
 
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <span class="caption d-block mb-2 font-secondary font-weight-bold">Services</span>
-                    <h2 class="site-section-heading text-uppercase text-center font-secondary">Build a better world with our hands</h2>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <span class="caption d-block mb-2 font-secondary font-weight-bold">Services</span>
+                        <h2 class="site-section-heading text-uppercase text-center font-secondary">Build a better world with our hands</h2>
+                    </div>
                 </div>
-            </div>
 
-            <div class="row">
-                <div class="col-md-12 block-13 nav-direction-white">
-                    <div class="nonloop-block-13 owl-carousel">
+                <div class="row">
+                    <div class="col-md-12 block-13 nav-direction-white">
+                        <div class="nonloop-block-13 owl-carousel">
 
-                        <div class="media-image">
-                            <img src="~/images/img_1.jpg" alt="Image" class="img-fluid">
-                            <div class="media-image-body">
-                                <h2 class="font-secondary text-uppercase">What can we do?</h2>
-                                <p>Learn more about reducing plastics</p>
-                                <center><a href="#" class="btn btn-primary text-white px-4">Learn More</a></center>
+                            <div class="media-image">
+                                <img src="~/images/img_1.jpg" alt="Image" class="img-fluid">
+                                <div class="media-image-body">
+                                    <h2 class="font-secondary text-uppercase">What can we do?</h2>
+                                    <p>Learn more about reducing plastics</p>
+                                    <center><a href="#" class="btn btn-primary text-white px-4">Learn More</a></center>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="media-image">
-                            <img src="~/images/img_2.jpg" alt="Image" class="img-fluid">
-                            <div class="media-image-body">
-                                <h2 class="font-secondary text-uppercase">Search Eco-Friendly Shop</h2>
-                                <p>Find Orgianic Food Shop on Map</p>
-                                <center><a href="#" class="btn btn-primary text-white px-4">Serach Now</a></center>
+                            <div class="media-image">
+                                <img src="~/images/img_2.jpg" alt="Image" class="img-fluid">
+                                <div class="media-image-body">
+                                    <h2 class="font-secondary text-uppercase">Search Eco-Friendly Shop</h2>
+                                    <p>Find Orgianic Food Shop on Map</p>
+                                    <center><a href="#" class="btn btn-primary text-white px-4">Serach Now</a></center>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="media-image">
-                            <img src="~/images/img_4.jpg" alt="Image" class="img-fluid">
-                            <div class="media-image-body">
-                                <h2 class="font-secondary text-uppercase">Garbage Classification</h2>
-                                <p>Different colors for the correct use of trash cans posters</p>
-                                <center><a href="#" class="btn btn-primary text-white px-4">Learn More</a></center>
+                            <div class="media-image">
+                                <img src="~/images/img_4.jpg" alt="Image" class="img-fluid">
+                                <div class="media-image-body">
+                                    <h2 class="font-secondary text-uppercase">Garbage Classification</h2>
+                                    <p>Different colors for the correct use of trash cans posters</p>
+                                    <center><a href="#" class="btn btn-primary text-white px-4">Learn More</a></center>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="media-image">
-                            <img src="~/images/img_5.jpg" alt="Image" class="img-fluid">
-                            <div class="media-image-body">
-                                <h2 class="font-secondary text-uppercase">Problems of Plastic</h2>
-                                <p>Knowledge of the problems of plastic waste</p>
-                                <center><a href="#" class="btn btn-primary text-white px-4">Learn More</a></center>
+                            <div class="media-image">
+                                <img src="~/images/img_5.jpg" alt="Image" class="img-fluid">
+                                <div class="media-image-body">
+                                    <h2 class="font-secondary text-uppercase">Problems of Plastic</h2>
+                                    <p>Knowledge of the problems of plastic waste</p>
+                                    <center><a href="#" class="btn btn-primary text-white px-4">Learn More</a></center>
+                                </div>
                             </div>
-                        </div>
 
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
-<script src="~/js/Go-top-button.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
+    <script src="~/js/Go-top-button.js"></script>
