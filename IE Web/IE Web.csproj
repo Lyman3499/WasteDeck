@@ -135,10 +135,29 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\VendorsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\SendEmailViewModel.cs" />
+    <Compile Include="Models\Table.cs">
+      <DependentUpon>Vendor_DB_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Vendor_DB_Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Vendor_DB_Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Vendor_DB_Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Vendor_DB_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Vendor_DB_Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Vendor_DB_Model.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\EmailSender.cs" />
   </ItemGroup>
@@ -219,6 +238,16 @@
     <Content Include="js\owl.carousel.min.js" />
     <Content Include="js\popper.min.js" />
     <Content Include="js\slick.min.js" />
+    <Content Include="Models\Vendor_DB_Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Vendor_DB_Model.edmx</DependentUpon>
+      <LastGenOutput>Vendor_DB_Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Vendor_DB_Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Vendor_DB_Model.edmx</DependentUpon>
+      <LastGenOutput>Vendor_DB_Model.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="css\bootstrap.min.css.map" />
@@ -234,6 +263,13 @@
     <Content Include="fonts\icomoon\fonts\icomoon.ttf" />
     <Content Include="fonts\icomoon\fonts\icomoon.woff" />
     <Content Include="fonts\icomoon\selection.json" />
+    <EntityDeploy Include="Models\Vendor_DB_Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Vendor_DB_Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Vendor_DB_Model.edmx.diagram">
+      <DependentUpon>Vendor_DB_Model.edmx</DependentUpon>
+    </Content>
     <None Include="Properties\PublishProfiles\WasteDeck - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -356,8 +392,15 @@
     <Content Include="scss\_site-blocks.scss" />
     <Content Include="scss\_site-navbar.scss" />
     <Content Include="Views\Home\Services.cshtml" />
+    <Content Include="Views\Vendors\Create.cshtml" />
+    <Content Include="Views\Vendors\Delete.cshtml" />
+    <Content Include="Views\Vendors\Details.cshtml" />
+    <Content Include="Views\Vendors\Edit.cshtml" />
+    <Content Include="Views\Vendors\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
