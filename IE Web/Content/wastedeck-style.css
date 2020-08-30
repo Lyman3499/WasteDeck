@@ -1,17 +1,22 @@
 ﻿body {
 }
 
+.about2-img img {
+    max-width: 100%;
+    height: 67%;
+}
+
 .page-heading {
     margin: 15px 0;
 }
 
-#sampleDropdownMenu{
-    width:100%;
-    height:46px;
+#sampleDropdownMenu {
+    width: 100%;
+    height: 46px;
 }
 
-#sampleDropdownMenu span{
-    text-align:left;
+#sampleDropdownMenu span {
+    text-align: left;
 }
 
 body .img-fluid.pic4 {
@@ -20,8 +25,8 @@ body .img-fluid.pic4 {
 }
 
 /*Bin Seperation*/
-.segregation-content-block{
-    text-align:center;
+.segregation-content-block {
+    text-align: center;
 }
 
 .text-bold {
@@ -132,19 +137,19 @@ address {
     margin: 25px 0 15px;
 }
 
-.problem-block span {
-    margin: 0 0 6px 0;
-    display: block;
-}
+    .problem-block span {
+        margin: 0 0 6px 0;
+        display: block;
+    }
 
-.problem-block ul {
-    padding: 0 0 0 15px;
-    margin: 0;
-}
+    .problem-block ul {
+        padding: 0 0 0 15px;
+        margin: 0;
+    }
 
-.problem-block ul li {
-    margin: 0 0 4px 0;
-}
+        .problem-block ul li {
+            margin: 0 0 4px 0;
+        }
 
 .plastic_prod {
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
@@ -153,12 +158,12 @@ address {
     cursor: pointer;
 }
 
-.plastic_prod img {
-    max-width: 100%;
-    height: 120px;
-    display: block;
-    margin: 0 auto;
-}
+    .plastic_prod img {
+        max-width: 100%;
+        height: 120px;
+        display: block;
+        margin: 0 auto;
+    }
 
 .modal-title {
     display: inline-block;

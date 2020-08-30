@@ -209,6 +209,9 @@
     <Content Include="images\about_us.jpg" />
     <Content Include="images\commingled.png" />
     <Content Include="images\ecofriendly.jpg" />
+    <Content Include="images\food.png" />
+    <Content Include="images\general_waste.png" />
+    <Content Include="images\glass.png" />
     <Content Include="images\hero_1.jpg" />
     <Content Include="images\content_2.jpg" />
     <Content Include="images\organic_pulses.jpg" />
