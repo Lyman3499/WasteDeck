@@ -1,5 +1,17 @@
 ﻿
 /*Home Page Impact Page*/
+body .site-logo img {
+    max-width: 100%;
+    height: 40px;
+}
+
+.site-section .site-section-heading::before {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
 .caption {
     font-size: 25px;
 }
