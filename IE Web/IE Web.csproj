@@ -214,6 +214,8 @@
     <Content Include="images\glass.png" />
     <Content Include="images\hero_1.jpg" />
     <Content Include="images\content_2.jpg" />
+    <Content Include="images\Logo1.ico" />
+    <Content Include="images\Logo2.ico" />
     <Content Include="images\organic_pulses.jpg" />
     <Content Include="images\organic_vendor.jpg" />
     <Content Include="images\packing_banner.jpg" />
