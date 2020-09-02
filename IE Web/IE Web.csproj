@@ -224,7 +224,6 @@
     <Content Include="images\Logo1.ico" />
     <Content Include="images\Logo2.ico" />
     <Content Include="images\organic_cafe.jpg" />
-    <Content Include="images\organic_grocery.jpg" />
     <Content Include="images\organic_syrup.jpg" />
     <Content Include="images\organic_meat.jpg" />
     <Content Include="images\organic_pulses.jpg" />

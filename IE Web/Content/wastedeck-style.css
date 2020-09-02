@@ -35,6 +35,7 @@ body .site-logo img {
     margin:0;
 }
 /*Footer*/
+
 .about2-img img {
     max-width: 100%;
     height: 67%;
@@ -172,8 +173,9 @@ address {
 .vendor-detail-block span {
     display: block;
 }
+/*Vendor Page Layout*/
 
-/*Packaging page*/
+/*Plastic Alternative page*/
 .packaging-img-block {
     background-image: url('../images/packing_banner.jpg');
     max-width: 100%;
@@ -192,19 +194,19 @@ address {
     margin: 25px 0 15px;
 }
 
-    .problem-block span {
-        margin: 0 0 6px 0;
-        display: block;
-    }
+.problem-block span {
+    margin: 0 0 6px 0;
+    display: block;
+}
 
-    .problem-block ul {
-        padding: 0 0 0 15px;
-        margin: 0;
-    }
+.problem-block ul {
+    padding: 0 0 0 15px;
+    margin: 0;
+}
 
-        .problem-block ul li {
-            margin: 0 0 4px 0;
-        }
+.problem-block ul li {
+    margin: 0 0 4px 0;
+}
 
 .plastic_prod {
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
@@ -213,12 +215,12 @@ address {
     cursor: pointer;
 }
 
-    .plastic_prod img {
-        max-width: 100%;
-        height: 120px;
-        display: block;
-        margin: 0 auto;
-    }
+.plastic_prod img {
+    max-width: 100%;
+    height: 120px;
+    display: block;
+    margin: 0 auto;
+}
 
 .modal-title {
     display: inline-block;
@@ -258,6 +260,7 @@ address {
     align-items: center;
     min-height: calc(100% - (.5rem * 2));
 }
+/*Plastic Alternative page*/
 
 /*Media Queries for ipad*/
 @media only screen and (max-width: 1024px) and (min-width: 768px) and (orientation:portrait) {
