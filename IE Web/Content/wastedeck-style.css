@@ -65,8 +65,8 @@ body .img-fluid.pic4 {
     margin: 0 0 20px 0;
 }
 
-.yellow-bin-content, .green-bin-content, .red-bin-content, .purple-bin-content {
-    display: none;
+.yellow-bin-content,.green-bin-content, .red-bin-content, .purple-bin-content {
+    display:none;
     padding: 5px 8px;
     border-radius: 2px;
     width: 90%;
@@ -75,31 +75,43 @@ body .img-fluid.pic4 {
 
 .yellow-bin-content {
     border: 2px solid #f9d953;
+    width: 100%;
+    margin:0 0 15px 0;
 }
 
 .green-bin-content {
     border: 2px solid #8fb845;
+    width: 100%;
+    margin: 15px 0;
 }
 
 .red-bin-content {
     border: 2px solid #ce2d3a;
+    width: 100%;
+    margin: 15px 0;
 }
 
 .purple-bin-content {
     border: 2px solid #792b94;
+    width: 100%;
+    margin: 15px 0;
 }
 
-.bin-img img {
-    display: block;
-    margin: 10px auto;
-    cursor: pointer;
+.bin-img {
+    text-align:center;
+    padding:50px 15px;
+    background:#eee;
+}
+
+.bin-img img{
+    cursor:pointer;
 }
 
 .bin-block ul {
     display: inline-block;
     padding: 0;
-    width: 18%;
-    margin: 0 15px 0 0;
+    width: 44%;
+    margin: 0 15px 15px 0;
 }
 
 .bin-block ul li {
@@ -108,6 +120,8 @@ body .img-fluid.pic4 {
     margin: 0 0 2px 0;
     border-bottom: 1px solid #eee;
 }
+/*Bin Seperation*/
+
 
 /*Vendor Page Layout*/
 .vendor-block {
@@ -251,45 +265,22 @@ address {
         margin: 10px 0 0 0;
     }
 
-    .yellow-bin-block, .green-bin-block, .red-bin-block {
-        border-bottom: 1px solid #eee;
-    }
-
-    .yellow-bin-content, .green-bin-content, .red-bin-content, .purple-bin-content {
-        width: 100%;
-        margin: 0 0 15px 0;
-    }
-
-    .bin-block ul {
-        display: inline-block;
-        padding: 0;
-        width: 30%;
-        margin: 0 15px 15px 0;
+    .yellow-bin-content, .red-bin-content {
+        margin: 25px 0 15px;
     }
 }
 
+/*Media Queries for ipad landascape*/
 @media only screen and (max-width: 1024px) and (min-width: 768px) and (orientation:landscape) {
     .bin-block ul {
         display: inline-block;
         padding: 0;
-        width: 22%;
+        width: 45%;
         margin: 0 15px 15px 0;
     }
 
     .yellow-bin-content, .green-bin-content, .red-bin-content, .purple-bin-content {
-        width: 86%;
-    }
-
-    .bin-img img {
-        display: block;
-        margin: 60px auto;
-        cursor: pointer;
-        width: 110px;
-        height: 110px;
-    }
-
-    .bin-img .green-bin {
-        margin: 5px auto;
+        width: 100%;
     }
 }
 
@@ -320,21 +311,7 @@ address {
         text-align: center;
     }
 
-    .yellow-bin-block, .green-bin-block, .red-bin-block {
-        border-bottom: 1px solid #eee;
-    }
-
-    .yellow-bin-content, .green-bin-content, .red-bin-content, .purple-bin-content {
-        width: 100%;
-        margin: 0 0 15px 0;
-    }
-
-    .bin-block ul {
-        display: inline-block;
-        padding: 0;
-        width: 45%;
-        margin: 0 15px 15px 0;
-    }
+    
 }
 
 /*Media Queries for iphone XS Max Landscape*/
@@ -348,7 +325,7 @@ address {
     }
 
     .yellow-bin-content, .green-bin-content, .red-bin-content, .purple-bin-content {
-        width: 82%;
+        width: 100%;
     }
 
     .bin-block ul {
@@ -356,6 +333,10 @@ address {
         padding: 0;
         width: 45%;
         margin: 0 15px 15px 0;
+    }
+
+    .yellow-bin-content{
+        margin:25px 0 15px 0;
     }
 }
 
@@ -375,7 +356,7 @@ address {
 
     .yellow-bin-content, .green-bin-content, .red-bin-content, .purple-bin-content {
         width: 100%;
-        margin: 0 0 15px 0;
+        margin:15px 0;
     }
 
     .bin-block ul {

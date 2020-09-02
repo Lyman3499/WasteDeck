@@ -133,27 +133,26 @@
     <!--jQuery Scripts-->
     <!--JQuery Script for Bin show and hide on Waste Seperation Page-->
     <script>
+
         $(".yellow-bin").click(function () {
-            $(".yellow-bin-content").first().toggle(2000, function showNext() {
-                $(this).next(".yellow-bin-content").toggle(2000, showNext);
-            });
+            $(".yellow-bin-content").toggle("slow");
         });
+
+        
         $(".green-bin").click(function () {
-            $(".green-bin-content").first().toggle(2000, function showNext() {
-                $(this).next(".green-bin-content").toggle(2000, showNext);
-            });
+            $(".green-bin-content").toggle("slow");
         });
+
         $(".red-bin").click(function () {
-            $(".red-bin-content").first().toggle(2000, function showNext() {
-                $(this).next(".red-bin-content").toggle(2000, showNext);
-            });
+            $(".red-bin-content").toggle("slow");
         });
+
         $(".purple-bin").click(function () {
-            $(".purple-bin-content").first().toggle(2000, function showNext() {
-                $(this).next(".purple-bin-content").toggle(2000, showNext);
-            });
+            $(".purple-bin-content").toggle("slow");
         });
     </script>
+    
+    
     <!--JQuery Script for Bin show and hide on Waste Seperation Page-->
     <script src="~/js/Go-top-button.js"></script>
 </body>
