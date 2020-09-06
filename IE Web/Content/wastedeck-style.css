@@ -195,19 +195,10 @@ address {
     margin: 25px 0 15px;
 }
 
-.problem-block span {
-    margin: 0 0 6px 0;
-    display: block;
+.problem-block{
+    text-align:center;
 }
 
-.problem-block ul {
-    padding: 0 0 0 15px;
-    margin: 0;
-}
-
-.problem-block ul li {
-    margin: 0 0 4px 0;
-}
 
 .plastic_prod {
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
