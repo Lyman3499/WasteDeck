@@ -8,7 +8,10 @@
 @using (Html.BeginForm("Contact", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
-
+    if (@ViewBag.Result != null)
+    {
+        <div class="alert alert-info">@ViewBag.Result</div>
+    }
     <div class="site-wrap">
 
         <!--Contact Banner Section-->
@@ -61,7 +64,7 @@
 
                             <div class="row form-group">
                                 <div class="col-md-12">
-                                    <input type="submit" value="Send Message" class="btn btn-primary text-white px-4 py-2" onclick="EmailSent()">
+                                    <input type="submit" value="Send Message" class="btn btn-primary text-white px-4 py-2">
                                 </div>
                             </div>
 
@@ -98,11 +101,11 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
-<script>
-    function EmailSent() {
-        alert("Email was successfully sent to Admin");
-    }
-</script>
+    <script>
+        function EmailSent() {
+            alert("Email was successfully sent to Admin");
+        }
+    </script>
     <script src="~/js/jquery-3.3.1.min.js"></script>
     <script src="~/js/jquery-migrate-3.0.1.min.js"></script>
     <script src="~/js/jquery-ui.js"></script>
