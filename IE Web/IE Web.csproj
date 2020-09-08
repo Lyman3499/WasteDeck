@@ -217,6 +217,7 @@
     <Content Include="images\favicon.ico" />
     <Content Include="images\food.png" />
     <Content Include="images\general_waste.png" />
+    <Content Include="images\gif.gif" />
     <Content Include="images\glass.png" />
     <Content Include="images\hero_1.jpg" />
     <Content Include="images\content_2.jpg" />
