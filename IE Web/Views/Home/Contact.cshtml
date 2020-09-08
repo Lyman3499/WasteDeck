@@ -8,7 +8,7 @@
 @using (Html.BeginForm("Contact", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
-
+    
     <div class="site-wrap">
 
         <!--Contact Banner Section-->
@@ -27,12 +27,17 @@
         <div class="site-section">
             <div class="container">
                 <div class="row">
-
+                    
                     <!--Contact Form-->
                     <div class="col-md-12 col-lg-8 mb-5">
                         <form action="#email" class="p-5 bg-white">
 
                             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                            @if (@ViewBag.Result != null)
+                            {
+                                <div class="alert alert-info">@ViewBag.Result</div>
+                            }
 
                             <div class="row form-group">
                                 <div class="col-md-12">
@@ -98,11 +103,6 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
-<script>
-    function EmailSent() {
-        alert("Email was successfully sent to Admin");
-    }
-</script>
     <script src="~/js/jquery-3.3.1.min.js"></script>
     <script src="~/js/jquery-migrate-3.0.1.min.js"></script>
     <script src="~/js/jquery-ui.js"></script>
