@@ -10,6 +10,7 @@ using IE_Web.Models;
 
 namespace IE_Web.Controllers
 {
+    [BasicAuthenticationAttribute("ma16", "5120", BasicRealm = "your-realm")]
     public class VendorsController : Controller
     {
         private Vendors_dbEntities1 db = new Vendors_dbEntities1();
