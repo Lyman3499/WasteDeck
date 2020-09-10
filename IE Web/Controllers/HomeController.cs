@@ -64,28 +64,35 @@ namespace IE_Web.Controllers
 
         public ActionResult Plastic_Alternative()
         {
-            ViewBag.Message = "Services Page";
+            ViewBag.Message = "Description Page";
 
             return View();
         }
 
         public ActionResult Plastic_Impact()
         {
-            ViewBag.Message = "Services Page";
+            ViewBag.Message = "Description Page";
 
             return View();
         }
 
         public ActionResult Vendor()
         {
-            ViewBag.Message = "Services Page";
+            ViewBag.Message = "Description Page";
 
             return View();
         }
 
         public ActionResult Waste_Seperation()
         {
-            ViewBag.Message = "Services Page";
+            ViewBag.Message = "Description Page";
+
+            return View();
+        }
+
+        public ActionResult Food_Farming()
+        {
+            ViewBag.Message = "Description Page";
 
             return View();
         }
