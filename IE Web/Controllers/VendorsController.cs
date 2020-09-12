@@ -13,12 +13,12 @@ namespace IE_Web.Controllers
     [BasicAuthenticationAttribute("ma16", "5120", BasicRealm = "your-realm")]
     public class VendorsController : Controller
     {
-        private Vendors_dbEntities1 db = new Vendors_dbEntities1();
+        Vendors_dbEntities1 db = new Vendors_dbEntities1();
 
         // GET: Vendors
-        public ActionResult Index()
+        public ActionResult Index(String searching)
         {
-            return View(db.Vendors.ToList());
+            return View(db.Vendors.Where(x => x.category.Contains("Cafe") || searching == null).ToList());
         }
 
         // GET: Vendors/Details/5
