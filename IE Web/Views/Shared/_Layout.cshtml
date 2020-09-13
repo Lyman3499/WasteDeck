@@ -66,6 +66,7 @@
                                                 <li><a href="~/Home/Vendor">Vendors List</a></li>
                                                 <li><a href="~/Home/Waste_Seperation">Bin Classification</a></li>
                                                 <li><a href="~/Home/Plastic_Impact">Plastic Impact</a></li>
+                                                <li><a href="~/Home/Avoid_Food_Waste">Avoid Food Waste</a></li>
                                                 <li><a href="~/Home/Food_Farming">Pot Farming</a></li>
                                             </ul>
                                         </li>
@@ -158,6 +159,28 @@
 
         $(".purple-bin").click(function () {
             $(".purple-bin-content").toggle("slow");
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#shop-smart").click(function () {
+                $("#shop-content-block").slideToggle("slow");
+            });
+        });
+        $(document).ready(function () {
+            $("#store-food").click(function () {
+                $("#store-content-block").slideToggle("slow");
+            });
+        });
+        $(document).ready(function () {
+            $("#food-leftover").click(function () {
+                $("#leftover-content-block").slideToggle("slow");
+            });
+        });
+        $(document).ready(function () {
+            $("#pack-lunch").click(function () {
+                $("#lunch-content-block").slideToggle("slow");
+            });
         });
     </script>
 

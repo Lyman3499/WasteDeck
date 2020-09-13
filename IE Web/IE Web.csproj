@@ -235,6 +235,7 @@
     <Content Include="images\organic_veggies.jpg" />
     <Content Include="images\organic_vendor.jpg" />
     <Content Include="images\organic_wholesale.jpg" />
+    <Content Include="images\pack-lunch.jpg" />
     <Content Include="images\packing_banner.jpg" />
     <Content Include="images\img_1.jpg" />
     <Content Include="images\img_5.jpg" />
@@ -251,10 +252,13 @@
     <Content Include="images\plastic_wrap_alternatives.png" />
     <Content Include="images\rosemary-farming.jpg" />
     <Content Include="images\rubber-duck-4432703.jpg" />
+    <Content Include="images\save_leftover.jpg" />
     <Content Include="images\service_img_7.jpg" />
     <Content Include="images\content_4.jpg" />
     <Content Include="images\hero_2.jpg" />
+    <Content Include="images\shop_smart.jpg" />
     <Content Include="images\stop_plastic.jpg" />
+    <Content Include="images\store_food.jpg" />
     <Content Include="images\tomatoes-farming.jpg" />
     <Content Include="images\topography.png" />
     <Content Include="images\content_3.jpg" />
