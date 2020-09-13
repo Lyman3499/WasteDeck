@@ -439,6 +439,7 @@
     <Content Include="Views\Home\Waste_Seperation.cshtml" />
     <Content Include="Views\Home\Plastic_Impact.cshtml" />
     <Content Include="Views\Home\Food_Farming.cshtml" />
+    <Content Include="Views\Home\Avoid_Food_Waste.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
