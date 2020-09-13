@@ -76,11 +76,13 @@ namespace IE_Web.Controllers
             return View();
         }
 
-        public ActionResult Vendor()
-        {
-            ViewBag.Message = "Description Page";
+        Vendors_dbEntities1 db = new Vendors_dbEntities1();
 
-            return View();
+        public ActionResult Vendor(String searching)
+        {
+            ViewBag.Message = "Vendors";
+
+            return View(db.Vendors.Where(x => x.postcode.ToString().Contains(searching) || searching == null).ToList());
         }
 
         public ActionResult Waste_Seperation()
