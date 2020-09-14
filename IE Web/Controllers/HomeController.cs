@@ -104,6 +104,12 @@ namespace IE_Web.Controllers
 
             return View();
         }
+        public ActionResult Composting()
+        {
+            ViewBag.Message = "Description Page";
+
+            return View();
+        }
         public ActionResult Contact()
         {
             return View(new Models.SendEmailViewModel());
