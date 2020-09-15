@@ -9,18 +9,45 @@
 
 <!--Page Title-->
 <center>
-    <h2 class="page-heading">Search Eco-Friendly Vendor Information</h2>
+    <h2 class="page-heading">Search Eco-Friendly Vendors Information</h2>
 </center>
 
 <!--Search Bar-->
 @using (Html.BeginForm("Vendor", "Home", FormMethod.Get))
 {
-    <div class="container">
-        <center class="search-form input">
-            @Html.TextBox("category")
-            @Html.TextBox("postcode")
-            <input type="submit" value="Search" class="btn btn-primary" />
-        </center>
+    <div class="py-3 bg-primary" style="margin-bottom:-20px">
+        <div class="container">
+            <div class="row">
+
+                <form class="search-form col-md-12">
+
+                    <div class="col-md-4 col-12">
+                            <h5 class="text-uppercase text-white mb-4" for="offer-types">Select Category</h5>
+                            <select name="category" style="height:40px;width:200px">
+                                <option value="">All</option>
+                                <option value="WholeSale">WholeSale</option>
+                                <option value="Meat">Meat</option>
+                                <option value="Vegetables">Vegetables</option>
+                                <option value="Fruits">Fruits</option>
+                                <option value="Cafe">Cafe</option>
+                                <option value="Bakery">Bakery</option>
+                                <option value="Grocery">Grocery</option>
+                            </select>   
+                    </div>
+
+                    <div class="col-md-4">               
+                            <h5 class="text-uppercase text-white mb-4">Input Postcode</h5>
+                            <input type="text" name="postcode" placeholder="Postcode" style="height:40px;width:300px" />                        
+                    </div>
+
+                    <div class="col-md-4 col-12 text-center">
+                        <h5 class="text-uppercase text-white mb-4"><br /></h5>
+                        <input type="submit" value="Search" class="btn btn-bg-primary font-secondary text-uppercase" />
+                    </div>
+                </form>
+
+            </div>
+        </div>
     </div>
 }
 
@@ -31,8 +58,8 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-sm-12 col-md-4 col-4">
-                <div style="height:460px;overflow-y:auto">
+            <div class="col-sm-12 col-md-4 col-12">
+                <div style="height:600px;overflow-y:auto;overflow-x:hidden">
 
 
                     @if (Model.Count() == 0)
@@ -123,8 +150,9 @@
                     }
                 </div>
             </div>
+            <br /><br />
             <!--Map-->
-            <div id="map" class="col-sm-12 col-md-8 col-8" style="height:460px;width:100%"></div>
+            <div id="map" class="col-sm-12 col-md-8 col-12" style="height:600px;width:100%"></div>
 
         </div>
     </div>

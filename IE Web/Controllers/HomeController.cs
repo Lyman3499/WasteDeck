@@ -43,9 +43,10 @@ namespace IE_Web.Controllers
     [BasicAuthenticationAttribute("ma16","5120", BasicRealm = "your-realm")]
     public class HomeController : Controller
     {
+
         public ActionResult Index()
         {
-            return View();
+                return View();
         }
 
         public ActionResult About()
