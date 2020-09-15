@@ -78,10 +78,10 @@ namespace IE_Web.Controllers
 
         WasteDeck_dbEntities1 db = new WasteDeck_dbEntities1();
 
-        public ActionResult Vendor(String postcode)
+        public ActionResult Vendor(String category, String postcode)
         {
             ViewBag.Message = "Vendors";
-            if(postcode == null)
+            if(category == null && postcode == null)
             {
                 return View(db.Vendors.ToList());
             }
