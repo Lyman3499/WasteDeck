@@ -4,8 +4,8 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="0cd81b82eb9641f4b74ef36bcd2bd117" Name="Diagram1">
-        <EntityTypeShape EntityType="Vendors_dbModel.Vendor" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="4781d6d0387d4405a34f48e2993fa0e7" Name="Diagram1">
+        <EntityTypeShape EntityType="WasteDeck_dbModel.Vendor" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

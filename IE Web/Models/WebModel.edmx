@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Vendors_dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="WasteDeck_dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Vendors">
           <Key>
             <PropertyRef Name="address" />
@@ -19,14 +19,14 @@
           <Property Name="Longitude" Type="numeric" Precision="6" Scale="3" />
           <Property Name="latitude" Type="numeric" Precision="6" Scale="3" />
         </EntityType>
-        <EntityContainer Name="Vendors_dbModelStoreContainer">
+        <EntityContainer Name="WasteDeck_dbModelStoreContainer">
           <EntitySet Name="Vendors" EntityType="Self.Vendors" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="Vendors_dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="WasteDeck_dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Vendor">
           <Key>
             <PropertyRef Name="address" />
@@ -41,7 +41,7 @@
           <Property Name="Longitude" Type="Decimal" Precision="6" Scale="3" />
           <Property Name="latitude" Type="Decimal" Precision="6" Scale="3" />
         </EntityType>
-        <EntityContainer Name="Vendors_dbEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="WasteDeck_dbEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Vendors" EntityType="Self.Vendor" />
         </EntityContainer>
       </Schema>
@@ -49,9 +49,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Vendors_dbModelStoreContainer" CdmEntityContainer="Vendors_dbEntities1">
+        <EntityContainerMapping StorageEntityContainer="WasteDeck_dbModelStoreContainer" CdmEntityContainer="WasteDeck_dbEntities1">
           <EntitySetMapping Name="Vendors">
-            <EntityTypeMapping TypeName="Vendors_dbModel.Vendor">
+            <EntityTypeMapping TypeName="WasteDeck_dbModel.Vendor">
               <MappingFragment StoreEntitySet="Vendors">
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="category" ColumnName="category" />

@@ -76,13 +76,20 @@ namespace IE_Web.Controllers
             return View();
         }
 
-        Vendors_dbEntities1 db = new Vendors_dbEntities1();
+        WasteDeck_dbEntities1 db = new WasteDeck_dbEntities1();
 
-        public ActionResult Vendor(String searching)
+        public ActionResult Vendor(String postcode)
         {
             ViewBag.Message = "Vendors";
-
-            return View(db.Vendors.Where(x => x.postcode.ToString().Contains(searching) || searching == null).ToList());
+            if(postcode == null)
+            {
+                return View(db.Vendors.ToList());
+            }
+            else
+            {
+                return View(db.Vendors.Where(x => x.postcode.ToString().Contains(postcode)).ToList());
+            }
+            
         }
 
         public ActionResult Waste_Seperation()

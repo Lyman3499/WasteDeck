@@ -13,10 +13,10 @@ namespace IE_Web.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Vendors_dbEntities1 : DbContext
+    public partial class WasteDeck_dbEntities1 : DbContext
     {
-        public Vendors_dbEntities1()
-            : base("name=Vendors_dbEntities1")
+        public WasteDeck_dbEntities1()
+            : base("name=WasteDeck_dbEntities1")
         {
         }
     
