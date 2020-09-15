@@ -210,11 +210,15 @@
     <Content Include="images\apple-touch-icon.png" />
     <Content Include="images\carrot-farming.jpg" />
     <Content Include="images\commingled.png" />
+    <Content Include="images\compost.jpg" />
+    <Content Include="images\composting-bin.jpg" />
     <Content Include="images\coriander-farming.jpg" />
+    <Content Include="images\eat_the_yolk.png" />
     <Content Include="images\ecofriendly.jpg" />
     <Content Include="images\favicon-16x16.png" />
     <Content Include="images\favicon-32x32.png" />
     <Content Include="images\favicon.ico" />
+    <Content Include="images\filling-bin.jpg" />
     <Content Include="images\food.png" />
     <Content Include="images\garlic-farming.jpg" />
     <Content Include="images\general_waste.png" />
@@ -222,11 +226,15 @@
     <Content Include="images\glass.png" />
     <Content Include="images\hero_1.jpg" />
     <Content Include="images\content_2.jpg" />
+    <Content Include="images\image_coming_soon.jpg" />
+    <Content Include="images\kitchen_waste.jpg" />
     <Content Include="images\kumquats-farming.jpg" />
+    <Content Include="images\learn_preserve.png" />
     <Content Include="images\logo.png" />
     <Content Include="images\Logo1.ico" />
     <Content Include="images\Logo2.ico" />
     <Content Include="images\map_pin.png" />
+    <Content Include="images\maturing_process.jpg" />
     <Content Include="images\organic_cafe.jpg" />
     <Content Include="images\organic_meat.jpg" />
     <Content Include="images\organic_pulses.jpg" />
@@ -234,7 +242,6 @@
     <Content Include="images\organic_veggies.jpg" />
     <Content Include="images\organic_vendor.jpg" />
     <Content Include="images\organic_wholesale.jpg" />
-    <Content Include="images\pack-lunch.jpg" />
     <Content Include="images\packing_banner.jpg" />
     <Content Include="images\img_1.jpg" />
     <Content Include="images\img_5.jpg" />
@@ -243,6 +250,7 @@
     <Content Include="images\img_3.jpg" />
     <Content Include="images\img_4.jpg" />
     <Content Include="images\img_6.jpg" />
+    <Content Include="images\pack_lunch.png" />
     <Content Include="images\plastic_bottle.png" />
     <Content Include="images\plastic_bottle_alt.png" />
     <Content Include="images\plastic_squeeze.png" />
@@ -251,13 +259,13 @@
     <Content Include="images\plastic_wrap_alternatives.png" />
     <Content Include="images\rosemary-farming.jpg" />
     <Content Include="images\rubber-duck-4432703.jpg" />
-    <Content Include="images\save_leftover.jpg" />
+    <Content Include="images\save_leftovers.png" />
     <Content Include="images\service_img_7.jpg" />
     <Content Include="images\content_4.jpg" />
     <Content Include="images\hero_2.jpg" />
-    <Content Include="images\shop_smart.jpg" />
+    <Content Include="images\shop_smart.png" />
     <Content Include="images\stop_plastic.jpg" />
-    <Content Include="images\store_food.jpg" />
+    <Content Include="images\store_correctly.png" />
     <Content Include="images\tomatoes-farming.jpg" />
     <Content Include="images\topography.png" />
     <Content Include="images\content_3.jpg" />
@@ -438,6 +446,7 @@
     <Content Include="Views\Home\Plastic_Impact.cshtml" />
     <Content Include="Views\Home\Food_Farming.cshtml" />
     <Content Include="Views\Home\Avoid_Food_Waste.cshtml" />
+    <Content Include="Views\Home\Composting.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
