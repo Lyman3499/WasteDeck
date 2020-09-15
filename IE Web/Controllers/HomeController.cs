@@ -85,11 +85,19 @@ namespace IE_Web.Controllers
             {
                 return View(db.Vendors.ToList());
             }
+            else if(category == null && postcode != null)
+            {
+                return View(db.Vendors.Where(x => x.postcode.ToString().Trim().Contains(postcode)).ToList());
+            }
+            else if (category != null && postcode == null)
+            {
+                return View(db.Vendors.Where(x => x.category.Trim().ToLower().Contains(category)).ToList());
+            }
             else
             {
-                return View(db.Vendors.Where(x => x.postcode.ToString().Contains(postcode)).ToList());
+                return View(db.Vendors.Where(x => x.postcode.ToString().Trim().Contains(postcode) && x.category.Trim().ToLower().Contains(category)).ToList());
             }
-            
+
         }
 
         public ActionResult Waste_Seperation()
