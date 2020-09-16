@@ -40,13 +40,14 @@ namespace IE_Web.Controllers
     }
 
 
-    [BasicAuthenticationAttribute("ma16","5120", BasicRealm = "your-realm")]
+    [BasicAuthenticationAttribute("ma16", "5120", BasicRealm = "your-realm")]
     public class HomeController : Controller
     {
 
-        public ActionResult Index()
+        public ActionResult Index(String category, String postcode)
         {
-                return View();
+           
+            return Vendor(category, postcode);
         }
 
         public ActionResult About()
@@ -82,11 +83,11 @@ namespace IE_Web.Controllers
         public ActionResult Vendor(String category, String postcode)
         {
             ViewBag.Message = "Vendors";
-            if(category == null && postcode == null)
+            if (category == null && postcode == null)
             {
                 return View(db.Vendors.ToList());
             }
-            else if(category == null && postcode != null)
+            else if (category == null && postcode != null)
             {
                 return View(db.Vendors.Where(x => x.postcode.ToString().Trim().Contains(postcode)).ToList());
             }

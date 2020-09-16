@@ -59,7 +59,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 col-md-4 col-12">
-                <div style="height:600px;overflow-y:auto;overflow-x:hidden">
+                <div style="height:500px;overflow-y:auto;overflow-x:hidden">
 
 
                     @if (Model.Count() == 0)
@@ -92,7 +92,7 @@
                                     {
                                         <img src="~/images/organic_meat.jpg" />
                                     }
-                                    else if (item.category.Trim().ToLower().Equals("fruits, vegetables"))
+                                    else if (item.category.Trim().ToLower().Equals("vegetables"))
                                     {
                                         <img src="~/images/organic_veggies.jpg" />
                                     }
@@ -152,7 +152,7 @@
             </div>
             <br /><br />
             <!--Map-->
-            <div id="map" class="col-sm-12 col-md-8 col-12" style="height:600px;width:100%"></div>
+            <div id="map" class="col-sm-12 col-md-8 col-12" style="height:500px;width:100%"></div>
 
         </div>
     </div>
@@ -174,18 +174,18 @@
                 zoom: 8
             });
 
-            // Set the point(Vendors) detail information
+            // Set feature for all Vendors
             var geojson = {
                 type: 'FeatureCollection',
                 features: [{
                     type: 'Feature',
                     geometry: {
                         type: 'Point',
-                        coordinates: [145.045837, -37.876823]
+                        coordinates: [146, -38]
                     },
                     properties: {
-                        title: 'Monash Hotel',
-                        description: 'The location of Monash Hotel'
+                        title: 'Vendors',
+                        description: 'The location of Vendors'
                     }
                 }]
             };
