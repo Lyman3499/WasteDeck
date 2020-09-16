@@ -268,6 +268,7 @@
     <Content Include="images\pack_lunch.png" />
     <Content Include="images\plastic_bottle.png" />
     <Content Include="images\plastic_bottle_alt.png" />
+    <Content Include="images\plastic_impact.gif" />
     <Content Include="images\plastic_squeeze.png" />
     <Content Include="images\plastic_squeeze_alt.png" />
     <Content Include="images\plastic_wrap.png" />

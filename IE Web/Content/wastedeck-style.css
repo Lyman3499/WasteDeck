@@ -263,14 +263,23 @@ address {
     align-items: center;
     min-height: calc(100% - (.5rem * 2));
 }
-/*Plastic Alternative page*/
 
+.author-attribution{
+    font-size:10px;
+    text-align: right;
+}
+
+.author-attribution p{
+    margin-top:10px;
+    margin-bottom:5px;
+}
+/*Plastic Alternative page*/
 /*Food Farming*/
 .food-farm-block {
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     border-radius: 10px;
     cursor: pointer;
-    margin:0 0 30px 0;
+    margin: 0 0 30px 0;
 }
 
 .food-farm-block img {
@@ -298,6 +307,11 @@ a:hover, a:focus {
     width:88%;
     margin: 0 auto;
 }
+
+.modal-body .nav.nav-tabs li{
+    margin:10px 0 0 0;
+}
+
 .tab .nav-tabs li a {
     padding: 10px;
     margin-right: 20px;
@@ -442,6 +456,19 @@ a:hover, a:focus {
 }
 
 /*Composting*/
+
+/*Plastic Impact Block*/
+
+.plastic-gif-block .plastic-impact_img {
+    margin: 20px 0;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.line-chart-block{
+    margin:70px 0 0 0;
+}
+
+
 /*Media Queries for ipad*/
 @media only screen and (max-width: 1024px) and (min-width: 768px) and (orientation:portrait) {
     .alternative {
@@ -462,6 +489,10 @@ a:hover, a:focus {
 
     .yellow-bin-content, .red-bin-content {
         margin: 25px 0 15px;
+    }
+
+    .plastic-gif-block .plastic-impact_img {
+        height: auto;
     }
 }
 
@@ -510,6 +541,10 @@ a:hover, a:focus {
         text-align:center;
     }
 
+    .line-chart-block{
+        margin:0;
+    }
+
     
 }
 
@@ -536,6 +571,14 @@ a:hover, a:focus {
 
     .yellow-bin-content{
         margin:25px 0 15px 0;
+    }
+
+    .line-chart-block {
+        margin: 0;
+    }
+
+    .plastic-gif-block .plastic-impact_img{
+        height:auto;
     }
 }
 
@@ -565,5 +608,9 @@ a:hover, a:focus {
 
     .site-logo {
         text-align: center;
+    }
+
+    .line-chart-block {
+        margin: 0;
     }
 }
