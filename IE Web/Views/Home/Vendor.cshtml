@@ -22,22 +22,22 @@
                 <form class="search-form col-md-12">
 
                     <div class="col-md-4 col-12">
-                            <h5 class="text-uppercase text-white mb-4" for="offer-types">Select Category</h5>
-                            <select name="category" style="height:40px;width:200px">
-                                <option value="">All</option>
-                                <option value="WholeSale">WholeSale</option>
-                                <option value="Meat">Meat</option>
-                                <option value="Vegetables">Vegetables</option>
-                                <option value="Fruits">Fruits</option>
-                                <option value="Cafe">Cafe</option>
-                                <option value="Bakery">Bakery</option>
-                                <option value="Grocery">Grocery</option>
-                            </select>   
+                        <h5 class="text-uppercase text-white mb-4" for="offer-types">Select Category</h5>
+                        <select name="category" style="height:40px;width:200px">
+                            <option value="">All</option>
+                            <option value="WholeSale">WholeSale</option>
+                            <option value="Meat">Meat</option>
+                            <option value="Vegetables">Vegetables</option>
+                            <option value="Fruits">Fruits</option>
+                            <option value="Cafe">Cafe</option>
+                            <option value="Bakery">Bakery</option>
+                            <option value="Grocery">Grocery</option>
+                        </select>
                     </div>
 
-                    <div class="col-md-4">               
-                            <h5 class="text-uppercase text-white mb-4">Input Postcode</h5>
-                            <input type="text" name="postcode" placeholder="Postcode" style="height:40px;width:300px" />                        
+                    <div class="col-md-4">
+                        <h5 class="text-uppercase text-white mb-4">Input Postcode</h5>
+                        <input type="text" name="postcode" placeholder="Input Postcode" style="height:40px;width:300px" />
                     </div>
 
                     <div class="col-md-4 col-12 text-center">
@@ -45,7 +45,7 @@
                         <input type="submit" value="Search" class="btn btn-bg-primary font-secondary text-uppercase" />
                     </div>
                 </form>
-
+                
             </div>
         </div>
     </div>
@@ -82,19 +82,19 @@
 
                                     @if (item.category.Trim().ToLower().Equals("wholesale"))
                                     {
-                                        <img src="~/images/organic_wholesale.jpg" />
+                                        <img src="~/images/category_wholesale.jpg" />
                                     }
                                     else if (item.category.Trim().ToLower().Equals("cafe"))
                                     {
-                                        <img src="~/images/organic_cafe.jpg" />
+                                        <img src="~/images/category_cafe.jpg" />
                                     }
                                     else if (item.category.Trim().ToLower().Equals("meat"))
                                     {
-                                        <img src="~/images/organic_meat.jpg" />
+                                        <img src="~/images/category_meat.jpg" />
                                     }
                                     else if (item.category.Trim().ToLower().Equals("vegetables"))
                                     {
-                                        <img src="~/images/organic_veggies.jpg" />
+                                        <img src="~/images/category_veggies.jpg" />
                                     }
                                     else
                                     {
