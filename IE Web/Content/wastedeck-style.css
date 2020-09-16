@@ -412,6 +412,34 @@ a:hover, a:focus {
 
 /*Composting*/
 
+.container .composting-block{
+    padding: 10px 0 !important;
+}
+
+.composting-block .site-section-heading{
+    margin-bottom:15px !important;
+    padding-bottom:10px;
+}
+
+.composting-block .site-section-heading::before{
+    height:3px;
+}
+
+.composting-block ul{
+    padding:0 0 0 15px;
+}
+
+.compost-material{
+    margin-bottom:5px;
+}
+
+.dropdown.arrow-top{
+    width:228%;
+}
+
+.site-navbar .site-navigation .site-menu .has-children .dropdown.arrow-top::before {
+    left: 18%;
+}
 /*Composting*/
 /*Media Queries for ipad*/
 @media only screen and (max-width: 1024px) and (min-width: 768px) and (orientation:portrait) {
