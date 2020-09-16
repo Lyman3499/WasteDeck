@@ -249,6 +249,7 @@
     <Content Include="images\kitchen_waste.jpg" />
     <Content Include="images\kumquats-farming.jpg" />
     <Content Include="images\learn_preserve.png" />
+    <Content Include="images\Logo1.ico" />
     <Content Include="images\map_pin.png" />
     <Content Include="images\maturing_process.jpg" />
     <Content Include="images\category_cafe.jpg" />
@@ -268,7 +269,7 @@
     <Content Include="images\pack_lunch.png" />
     <Content Include="images\plastic_bottle.png" />
     <Content Include="images\plastic_bottle_alt.png" />
-    <Content Include="images\plastic_impact.gif" />
+    <Content Include="images\plastic_Impact.jpg" />
     <Content Include="images\plastic_squeeze.png" />
     <Content Include="images\plastic_squeeze_alt.png" />
     <Content Include="images\plastic_wrap.png" />
