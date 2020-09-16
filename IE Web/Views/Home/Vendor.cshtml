@@ -45,7 +45,7 @@
                         <input type="submit" value="Search" class="btn btn-bg-primary font-secondary text-uppercase" />
                     </div>
                 </form>
-                
+
             </div>
         </div>
     </div>
@@ -80,26 +80,76 @@
                                 <!--Different categories use different images-->
                                 <div class="vendor-img-block">
 
-                                    @if (item.category.Trim().ToLower().Equals("wholesale"))
+                                    @switch (item.category.Trim().ToLower())
                                     {
-                                        <img src="~/images/category_wholesale.jpg" />
+                                        case "baby_food":
+                                            <img src="~/images/Category/category_baby_food.jpg" />;
+                                            break;
+                                        case "bakery":
+                                            <img src="~/images/Category/category_bakery.jpg" />;
+                                            break;
+                                        case "bee_products":
+                                            <img src="~/images/Category/category_bee_products.jpg" />;
+                                            break;
+                                        case "berries":
+                                            <img src="~/images/Category/category_berries.jpg" />;
+                                            break;
+                                        case "cafe":
+                                            <img src="~/images/Category/category_cafe.jpg" />;
+                                            break;
+                                        case "dairy":
+                                            <img src="~/images/Category/category_dairy.jpg" />;
+                                            break;
+                                        case "dried_products":
+                                            <img src="~/images/Category/category_dried_products.jpg" />;
+                                            break;
+                                        case "eggs":
+                                            <img src="~/images/Category/category_eggs.jpg" />;
+                                            break;
+                                        case "fruits":
+                                            <img src="~/images/Category/category_fruits.jpg" />;
+                                            break;
+                                        case "grains":
+                                            <img src="~/images/Category/category_grains.jpg" />;
+                                            break;
+                                        case "herbs_tea":
+                                            <img src="~/images/Category/category_herbs_tea.jpg" />;
+                                            break;
+                                        case "meat":
+                                            <img src="~/images/Category/category_meat.jpg" />;
+                                            break;
+                                        case "nuts":
+                                            <img src="~/images/Category/category_nuts.jpg" />;
+                                            break;
+                                        case "oil":
+                                            <img src="~/images/Category/category_oil.jpg" />;
+                                            break;
+                                        case "seafood":
+                                            <img src="~/images/Category/category_seafood.jpg" />;
+                                            break;
+                                        case "sweets":
+                                            <img src="~/images/Category/category_sweets.jpg" />;
+                                            break;
+                                        case "vegetables":
+                                            <img src="~/images/Category/category_vegetables.jpg" />;
+                                            break;
+                                        case "vinegar":
+                                            <img src="~/images/Category/category_vinegar.jpg" />;
+                                            break;
+                                        case "wine":
+                                            <img src="~/images/Category/category_wine.jpg" />;
+                                            break;
+                                        case "wholesale":
+                                            <img src="~/images/Category/category_wholesale.jpg" />;
+                                            break;
+                                        default:
+                                            <img src="~/images/Category/category_wholesale.jpg" />;
+                                            break;
+
                                     }
-                                    else if (item.category.Trim().ToLower().Equals("cafe"))
-                                    {
-                                        <img src="~/images/category_cafe.jpg" />
-                                    }
-                                    else if (item.category.Trim().ToLower().Equals("meat"))
-                                    {
-                                        <img src="~/images/category_meat.jpg" />
-                                    }
-                                    else if (item.category.Trim().ToLower().Equals("vegetables"))
-                                    {
-                                        <img src="~/images/category_veggies.jpg" />
-                                    }
-                                    else
-                                    {
-                                        <img src="~/images/organic_syrup.jpg" />
-                                    }
+
+
+
                                 </div>
 
                                 <!--Show vendors' detail information-->
@@ -159,7 +209,7 @@
 
     <!--Script for Map-->
     @section Scripts{
-        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.0/mapbox-gl.js'></script>
+        <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
         <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js'></script>
 
         <script>
@@ -190,7 +240,7 @@
                 }]
             };
             var marker = new mapboxgl.Marker()
-                .setLngLat([12.550343, 55.665957])
+                .setLngLat([146, -38])
                 .addTo(map);
 
             // add markers to map
