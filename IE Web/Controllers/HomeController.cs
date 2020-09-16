@@ -46,8 +46,15 @@ namespace IE_Web.Controllers
 
         public ActionResult Index(String category, String postcode)
         {
-           
-            return Vendor(category, postcode);
+            if (category == null && postcode == null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Vendor", "Home", new { category = category, postcode = postcode });
+            }
+            
         }
 
         public ActionResult About()
@@ -82,7 +89,7 @@ namespace IE_Web.Controllers
 
         public ActionResult Vendor(String category, String postcode)
         {
-            ViewBag.Message = "Vendors";
+            ViewBag.Message = "Vendor";
             if (category == null && postcode == null)
             {
                 return View(db.Vendors.ToList());
