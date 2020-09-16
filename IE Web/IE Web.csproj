@@ -135,28 +135,27 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\VendorsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\SendEmailViewModel.cs" />
     <Compile Include="Models\Vendor.cs">
-      <DependentUpon>Vendors_Model.tt</DependentUpon>
+      <DependentUpon>WebModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Vendors_Model.Context.cs">
+    <Compile Include="Models\WebModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Vendors_Model.Context.tt</DependentUpon>
+      <DependentUpon>WebModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Vendors_Model.cs">
+    <Compile Include="Models\WebModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Vendors_Model.tt</DependentUpon>
+      <DependentUpon>WebModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Vendors_Model.Designer.cs">
+    <Compile Include="Models\WebModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Vendors_Model.edmx</DependentUpon>
+      <DependentUpon>WebModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\EmailSender.cs" />
@@ -223,7 +222,6 @@
     <Content Include="images\food.png" />
     <Content Include="images\garlic-farming.jpg" />
     <Content Include="images\general_waste.png" />
-    <Content Include="images\gif.gif" />
     <Content Include="images\glass.png" />
     <Content Include="images\hero_1.jpg" />
     <Content Include="images\content_2.jpg" />
@@ -231,23 +229,19 @@
     <Content Include="images\kitchen_waste.jpg" />
     <Content Include="images\kumquats-farming.jpg" />
     <Content Include="images\learn_preserve.png" />
-    <Content Include="images\logo.png" />
-    <Content Include="images\Logo1.ico" />
-    <Content Include="images\Logo2.ico" />
     <Content Include="images\map_pin.png" />
     <Content Include="images\maturing_process.jpg" />
-    <Content Include="images\organic_cafe.jpg" />
-    <Content Include="images\organic_meat.jpg" />
+    <Content Include="images\category_cafe.jpg" />
+    <Content Include="images\category_meat.jpg" />
     <Content Include="images\organic_pulses.jpg" />
     <Content Include="images\organic_syrup.jpg" />
-    <Content Include="images\organic_veggies.jpg" />
+    <Content Include="images\category_veggies.jpg" />
     <Content Include="images\organic_vendor.jpg" />
-    <Content Include="images\organic_wholesale.jpg" />
+    <Content Include="images\category_wholesale.jpg" />
     <Content Include="images\packing_banner.jpg" />
     <Content Include="images\img_1.jpg" />
     <Content Include="images\img_5.jpg" />
     <Content Include="images\hero_3.jpg" />
-    <Content Include="images\img_2.jpg" />
     <Content Include="images\img_3.jpg" />
     <Content Include="images\img_4.jpg" />
     <Content Include="images\img_6.jpg" />
@@ -258,6 +252,7 @@
     <Content Include="images\plastic_squeeze_alt.png" />
     <Content Include="images\plastic_wrap.png" />
     <Content Include="images\plastic_wrap_alternatives.png" />
+    <Content Include="images\Poster.jpeg" />
     <Content Include="images\rosemary-farming.jpg" />
     <Content Include="images\rubber-duck-4432703.jpg" />
     <Content Include="images\save_leftovers.png" />
@@ -287,15 +282,15 @@
     <Content Include="js\owl.carousel.min.js" />
     <Content Include="js\popper.min.js" />
     <Content Include="js\slick.min.js" />
-    <Content Include="Models\Vendors_Model.Context.tt">
+    <Content Include="Models\WebModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Vendors_Model.edmx</DependentUpon>
-      <LastGenOutput>Vendors_Model.Context.cs</LastGenOutput>
+      <DependentUpon>WebModel.edmx</DependentUpon>
+      <LastGenOutput>WebModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\Vendors_Model.tt">
+    <Content Include="Models\WebModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Vendors_Model.edmx</DependentUpon>
-      <LastGenOutput>Vendors_Model.cs</LastGenOutput>
+      <DependentUpon>WebModel.edmx</DependentUpon>
+      <LastGenOutput>WebModel.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -312,12 +307,12 @@
     <Content Include="fonts\icomoon\fonts\icomoon.ttf" />
     <Content Include="fonts\icomoon\fonts\icomoon.woff" />
     <Content Include="fonts\icomoon\selection.json" />
-    <EntityDeploy Include="Models\Vendors_Model.edmx">
+    <EntityDeploy Include="Models\WebModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Vendors_Model.Designer.cs</LastGenOutput>
+      <LastGenOutput>WebModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\Vendors_Model.edmx.diagram">
-      <DependentUpon>Vendors_Model.edmx</DependentUpon>
+    <Content Include="Models\WebModel.edmx.diagram">
+      <DependentUpon>WebModel.edmx</DependentUpon>
     </Content>
     <None Include="Properties\PublishProfiles\WasteDeck - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
@@ -441,18 +436,12 @@
     <Content Include="scss\_site-blocks.scss" />
     <Content Include="scss\_site-navbar.scss" />
     <Content Include="Views\Home\Services.cshtml" />
-    <Content Include="Views\Vendors\Create.cshtml" />
-    <Content Include="Views\Vendors\Delete.cshtml" />
-    <Content Include="Views\Vendors\Details.cshtml" />
-    <Content Include="Views\Vendors\Edit.cshtml" />
-    <Content Include="Views\Vendors\Index.cshtml" />
     <Content Include="Views\Home\Plastic_Alternative.cshtml" />
     <Content Include="Views\Home\Vendor.cshtml" />
     <Content Include="Views\Home\Waste_Seperation.cshtml" />
     <Content Include="Views\Home\Plastic_Impact.cshtml" />
     <Content Include="Views\Home\Food_Farming.cshtml" />
     <Content Include="Views\Home\Avoid_Food_Waste.cshtml" />
-    <Content Include="Views\Home\Composting.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

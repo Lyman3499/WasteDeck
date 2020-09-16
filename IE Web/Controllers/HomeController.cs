@@ -40,12 +40,21 @@ namespace IE_Web.Controllers
     }
 
 
-    [BasicAuthenticationAttribute("ma16","5120", BasicRealm = "your-realm")]
+    [BasicAuthenticationAttribute("ma16", "5120", BasicRealm = "your-realm")]
     public class HomeController : Controller
     {
-        public ActionResult Index()
+
+        public ActionResult Index(String category, String postcode)
         {
-            return View();
+            if (category == null && postcode == null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Vendor", "Home", new { category = category, postcode = postcode });
+            }
+            
         }
 
         public ActionResult About()
@@ -76,13 +85,28 @@ namespace IE_Web.Controllers
             return View();
         }
 
-        Vendors_dbEntities1 db = new Vendors_dbEntities1();
+        WasteDeck_dbEntities1 db = new WasteDeck_dbEntities1();
 
-        public ActionResult Vendor(String searching)
+        public ActionResult Vendor(String category, String postcode)
         {
-            ViewBag.Message = "Vendors";
+            ViewBag.Message = "Vendor";
+            if (category == null && postcode == null)
+            {
+                return View(db.Vendors.ToList());
+            }
+            else if (category == null && postcode != null)
+            {
+                return View(db.Vendors.Where(x => x.postcode.ToString().Trim().Contains(postcode)).ToList());
+            }
+            else if (category != null && postcode == null)
+            {
+                return View(db.Vendors.Where(x => x.category.Trim().ToLower().Contains(category)).ToList());
+            }
+            else
+            {
+                return View(db.Vendors.Where(x => x.postcode.ToString().Trim().Contains(postcode) && x.category.Trim().ToLower().Contains(category)).ToList());
+            }
 
-            return View(db.Vendors.Where(x => x.postcode.ToString().Contains(searching) || searching == null).ToList());
         }
 
         public ActionResult Waste_Seperation()
@@ -104,12 +128,7 @@ namespace IE_Web.Controllers
 
             return View();
         }
-        public ActionResult Composting()
-        {
-            ViewBag.Message = "Description Page";
 
-            return View();
-        }
         public ActionResult Contact()
         {
             return View(new Models.SendEmailViewModel());
