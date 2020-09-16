@@ -245,6 +245,7 @@
     <Content Include="images\glass.png" />
     <Content Include="images\hero_1.jpg" />
     <Content Include="images\content_2.jpg" />
+    <Content Include="images\Home-Plastic.jpg" />
     <Content Include="images\image_coming_soon.jpg" />
     <Content Include="images\kitchen_waste.jpg" />
     <Content Include="images\kumquats-farming.jpg" />
@@ -267,6 +268,7 @@
     <Content Include="images\img_4.jpg" />
     <Content Include="images\img_6.jpg" />
     <Content Include="images\pack_lunch.png" />
+    <Content Include="images\Plastic-Impact.gif" />
     <Content Include="images\plastic_bottle.png" />
     <Content Include="images\plastic_bottle_alt.png" />
     <Content Include="images\plastic_Impact.jpg" />
