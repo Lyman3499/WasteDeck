@@ -420,13 +420,19 @@ a:hover, a:focus {
 .avoid-waste-block .content-block{
     background-color:#eee;
     padding:10px;
+    height:260px;
 }
 
+.avoid-foodwaste-tip{
+    margin:0 0 5px 0;
+}
+
+.content-block ul{
+    display:inline-block;
+}
 /*Avoid Food Waste*/
-
 /*Composting*/
-
-.container .composting-block{
+.container .composting-block {
     padding: 10px 0 !important;
 }
 
