@@ -128,6 +128,12 @@ namespace IE_Web.Controllers
 
             return View();
         }
+        public ActionResult References()
+        {
+            ViewBag.Message = "Description Page";
+
+            return View();
+        }
 
         public ActionResult Contact()
         {

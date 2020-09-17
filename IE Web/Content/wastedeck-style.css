@@ -473,7 +473,11 @@ a:hover, a:focus {
 .line-chart-block{
     margin:70px 0 0 0;
 }
+/*Plastic Impact Block*/
 
+/*References*/
+
+/*References*/
 
 /*Media Queries for ipad*/
 @media only screen and (max-width: 1024px) and (min-width: 768px) and (orientation:portrait) {
