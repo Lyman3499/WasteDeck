@@ -520,6 +520,10 @@ a:hover, a:focus {
     .yellow-bin-content, .green-bin-content, .red-bin-content, .purple-bin-content {
         width: 100%;
     }
+
+    .avoid-waste-block .content-block {
+        height: 300px;
+    }
 }
 
 /*Media Queries for ipad pro*/
@@ -530,6 +534,10 @@ a:hover, a:focus {
 
     .solution-block {
         margin: 25px 0 0 0;
+    }
+
+    .avoid-waste-block .content-block {
+        height: 300px;
     }
 }
 
@@ -557,7 +565,13 @@ a:hover, a:focus {
         margin:0;
     }
 
-    
+    .avoid-waste-block .content-block{
+        height: auto;
+    }
+
+    .avoid-waste-block .content-block{
+        height: 350px;
+    }
 }
 
 /*Media Queries for iphone XS Max Landscape*/
@@ -592,6 +606,10 @@ a:hover, a:focus {
     .plastic-gif-block .plastic-impact_img{
         height:auto;
     }
+
+    .avoid-waste-block .content-block {
+        height: 382px;
+    }
 }
 
 /*Media Queries for iphone X Portrait*/
@@ -624,5 +642,15 @@ a:hover, a:focus {
 
     .line-chart-block {
         margin: 0;
+    }
+
+    .avoid-waste-block .content-block {
+        height: auto;
+    }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 740px) and (orientation:portrait) {
+    .avoid-waste-block .content-block {
+        height: auto;
     }
 }
