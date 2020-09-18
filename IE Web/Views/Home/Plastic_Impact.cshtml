@@ -48,27 +48,6 @@
 <!--Data Visualisation script-->
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 <script>
-    new Chart(document.getElementById("pie-chart"), {
-        type: 'doughnut',
-        data: {
-            labels: ["Polyethylene terephthalate PET", "High-density polyethylene  PE-HD", "Polyvinyl chloride  PVC", "Low-density polyethylene PE-LD/LLD", "Polypropylene PP", "PS", "All", "Unknown polymer"],
-            datasets: [{
-                label: "Population (millions)",
-                backgroundColor: ["#9F0162", "#E66100", "#FFB2FD", "#00FCCF", "#FFC33B", "#3399ff", "#6A0213", "#0000cc"],
-                data: [28560.6676068507, 40052.8986257078, 3249.17545418812, 26150.1152092018, 23121.9254486078, 5986.81260606203, 7408.36649738164, 2637.47214059203]
-            }]
-        },
-        options: {
-            responsive: false,
-            title: {
-                display: true,
-                text: 'Distribution of different types of plastic'
-            }
-        }
-    });
-</script>
-
-<script>
     new Chart(document.getElementById("line-chart"), {
         type: 'bar',
         data: {
