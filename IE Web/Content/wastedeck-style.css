@@ -134,9 +134,11 @@ body .img-fluid.pic4 {
     margin: 0 0 2px 0;
     border-bottom: 1px solid #eee;
 }
+
+.site-wrap .container.poster-block {
+    margin: 30px auto;
+}
 /*Bin Seperation*/
-
-
 /*Vendor Page Layout*/
 .vendor-block {
     border-radius: 5px;
