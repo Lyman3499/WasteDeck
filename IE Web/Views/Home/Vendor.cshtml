@@ -278,7 +278,7 @@
         <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
         <script src="https://unpkg.com/es6-promise@4.2.4/dist/es6-promise.auto.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
-
+        <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
         <script>
             var points = [];
             $(".table").each(function () {
@@ -315,7 +315,7 @@
             };
             console.log(datalist);
 
-            
+
             //Position position = Position.fromCoordinates(145.045837, -37.876823);
 
             //MapboxGeocoding client = new MapboxGeocoding.Builder()
@@ -324,8 +324,8 @@
             //    .setProximity(position)
             //    .build();
 
-           // Response < GeocodingResponse > response = client.execute();
-            
+            // Response < GeocodingResponse > response = client.execute();
+
 
             // mapbox accessToken
             mapboxgl.accessToken = 'pk.eyJ1IjoibHltYW4zNDk5IiwiYSI6ImNrMW44ZXJ0ZDA0aHgzanBoZ2djM2gydm0ifQ.lNs4k9R7vEECWf2x7y09Ww';
@@ -357,8 +357,8 @@
             //var marker = new mapboxgl.Marker()
             //    .setLngLat([145.045837, -37.876823])
             //    .setPopup(new mapboxgl.Popup({ offset: 25 })
-             //       .setHTML('<h3>' + data.name + '</h3><p>' + "Vendor Category" + '</p>'))
-             //   .addTo(map);
+            //       .setHTML('<h3>' + data.name + '</h3><p>' + "Vendor Category" + '</p>'))
+            //   .addTo(map);
 
 
             // add markers to map
