@@ -42,6 +42,25 @@ body .site-logo img {
     height: 67%;
 }
 
+.banner{
+    position:relative;
+    margin:0 0 30px 0;
+}
+
+.about-banner-block {
+    background-image: url('../images/about_us_banner.jpg');
+    height:220px;
+    background-position:top center;
+}
+
+.banner-text-block {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align:center;
+}
+
 .page-heading {
     margin: 15px 0;
 }
@@ -61,6 +80,12 @@ body .img-fluid.pic4 {
 }
 
 /*Bin Seperation*/
+.waste-segregation-banner-block {
+    background-image: url('../../images/bin_classification_banner.jpg');
+    height: 220px;
+    background-position: left -237px center;
+}
+
 .segregation-content-block {
     text-align: center;
 }
@@ -140,6 +165,12 @@ body .img-fluid.pic4 {
 }
 /*Bin Seperation*/
 /*Vendor Page Layout*/
+.vendor-banner-block {
+    background-image: url('../../images/vendors.jpg');
+    height: 220px;
+    background-position: center right;
+}
+
 .vendor-block {
     border-radius: 5px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
@@ -179,12 +210,10 @@ address {
 /*Vendor Page Layout*/
 
 /*Plastic Alternative page*/
-.packaging-img-block {
-    background-image: url('../images/packing_banner.jpg');
-    max-width: 100%;
+.plastic-alternatives-banner-block {
+    background-image: url('../../images/plastic_alternatives_banner.jpg');
     height: 220px;
     background-position: center;
-    display: block;
 }
 
 .problem-block h5, .solution-block h5 {
@@ -277,6 +306,13 @@ address {
 }
 /*Plastic Alternative page*/
 /*Food Farming*/
+
+.pot-farming-banner-block {
+    background-image: url('../images/pot_farming_banner.jpg');
+    height: 220px;
+    background-position: right center;
+}
+
 .food-farm-block {
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     border-radius: 10px;
@@ -286,7 +322,7 @@ address {
 
 .food-farm-block img {
     width: 100%;
-    height: 160px;
+    height: 250px;
     display: block;
     border-radius:10px;
 }
@@ -383,6 +419,15 @@ a:hover, a:focus {
     margin: 0;
     font-weight:bold;
 }
+
+.food-farming-banner {
+    background-image: url('../images/food_farming_banner.jpg');
+    max-width: 100%;
+    height: 220px;
+    background-position: center;
+    display: block;
+}
+
 @media only screen and (max-width: 479px) {
     .tab .nav-tabs li {
         width: 100%;
@@ -398,6 +443,11 @@ a:hover, a:focus {
 /*Food Farming*/
 
 /*Avoid Food Waste*/
+.food-waste-banner-block {
+    background-image: url('../../images/food_waste.jpg');
+    height: 220px;
+    background-position: center right;
+}
 
 #shop-content-block, #store-content-block, #leftover-content-block, #lunch-content-block, #egg-content-block, #preserve-content-block {
     display: none;
@@ -434,6 +484,19 @@ a:hover, a:focus {
 }
 /*Avoid Food Waste*/
 /*Composting*/
+
+.composting-banner-block {
+    background-image: url('../images/composting_banners.jpg');
+    height: 220px;
+    background-position: top center;
+}
+
+.banner_text_color{
+    color:#ffffff;
+    text-transform:uppercase;
+    text-align:center;
+}
+
 .container .composting-block {
     padding: 10px 0 !important;
 }
@@ -466,6 +529,12 @@ a:hover, a:focus {
 /*Composting*/
 
 /*Plastic Impact Block*/
+
+.plastic-impact-banner-block {
+    background-image: url('../../images/plastic_impact.jpg');
+    height: 220px;
+    background-position: center;
+}
 
 .plastic-gif-block .plastic-impact_img {
     margin: 20px 0;
