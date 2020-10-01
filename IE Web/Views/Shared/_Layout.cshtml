@@ -58,7 +58,7 @@
 
                                     <ul class="site-menu js-clone-nav d-none d-lg-block">
                                         @{
-                                            //get curent action
+                                            //get curent action for highlight curent page in navigation bar
                                             var action = ViewContext.RouteData.Values["action"].ToString();
                                         }
                                         <li class="@if(action == "Index"){ <text>active</text> }"><a href="~/Home">Home</a></li>
@@ -70,15 +70,15 @@
                                                 <li class="@if(action == "Plastic_Alternative"){ <text>active</text> }"><a href="~/Home/Plastic_Alternative">Plastic Alternatives</a></li>
                                                 <li class="@if(action == "Vendor"){ <text>active</text> }"><a href="~/Home/Vendor">Search Eco-Friendly Vendors</a></li>
                                                 <li class="@if(action == "Waste_Seperation"){ <text>active</text> }"><a href="~/Home/Waste_Seperation">Bin Classification</a></li>
-                                                <li class="@if(action == "Avoid_Food_Waste"){ <text>active</text> }"><a href="~/Home/Avoid_Food_Waste">Avoid Food Waste</a></li>                                               
+                                                <li class="@if(action == "Avoid_Food_Waste"){ <text>active</text> }"><a href="~/Home/Avoid_Food_Waste">Avoid Food Waste</a></li>
                                                 <li class="@if(action == "Composting"){ <text>active</text> }"><a href="~/Home/Composting">Composting</a></li>
                                                 <li class="@if(action == "Pot_Farming"){ <text>active</text> }"><a href="~/Home/Pot_Farming">Pot Farming</a></li>
                                             </ul>
                                         </li>
                                         <li class="@if(action == "Contact"){ <text>active</text> }"><a href="~/Home/Contact">Contact</a></li>
                                         <!--
-    <li><a href="~/Home#start"><span class="d-inline-block bg-primary text-white btn btn-primary">Get Test</span></a></li>
-    -->
+                                        <li><a href="~/Home#start"><span class="d-inline-block bg-primary text-white btn btn-primary">Get Test</span></a></li>
+                                        -->
                                     </ul>
                                 </div>
                             </nav>
@@ -145,8 +145,6 @@
     <script src="~/js/main.js"></script>
     @RenderSection("scripts", required: false)
     <!--jQuery Scripts-->
-
-
     <!--JQuery Script for Bin show and hide on Waste Seperation Page-->
     <script>
 

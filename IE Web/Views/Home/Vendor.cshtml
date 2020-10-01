@@ -3,7 +3,8 @@
     ViewBag.Title = "Vendor";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
 <link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet" />
 <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css" type="text/css" />
 
@@ -182,9 +183,8 @@
                                             <path fill-rule="evenodd" d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.319 1.319 0 0 0-.37.265.301.301 0 0 0-.057.09V14l.002.008a.147.147 0 0 0 .016.033.617.617 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.619.619 0 0 0 .146-.15.148.148 0 0 0 .015-.033L12 14v-.004a.301.301 0 0 0-.057-.09 1.318 1.318 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465-1.281 0-2.462-.172-3.34-.465-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411z" />
                                         </svg>
                                         Address
-
                                     </address>
-                                    <div width="100%" style="word-break:break-all;white-space:pre-wrap ">@item.address</div>
+                                    <div style="word-break:break-all;white-space:pre-wrap ">@item.address</div>
 
                                     <div style="font-weight:bold">
                                         <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-filter-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -203,6 +203,7 @@
 
                                     </div>
                                     <div>@item.phone</div>
+
                                     <div>
                                         @if (item.website.ToLower().Trim().Equals("no details") || item.website == null)
                                         {
@@ -286,31 +287,33 @@
 
     <!--Script for Map-->
     @section Scripts{
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
         <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
         <script src="https://unpkg.com/es6-promise@4.2.4/dist/es6-promise.auto.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
         <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
-        
-        <script>
-            function copy(e) {
-                let transfer = document.createElement('input');
-                document.body.appendChild(transfer);
-                transfer.value = target.value;  // 这里表示想要复制的内容
-                transfer.focus();
-                transfer.select();
-                if (document.execCommand('copy')) {
-                    document.execCommand('copy');
-                }
-                transfer.blur();
-                console.log('复制成功');
-                document.body.removeChild(transfer);
-
-            }
-
-            $('#copyBtn').addEventListener('click', copy);
-        </script>
 
         <script>
+            //Position position = Position.fromCoordinates(145.045837, -37.876823);
+
+            //MapboxGeocoding client = new MapboxGeocoding.Builder()
+            //    .setAccessToken("<your access token here>")
+            //    .setLocation("Empire State Building")
+            //    .setProximity(position)
+            //    .build();
+
+            // Response < GeocodingResponse > response = client.execute();
+
+            // mapbox accessToken
+            mapboxgl.accessToken = 'pk.eyJ1IjoibHltYW4zNDk5IiwiYSI6ImNrMW44ZXJ0ZDA0aHgzanBoZ2djM2gydm0ifQ.lNs4k9R7vEECWf2x7y09Ww';
+            // use mapbox to create a map
+            var map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/streets-v11',
+                center: [144.96, -37.8],
+                zoom: 8
+            });
+
             var points = [];
             $(".table").each(function () {
                 var vendor = $(".name", this).text().trim();
@@ -338,58 +341,19 @@
                         coordinates: [145.045837, -37.876823]
                     },
                     properties: {
-                        title: points[i].name,
-                        description: points[i].category
+                        title: points[i].Vendor,
+                        description: points[i].Category
                     }
                 }
                 datalist.push(data);
             };
             console.log(datalist);
-
-
-            //Position position = Position.fromCoordinates(145.045837, -37.876823);
-
-            //MapboxGeocoding client = new MapboxGeocoding.Builder()
-            //    .setAccessToken("<your access token here>")
-            //    .setLocation("Empire State Building")
-            //    .setProximity(position)
-            //    .build();
-
-            // Response < GeocodingResponse > response = client.execute();
-
-
-            // mapbox accessToken
-            mapboxgl.accessToken = 'pk.eyJ1IjoibHltYW4zNDk5IiwiYSI6ImNrMW44ZXJ0ZDA0aHgzanBoZ2djM2gydm0ifQ.lNs4k9R7vEECWf2x7y09Ww';
-            // use mapbox to create a map
-            var map = new mapboxgl.Map({
-                container: 'map',
-                style: 'mapbox://styles/mapbox/streets-v11',
-                center: [144.96, -37.8],
-                zoom: 8
-            });
-
-            // Set the point(Monash Hotel) detail information
+            
+            // Set geojson tamplate
             var geojson = {
                 type: 'FeatureCollection',
-                features: [{
-                    type: 'Feature',
-                    geometry: {
-                        type: 'Point',
-                        coordinates: [145.045837, -37.876823]
-                    },
-                    properties: {
-                        title: 'Monash Hotel',
-                        description: 'The location of Monash Hotel'
-                    }
-                }]
+                features: datalist
             };
-
-            var marker = new mapboxgl.Marker()
-                .setLngLat([145.045837, -37.876823])
-                .setPopup(new mapboxgl.Popup({ offset: 25 })
-                   .setHTML('<h3>' + data.name + '</h3><p>' + "Vendor Category" + '</p>'))
-               .addTo(map);
-
 
             // add markers to map
             geojson.features.forEach(function (marker) {
@@ -402,7 +366,9 @@
                 new mapboxgl.Marker(el)
                     .setLngLat(marker.geometry.coordinates)
                     .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
-                        .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'))
+                        .setHTML('<h3>' + marker.properties.title + '</h3><p>'
+                            + marker.properties.description + '</p>'
+                        ))
                     .addTo(map);
             });
 
@@ -416,6 +382,7 @@
                 })
             );
 
+            // Add search bar
             map.addControl(
                 new MapboxGeocoder({
                     accessToken: mapboxgl.accessToken,
@@ -424,7 +391,6 @@
                     countries: 'au',
                 })
             );
-
 
         </script>
     }

@@ -1668,8 +1668,8 @@ a {
         visibility: visible;
     }
 
-#marker {
-    background-image: url('../images/map_pin.png');
+.marker {
+    background-image: url('../../images/map_pin.png');
     background-size: cover;
     width: 30px;
     height: 30px;
