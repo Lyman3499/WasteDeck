@@ -116,7 +116,7 @@ namespace IE_Web.Controllers
             return View();
         }
 
-        public ActionResult Food_Farming()
+        public ActionResult Composting()
         {
             ViewBag.Message = "Description Page";
 
@@ -124,6 +124,13 @@ namespace IE_Web.Controllers
         }
 
         public ActionResult Avoid_Food_Waste()
+        {
+            ViewBag.Message = "Description Page";
+
+            return View();
+        }
+
+        public ActionResult Pot_Farming()
         {
             ViewBag.Message = "Description Page";
 
