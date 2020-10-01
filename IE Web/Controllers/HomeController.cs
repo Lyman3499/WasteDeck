@@ -122,6 +122,7 @@ namespace IE_Web.Controllers
 
             return View();
         }
+
         public ActionResult Avoid_Food_Waste()
         {
             ViewBag.Message = "Description Page";
