@@ -349,6 +349,10 @@
     <Content Include="fonts\icomoon\fonts\icomoon.ttf" />
     <Content Include="fonts\icomoon\fonts\icomoon.woff" />
     <Content Include="fonts\icomoon\selection.json" />
+    <None Include="Dockerfile" />
+    <None Include=".dockerignore">
+      <DependentUpon>Dockerfile</DependentUpon>
+    </None>
     <EntityDeploy Include="Models\WebModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>WebModel.Designer.cs</LastGenOutput>
@@ -356,10 +360,6 @@
     <Content Include="Models\WebModel.edmx.diagram">
       <DependentUpon>WebModel.edmx</DependentUpon>
     </Content>
-    <None Include="Dockerfile" />
-    <None Include=".dockerignore">
-      <DependentUpon>Dockerfile</DependentUpon>
-    </None>
     <None Include="Properties\PublishProfiles\WasteDeck - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\WasteDeckIteration3 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
