@@ -1,5 +1,16 @@
 ﻿
 /*Home Page Impact Page*/
+.site-section.first-section {
+    margin-top: 0;
+    padding:50px 0 90px 0;
+}
+.slide-one-item .learn_more {
+    color: #fff;
+    outline: none;
+    text-decoration: none;
+    background: #71bc42;
+    padding: 5px 10px;
+}
 
 body .site-logo img {
     max-width: 100%;
@@ -472,7 +483,7 @@ a:hover, a:focus {
 .avoid-waste-block .content-block{
     background-color:#eee;
     padding:10px;
-    height:260px;
+    height:300px;
 }
 
 .avoid-foodwaste-tip{
@@ -575,6 +586,15 @@ a:hover, a:focus {
     .plastic-gif-block .plastic-impact_img {
         height: auto;
     }
+
+    .avoid-waste-block {
+        width: 70%;
+        margin: 0 auto 30px;
+    }
+
+    .avoid-waste-block .content-block {
+        height: auto;
+    }
 }
 
 /*Media Queries for ipad landascape*/
@@ -589,10 +609,6 @@ a:hover, a:focus {
     .yellow-bin-content, .green-bin-content, .red-bin-content, .purple-bin-content {
         width: 100%;
     }
-
-    .avoid-waste-block .content-block {
-        height: 300px;
-    }
 }
 
 /*Media Queries for ipad pro*/
@@ -603,6 +619,11 @@ a:hover, a:focus {
 
     .solution-block {
         margin: 25px 0 0 0;
+    }
+
+    .avoid-waste-block {
+        width: 100%;
+        margin: 0 auto 30px;
     }
 
     .avoid-waste-block .content-block {
@@ -632,14 +653,6 @@ a:hover, a:focus {
 
     .line-chart-block{
         margin:0;
-    }
-
-    .avoid-waste-block .content-block{
-        height: auto;
-    }
-
-    .avoid-waste-block .content-block{
-        height: 376px;
     }
 }
 
@@ -676,8 +689,13 @@ a:hover, a:focus {
         height:auto;
     }
 
+    .avoid-waste-block{
+        width:80%;
+        margin:0 auto 30px;
+    }
+
     .avoid-waste-block .content-block {
-        height: 382px;
+        height: auto;
     }
 }
 
