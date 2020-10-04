@@ -102,73 +102,7 @@
                                 <!--Different categories use different images-->
                                 <div class="vendor-img-block">
 
-                                    @switch (item.category.Trim().ToLower())
-                                    {
-                                        case "baby_food":
-                                            <img src="~/images/Category/category_baby_food.jpg" />;
-                                            break;
-                                        case "bakery":
-                                            <img src="~/images/Category/category_bakery.jpg" />;
-                                            break;
-                                        case "bee_products":
-                                            <img src="~/images/Category/category_bee_products.jpg" />;
-                                            break;
-                                        case "berries":
-                                            <img src="~/images/Category/category_berries.jpg" />;
-                                            break;
-                                        case "cafe":
-                                            <img src="~/images/Category/category_cafe.jpg" />;
-                                            break;
-                                        case "dairy":
-                                            <img src="~/images/Category/category_dairy.jpg" />;
-                                            break;
-                                        case "dried_products":
-                                            <img src="~/images/Category/category_dried_products.jpg" />;
-                                            break;
-                                        case "eggs":
-                                            <img src="~/images/Category/category_eggs.jpg" />;
-                                            break;
-                                        case "fruits":
-                                            <img src="~/images/Category/category_fruits.jpg" />;
-                                            break;
-                                        case "grains":
-                                            <img src="~/images/Category/category_grains.jpg" />;
-                                            break;
-                                        case "herbs_tea":
-                                            <img src="~/images/Category/category_herbs_tea.jpg" />;
-                                            break;
-                                        case "meat":
-                                            <img src="~/images/Category/category_meat.jpg" />;
-                                            break;
-                                        case "nuts":
-                                            <img src="~/images/Category/category_nuts.jpg" />;
-                                            break;
-                                        case "oil":
-                                            <img src="~/images/Category/category_oil.jpg" />;
-                                            break;
-                                        case "seafood":
-                                            <img src="~/images/Category/category_seafood.jpg" />;
-                                            break;
-                                        case "sweets":
-                                            <img src="~/images/Category/category_sweets.jpg" />;
-                                            break;
-                                        case "vegetables":
-                                            <img src="~/images/Category/category_vegetables.jpg" />;
-                                            break;
-                                        case "vinegar":
-                                            <img src="~/images/Category/category_vinegar.jpg" />;
-                                            break;
-                                        case "wine":
-                                            <img src="~/images/Category/category_wine.jpg" />;
-                                            break;
-                                        case "wholesale":
-                                            <img src="~/images/Category/category_wholesale.jpg" />;
-                                            break;
-                                        default:
-                                            <img src="~/images/Category/category_wholesale.jpg" />;
-                                            break;
 
-                                    }
 
                                 </div>
 
@@ -184,7 +118,7 @@
                                         </svg>
                                         Address
                                     </address>
-                                    <div style="word-break:break-all;white-space:pre-wrap ">@item.address</div>
+                                    <div style="word-wrap:break-word;white-space:pre-wrap ">@item.address</div>
 
                                     <div style="font-weight:bold">
                                         <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-filter-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -347,7 +281,7 @@
                 datalist.push(data);
             };
             console.log(datalist);
-            
+
             // Set geojson tamplate
             var geojson = {
                 type: 'FeatureCollection',
