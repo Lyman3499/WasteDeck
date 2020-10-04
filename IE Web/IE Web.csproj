@@ -258,6 +258,12 @@
     <Content Include="images\hero_1.jpg" />
     <Content Include="images\content_2.jpg" />
     <Content Include="images\Home-Plastic.jpg" />
+    <Content Include="images\homepage_banner1.jpg" />
+    <Content Include="images\homepage_banner2.jpg" />
+    <Content Include="images\homepage_banner3.jpg" />
+    <Content Include="images\homepage_banner4.jpg" />
+    <Content Include="images\homepage_banner5.jpg" />
+    <Content Include="images\homepage_banner6.jpg" />
     <Content Include="images\image_coming_soon.jpg" />
     <Content Include="images\kitchen_waste.jpg" />
     <Content Include="images\kumquats-farming.jpg" />
