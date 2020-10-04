@@ -317,6 +317,13 @@ address {
 }
 /*Plastic Alternative page*/
 /*Food Farming*/
+.pot-farming-block ul{
+    padding: 0 0 0 15px;
+}
+
+.list-title {
+    margin: 0 0 4px 0;
+}
 
 .pot-farming-banner-block {
     background-image: url('../images/pot_farming_banner.jpg');
@@ -460,6 +467,10 @@ a:hover, a:focus {
     background-position: center right;
 }
 
+.food-waste-top-block ul{
+    padding:0 0 0 15px;
+}
+
 #shop-content-block, #store-content-block, #leftover-content-block, #lunch-content-block, #egg-content-block, #preserve-content-block {
     display: none;
 }
@@ -495,6 +506,9 @@ a:hover, a:focus {
 }
 /*Avoid Food Waste*/
 /*Composting*/
+.composting-top-block ul{
+    padding:0 0 0 15px;
+}
 
 .composting-banner-block {
     background-image: url('../images/composting_banners.jpg');
