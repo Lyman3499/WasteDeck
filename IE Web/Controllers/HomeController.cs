@@ -85,7 +85,7 @@ namespace IE_Web.Controllers
             return View();
         }
 
-        readonly WasteDeck3Entities1 db = new WasteDeck3Entities1();
+        WasteDeckdatabaseEntities db = new WasteDeckdatabaseEntities();
 
         public ActionResult Vendor(String category, String postcode)
         {
