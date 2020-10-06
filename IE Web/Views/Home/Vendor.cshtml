@@ -82,15 +82,15 @@
         <div class="row">
             <div class="col-sm-12 col-md-4 col-12">
                 <div style="height:500px;overflow-y:auto;overflow-x:hidden">
-
+                    <h2 class="text-center text-bold">Vendor List</h2>
 
                     @if (Model.Count() == 0)
                     {
                         <!--Set the search to no results-->
                         <div>
-                            <h3 colspan="3" class="text-center">
-                                No Match Any Vendors
-                            </h3>
+                            <h4 colspan="3" class="text-center" style="color:#FF0000">
+                                No matching vendors found
+                            </h4>
                         </div>
                     }
                     else
@@ -108,7 +108,7 @@
 
                                 <!--Show vendors' detail information-->
                                 <div class="vendor-detail-block">
-                                    <h4 classname="vendorname">
+                                    <h4 classname="vendorname" style="background-color:#71bc42; vertical-align:middle; line-height:50px;height:50px">
                                         @item.Name
                                     </h4>
 
@@ -247,6 +247,25 @@
                 zoom: 8
             });
 
+             function codeAddress() {
+                geocoder.geocode({
+                    componentRestrictions: {
+                        country: 'AU',
+                        postalCode: '3000'
+                    }
+                }, function (results, status) {
+                    if (status == 'OK') {
+                        map.setCenter(results[0].geometry.location);
+                        var marker = new google.maps.Marker({
+                            map: map,
+                            position: results[0].geometry.location
+                        });
+                    } else {
+                        window.alert('Geocode was not successful for the following reason: ' + status);
+                    }
+                });
+            }
+
             var points = [];
             $(".table").each(function () {
                 var vendor = $(".name", this).text().trim();
@@ -259,14 +278,17 @@
                     "Address": address,
                     "Category": category,
                     "Website": website,
-                    "Phone": phone
+                    "Phone": phone,
+                    "Coordinates":codeAddress(address)
                 }
                 points.push(point);
             });
-            console.log(points);
-
+            console.log(points);       
+            
             var datalist = [];
             for (i = 0; i < points.length; i++) {
+                
+
                 var data = {
                     type: 'Feature',
                     geometry: {
