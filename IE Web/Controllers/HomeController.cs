@@ -86,7 +86,6 @@ namespace IE_Web.Controllers
         }
 
         WasteDeckdatabaseEntities db = new WasteDeckdatabaseEntities();
-
         public ActionResult Vendor(String category, String postcode)
         {
             ViewBag.Message = "Vendor";
