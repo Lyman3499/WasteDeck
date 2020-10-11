@@ -330,6 +330,7 @@
     <Content Include="js\owl.carousel.min.js" />
     <Content Include="js\popper.min.js" />
     <Content Include="js\slick.min.js" />
+    <Content Include="js\turf.min.js" />
     <Content Include="Models\VendorWebModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>VendorWebModel.edmx</DependentUpon>
@@ -501,6 +502,8 @@
     <Content Include="Views\Home\Avoid_Food_Waste.cshtml" />
     <Content Include="Views\Home\References.cshtml" />
     <Content Include="Views\Home\Pot_Farming.cshtml" />
+    <Content Include="Views\Home\Recycle_Center.cshtml" />
+    <Content Include="Views\Home\a.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

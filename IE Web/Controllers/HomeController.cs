@@ -85,6 +85,20 @@ namespace IE_Web.Controllers
             return View();
         }
 
+        public ActionResult Recycle_Center()
+        {
+            ViewBag.Message = "Description Page";
+
+            return View();
+        }
+
+        public ActionResult a()
+        {
+            ViewBag.Message = "Description Page";
+
+            return View();
+        }
+
         WasteDeckdatabaseEntities db = new WasteDeckdatabaseEntities();
         public ActionResult Vendor(String category, String postcode)
         {

@@ -173,7 +173,7 @@
         </div>
     </div>
 
-    <table class="table" style="display:none">
+    <table style="display:none">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Name)
@@ -193,31 +193,43 @@
             <th>
                 @Html.DisplayNameFor(model => model.phone)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Longitude)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.latitude)
+            </th>
             <th></th>
         </tr>
 
         @foreach (var item in Model)
         {
-            <tr class="table">
-                <td class="name">
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
-                <td class="address">
-                    @Html.DisplayFor(modelItem => item.address)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.postcode)
-                </td>
-                <td class="category">
-                    @Html.DisplayFor(modelItem => item.category)
-                </td>
-                <td class="website">
-                    @Html.DisplayFor(modelItem => item.website)
-                </td>
-                <td class="phone">
-                    @Html.DisplayFor(modelItem => item.phone)
-                </td>
-            </tr>
+    <tr class="table">
+        <td class="name">
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td class="address">
+            @Html.DisplayFor(modelItem => item.address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.postcode)
+        </td>
+        <td class="category">
+            @Html.DisplayFor(modelItem => item.category)
+        </td>
+        <td class="website">
+            @Html.DisplayFor(modelItem => item.website)
+        </td>
+        <td class="phone">
+            @Html.DisplayFor(modelItem => item.phone)
+        </td>
+        <td class="Longitude">
+            @Html.DisplayFor(modelItem => item.Longitude)
+        </td>
+        <td class="latitude">
+            @Html.DisplayFor(modelItem => item.latitude)
+        </td>
+    </tr>
         }
     </table>
 
@@ -253,13 +265,6 @@
                 zoom: 8
             });
 
-            var geocoder = new MapboxGeocoder({
-                accessToken: mapboxgl.accessToken,
-                marker: {
-                    color: 'orange'
-                },
-                mapboxgl: mapboxgl
-            });
 
             var points = [];
             $(".table").each(function () {
@@ -268,19 +273,19 @@
                 var category = $(".category", this).text().trim();
                 var phone = $(".phone", this).text().trim();
                 var website = $(".website", this).text().trim();
+                var longitude = $(".Longitude", this).text().trim();
+                var latitude = $(".latitude", this).text().trim();
                 var point = {
                     "Vendor": vendor,
                     "Address": address,
                     "Category": category,
                     "Website": website,
-                    "Phone": phone
+                    "Phone": phone,
+                    "Longitude": longitude,
+                    "Latitude": latitude
                 }
                 points.push(point);
             });
-            console.log(points);
-
-
-
 
             var datalist = [];
             for (i = 0; i < points.length; i++) {
@@ -290,7 +295,7 @@
                     type: 'Feature',
                     geometry: {
                         type: 'Point',
-                        coordinates: [145.045837, -37.876823]
+                        coordinates: [points[i].Longitude, points[i].Latitude]
                     },
                     properties: {
                         title: points[i].Vendor,
@@ -299,7 +304,6 @@
                 }
                 datalist.push(data);
             };
-            console.log(datalist);
 
             // Set geojson tamplate
             var geojson = {
@@ -317,8 +321,8 @@
                 // make a marker for each feature and add to the map, and set the popup
                 new mapboxgl.Marker(el)
                     .setLngLat(marker.geometry.coordinates)
-                    .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
-                        .setHTML('<h3>' + marker.properties.title + '</h3><p>'
+                    .setPopup(new mapboxgl.Popup({ offset: 35 }) // add popups
+                        .setHTML('<h4>' + marker.properties.title + '</h4><p>'
                             + marker.properties.description + '</p>'
                         ))
                     .addTo(map);
