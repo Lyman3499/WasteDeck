@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css" type="text/css" />
 <link href='https://api.tiles.mapbox.com/mapbox.js/v3.3.1/mapbox.css' rel='stylesheet' />
 
+
 <!--Search Vendors Banner Block-->
 <div class="banner">
     <div class="vendor-banner-block"></div>
@@ -204,32 +205,32 @@
 
         @foreach (var item in Model)
         {
-    <tr class="table">
-        <td class="name">
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td class="address">
-            @Html.DisplayFor(modelItem => item.address)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.postcode)
-        </td>
-        <td class="category">
-            @Html.DisplayFor(modelItem => item.category)
-        </td>
-        <td class="website">
-            @Html.DisplayFor(modelItem => item.website)
-        </td>
-        <td class="phone">
-            @Html.DisplayFor(modelItem => item.phone)
-        </td>
-        <td class="Longitude">
-            @Html.DisplayFor(modelItem => item.Longitude)
-        </td>
-        <td class="latitude">
-            @Html.DisplayFor(modelItem => item.latitude)
-        </td>
-    </tr>
+            <tr class="table">
+                <td class="name">
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td class="address">
+                    @Html.DisplayFor(modelItem => item.address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.postcode)
+                </td>
+                <td class="category">
+                    @Html.DisplayFor(modelItem => item.category)
+                </td>
+                <td class="website">
+                    @Html.DisplayFor(modelItem => item.website)
+                </td>
+                <td class="phone">
+                    @Html.DisplayFor(modelItem => item.phone)
+                </td>
+                <td class="Longitude">
+                    @Html.DisplayFor(modelItem => item.Longitude)
+                </td>
+                <td class="latitude">
+                    @Html.DisplayFor(modelItem => item.latitude)
+                </td>
+            </tr>
         }
     </table>
 
@@ -242,6 +243,9 @@
         <!-- Geocoder plugin -->
         <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
         <script src='https://api.tiles.mapbox.com/mapbox.js/v3.3.1/mapbox.js'></script>
+
+        <!-- Turf.js plugin -->
+        <script src="~/js/turf.min.js"></script>
 
         <script>
             //Position position = Position.fromCoordinates(145.045837, -37.876823);
@@ -265,7 +269,7 @@
                 zoom: 8
             });
 
-
+            //Get all the vendors information shown and put it into an Array for easy invocation
             var points = [];
             $(".table").each(function () {
                 var vendor = $(".name", this).text().trim();
@@ -287,6 +291,7 @@
                 points.push(point);
             });
 
+            //Collate vendor's data into a specified format which is required by MapBox
             var datalist = [];
             for (i = 0; i < points.length; i++) {
 
@@ -299,7 +304,7 @@
                     },
                     properties: {
                         title: points[i].Vendor,
-                        description: points[i].Category
+                        Address: points[i].Address
                     }
                 }
                 datalist.push(data);
@@ -323,30 +328,61 @@
                     .setLngLat(marker.geometry.coordinates)
                     .setPopup(new mapboxgl.Popup({ offset: 35 }) // add popups
                         .setHTML('<h4>' + marker.properties.title + '</h4><p>'
-                            + marker.properties.description + '</p>'
+                            + marker.properties.Address + '</p>'
+                            //+ marker.properties.Category + '</p>'
                         ))
                     .addTo(map);
             });
 
-            // Add geolocate control to the map.
+            // Add geolocate control to the map for marking location of user
             map.addControl(
                 new mapboxgl.GeolocateControl({
                     positionOptions: {
                         enableHighAccuracy: true
                     },
                     trackUserLocation: true
-                })
+                }),
+                'top-right'
             );
 
-            // Add search bar
-            map.addControl(
-                new MapboxGeocoder({
-                    accessToken: mapboxgl.accessToken,
-                    placeholder: 'Enter address',
-                    mapboxgl: mapboxgl,
-                    countries: 'au',
-                })
-            );
+            //Add the geocoder control
+            var geocoder = new MapboxGeocoder({
+                accessToken: mapboxgl.accessToken, // Set the access token
+                placeholder: 'Enter address',
+                mapboxgl: mapboxgl, // Set the mapbox-gl instance
+                marker: false, // Not use the geocoder's default marker style
+                countries: 'au' // Set the bounding box coordinates
+            });
+
+            map.addControl(geocoder, 'top-left');
+
+            // Listen for a geocoder resultListen for a geocoder result
+            geocoder.on('result', function (ev) {
+                var searchResult = ev.result.geometry;
+
+                //Find distance from all vendors' location
+                var options = { units: 'miles' };
+                stores.features.forEach(function (store) {
+                    Object.defineProperty(store.properties, 'distance', {
+                        value: turf.distance(searchResult, store.geometry, options),
+                        writable: true,
+                        enumerable: true,
+                        configurable: true
+                    });
+                });
+
+            });
+
+            // Sort Vendor list by distance
+            stores.features.sort(function (a, b) {
+                if (a.properties.distance > b.properties.distance) {
+                    return 1;
+                }
+                if (a.properties.distance < b.properties.distance) {
+                    return -1;
+                }
+                return 0; // a must be equal to b
+            });
 
         </script>
     }
