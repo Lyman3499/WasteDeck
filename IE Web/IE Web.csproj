@@ -299,6 +299,7 @@
     <Content Include="images\Poster.jpeg" />
     <Content Include="images\pot-farm-slider.jpg" />
     <Content Include="images\pot_farming_banner.jpg" />
+    <Content Include="images\quiz_banner.jpg" />
     <Content Include="images\rosemary-farming.jpg" />
     <Content Include="images\rosemary_farming.jpg" />
     <Content Include="images\rubber-duck-4432703.jpg" />
@@ -309,6 +310,14 @@
     <Content Include="images\shop_smart.png" />
     <Content Include="images\stop_plastic.jpg" />
     <Content Include="images\store_correctly.png" />
+    <Content Include="images\svg\co2.svg" />
+    <Content Include="images\svg\fishbone.svg" />
+    <Content Include="images\svg\jam.svg" />
+    <Content Include="images\svg\plastic-bag.svg" />
+    <Content Include="images\svg\plastic-bottle.svg" />
+    <Content Include="images\svg\potted-plant.svg" />
+    <Content Include="images\svg\recycling-bin.svg" />
+    <Content Include="images\svg\vendor.svg" />
     <Content Include="images\tomatoes-farming.jpg" />
     <Content Include="images\tomato_farming.jpg" />
     <Content Include="images\topography.png" />
@@ -331,6 +340,7 @@
     <Content Include="js\owl.carousel.min.js" />
     <Content Include="js\popper.min.js" />
     <Content Include="js\slick.min.js" />
+    <Content Include="js\surveyquiz.js" />
     <Content Include="js\turf.min.js" />
     <Content Include="Models\VendorWebModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -505,6 +515,7 @@
     <Content Include="Views\Home\Pot_Farming.cshtml" />
     <Content Include="Views\Home\Recycle_Center.cshtml" />
     <Content Include="Views\Home\a.cshtml" />
+    <Content Include="Views\Home\Quiz.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

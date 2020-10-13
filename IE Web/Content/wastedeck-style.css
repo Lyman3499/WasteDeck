@@ -519,6 +519,8 @@ a:hover, a:focus {
 .content-block ul{
     display:inline-block;
 }
+
+
 /*Avoid Food Waste*/
 /*Composting*/
 .composting-top-block ul{
@@ -604,7 +606,33 @@ a:hover, a:focus {
     color: #2e8b57;
     text-decoration: underline;
 }
+
+.link-content{
+    display:flex;
+    margin: 0 0 8px 0;
+}
+
+.icon-style-block{
+    display: flex;
+    width:35px;
+    align-items:center;
+    text-align:left;
+}
+
+.link-content-block{
+    flex:1;
+    align-self:center;
+    line-height:1.4;
+}
 /*Nav Links*/
+/*Quiz*/
+.quiz-banner-block {
+    background-image: url('../images/quiz_banner.jpg');
+    height: 220px;
+    background-position: center;
+}
+/*Quiz*/
+
 /*Media Queries for ipad*/
 @media only screen and (max-width: 1024px) and (min-width: 768px) and (orientation:portrait) {
     .alternative {
