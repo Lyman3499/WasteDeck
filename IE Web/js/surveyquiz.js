@@ -32,12 +32,12 @@ var json = {
                 {
                     "type": "html",
                     "visibleIf": "{bin_question}='General waste bin'",
-                    "html": "Great Job!"
+                    "html": "<h4 style = 'background-color:#71bc42; padding:8px; color:#ffffff;'>Correct!</h4>"
                 },
                 {
                     "type": "html",
                     "visibleIf": "{bin_question}='Cummingled recycling bin' or {bin_question}='Glass recycling bin' or {bin_question}='Food & garden bin'",
-                    "html": "Some Suggestion"
+                    "html": "<h4 style = 'background-color:#ff0033; padding:8px; color:#ffffff;'>Incorrect answer. Please think again.</h4><b>Recommendation:</b> Please refer to the <a class='quiz_links' target='_blank' href='Waste_Seperation'>bin classification page</a> to find out which waste goes into which bin."
                 }
             ]
         }, {
@@ -58,12 +58,12 @@ var json = {
                 {
                     "type": "html",
                     "visibleIf": "{plastic_alt}='Glass bottle'",
-                    "html": "Great Job!"
+                    "html": "<h4 style = 'background-color:#71bc42; padding:8px; color:#ffffff;'>Right!</h4>"
                 },
                 {
                     "type": "html",
                     "visibleIf": "{plastic_alt}='Plastic bottle' or {plastic_alt}='Stainless steel bottle' or {plastic_alt}='None of the above'",
-                    "html": "Some Suggestion"
+                    "html": "<h4 style = 'background-color:#ff0033; padding:8px; color:#ffffff;'>Incorrect answer. Please think again</h4><b>Recommendation:</b> Please refer to the <a class='quiz_links' target='_blank' href='Plastic_Alternative'>plastic alternative page</a> to find out the different alternatives to plastic food packaging items."
                 }
             ]
         },
@@ -84,12 +84,12 @@ var json = {
                 {
                     "type": "html",
                     "visibleIf": "{pot_farming}='All of the above'",
-                    "html": "Great Job!"
+                    "html": "<h4 style = 'background-color:#71bc42; padding:8px; color:#ffffff;'>Great Job!</h4>"
                 },
                 {
                     "type": "html",
                     "visibleIf": "{pot_farming}='Tomatoes' or {pot_farming}='Garlic' or {pot_farming}='Coriander'",
-                    "html": "Some Suggestion"
+                    "html": "<h4 style = 'background-color:#ff0033; padding:8px; color:#ffffff;'>Incorrect answer. Please think again</h4><b>Recommendation:</b> Please refer to the <a class='quiz_links' target='_blank' href='Pot_Farming'>pot farming page</a> to find out different vegetables you can grow in pots."
                 }
             ]
         },
@@ -98,24 +98,23 @@ var json = {
                 {
                     type: "radiogroup",
                     name: "compost",
-                    title: "What is the alternative to utilize your kitchen waste?",
+                    title: "How can you utilize your kitchen waste?",
                     choices: [
-                        "Avoid purchasing unnecessary food items",
-                        "Composting",
-                        "Pot farming",
+                        "To create compost",
+                        "By using it in pot farming",
                         "None of the above",
                     ],
-                    correctAnswer: "Composting"
+                    correctAnswer: "To create compost"
                 },
                 {
                     "type": "html",
-                    "visibleIf": "{compost}='Composting'",
-                    "html": "Great Job!"
+                    "visibleIf": "{compost}='To create compost'",
+                    "html": "<h4 style = 'background-color:#71bc42; padding:8px; color:#ffffff;'>Right!</h4>"
                 },
                 {
                     "type": "html",
-                    "visibleIf": "{compost}='Avoid purchasing unnecessary food items' or {compost}='Pot farming' or {compost}='None of the above'",
-                    "html": "Some Suggestion"
+                    "visibleIf": "{compost}='By using it in pot farming' or {compost}='None of the above'",
+                    "html": "<h4 style = 'background-color:#ff0033; padding:8px; color:#ffffff;'>Incorrect answer. Please think again</h4><b>Recommendation:</b> Please refer to the <a class='quiz_links' target='_blank' href='Composting'>composting page</a> to find out different kitchen waste that can be used to create compost."
                 }
             ]
         },
@@ -136,12 +135,62 @@ var json = {
                 {
                     "type": "html",
                     "visibleIf": "{food_waste}='All of the above'",
-                    "html": "Great Job!"
+                    "html": "<h4 style = 'background-color:#71bc42; padding:8px; color:#ffffff;'>Great Job!</h4>"
                 },
                 {
                     "type": "html",
                     "visibleIf": "{food_waste}='Store food at correct temperatures' or {food_waste}='Save leftover food' or {food_waste}='Avoid purchasing unnecessary food items'",
-                    "html": "Some Suggestion"
+                    "html": "<h4 style = 'background-color:#ff0033; padding:8px; color:#ffffff;'>Incorrect answer. Please think again</h4><b>Recommendation:</b> Please refer to the <a class='quiz_links' target='_blank' href='Avoid_Food_Waste'>avoid food waste page</a> to find different ways to avoid food wastage."
+                }
+            ]
+        },
+        {
+            questions: [
+                {
+                    type: "radiogroup",
+                    name: "plant_question",
+                    title: "Plants have absorbed almost half of the carbon dioxide that is produced by humans over the last decade?",
+                    choices: [
+                        "True",
+                        "False",
+                    ],
+                    correctAnswer: "False"
+                },
+                {
+                    "type": "html",
+                    "visibleIf": "{plant_question}='False'",
+                    "html": "<h4 style = 'background-color:#71bc42; padding:8px; color:#ffffff;'>Correct!</h4>"
+                },
+                {
+                    "type": "html",
+                    "visibleIf": "{plant_question}='True'",
+                    "html": "<h4 style = 'background-color:#ff0033; padding:8px; color:#ffffff;'>Incorrect answer. Please think again</h4><b>Recommendation:</b> Plants take up about a quarter of the carbon dioxide humans release into the atmosphere over the last decade. Moreover, as the planet's temperature rises more droughts will take place, affecting the amount of water available for plants to grow."
+                }
+            ]
+        },
+        {
+            questions: [
+                {
+                    type: "radiogroup",
+                    name: "carbon_sinks",
+                    title: "Which of the following are carbon sinks?",
+                    choices: [
+                        "Soil and rocks",
+                        "Fossil fuels",
+                        "Forests",
+                        "All of the above",
+                    ],
+                    correctAnswer: "All of the above"
+                },
+                {
+                    "type": "html",
+                    "visibleIf": "{carbon_sinks}='All of the above'",
+                    "html": "<h4 style = 'background-color:#71bc42; padding:8px; color:#ffffff;'>Excellent!</h4>"
+                },
+                {
+                    "type": "html",
+                    "visibleIf": "{carbon_sinks}='Soil and rocks' or {carbon_sinks}='Fossil fuels' or {carbon_sinks}='Forests'",
+                    "html": "<h4 style = 'background-color:#ff0033; padding:8px; color:#ffffff;'>Incorrect answer. Please think again</h4><b>Carbon sinks:</b> They are natural systems that absorb and store atmospheric carbon dioxide. Example: soils and rocks, fossil fuels, forests, and oceans. <br /><b>Carbon sources:</b> They are systems that release carbon dioxide into the atmosphere Example: Cities, Wildfires, and Volcanos. <br /><b>NOTE:</b> Our choices daily affect the amount of carbon dioxide released into the atmosphere which disrupts the balance that exists between natural carbon sinks and sources. This increases our carbon footprint."
                 }
             ]
         }
