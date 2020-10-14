@@ -76,21 +76,33 @@ body .site-logo img {
 }
 
 .site-mobile-menu .site-nav-wrap .link-content {
-    padding: 10px 20px;
+    padding: 10px 20px 10px 40px;
     margin: 0;
 }
 
 .site-mobile-menu .site-nav-wrap .icon-style-block{
-    width:46px;
+    width:26px;
 }
 
 .site-mobile-menu .site-nav-wrap .link-content-block{
     font-size:16px;
 }
 
+.site-mobile-menu .site-nav-wrap .link-content-block a{
+    padding:0;
+}
+
+.site-mobile-menu .site-nav-wrap > li > ul#collapseItem0 a {
+    color: #ffffff;
+}
+
 .site-mobile-menu .site-nav-wrap .link-content-block.active > a{
     color:#71bc42;
     padding:0;
+}
+
+.site-mobile-menu .site-nav-wrap > li > ul#collapseItem0{
+    background-color:#000;
 }
 
 
