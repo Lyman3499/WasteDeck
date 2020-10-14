@@ -109,7 +109,7 @@ namespace IE_Web.Controllers
             }
             else if (category == null && postcode != null)
             {
-                return View(db.Vendors.Where(x => x.postcode.ToString().Trim().Contains(postcode)).ToList());
+                return View(db.Vendors.Where(x => x.postcode.ToString().Trim().Contains(postcode) ||  x.suburb.ToString().Trim().Contains(postcode)).ToList());
             }
             else if (category != null && postcode == null)
             {
@@ -117,7 +117,7 @@ namespace IE_Web.Controllers
             }
             else
             {
-                return View(db.Vendors.Where(x => x.postcode.ToString().Trim().Contains(postcode) && x.category.Trim().ToLower().Contains(category)).ToList());
+                return View(db.Vendors.Where(x => x.postcode.ToString().Trim().Contains(postcode) && (x.category.Trim().ToLower().Contains(category) || x.suburb.ToString().Trim().Contains(postcode))).ToList());
             }
 
         }
