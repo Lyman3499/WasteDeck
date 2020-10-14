@@ -521,7 +521,7 @@
     <Content Include="Views\Home\Pot_Farming.cshtml" />
     <Content Include="Views\Home\Recycle_Center.cshtml" />
     <Content Include="Views\Home\a.cshtml" />
-    <Content Include="Views\Home\Quiz.cshtml" />
+    <Content Include="Views\Home\Test_Your_Knowledge.cshtml" />
     <Content Include="Views\Home\Carbon_Footprint.cshtml" />
   </ItemGroup>
   <ItemGroup>
