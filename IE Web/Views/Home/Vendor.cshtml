@@ -5,6 +5,7 @@
 }
 
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet'>
 <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
 <link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet" />
 <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css" type="text/css" />
@@ -15,7 +16,7 @@
 <div class="banner">
     <div class="vendor-banner-block"></div>
     <div class="banner-text-block">
-        <h1 class="text-uppercase">Search Eco-Friendly Vendors Information</h1>
+        <h1 class="text-uppercase text-bold">Search Eco-Friendly Vendors Information</h1>
     </div>
 </div>
 <!--Search Vendors Banner Block-->
@@ -86,93 +87,102 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 col-md-4 col-12">
-                <div style="height:500px;overflow-y:auto;overflow-x:hidden">
-                    <h2 class="text-center text-bold">Vendor List</h2>
 
-                    @if (Model.Count() == 0)
-                    {
-                        <!--Set the search to no results-->
-                        <div>
-                            <h4 colspan="3" class="text-center" style="color:#FF0000">
-                                No matching vendors found
-                            </h4>
-                        </div>
-                    }
-                    else
-                    {
-                        foreach (var item in Model)
+                <!--Vendor List-->
+                <div>
+                    <div style="height:500px;overflow-y:auto;overflow-x:hidden">
+                        <h2 class="text-center text-bold">Vendor List</h2>
+
+                        @if (Model.Count() == 0)
                         {
-                            <div class="vendor-block">
-
-                                <!--Different categories use different images-->
-                                <div class="vendor-img-block">
-
-
-
-                                </div>
-
-                                <!--Show vendors' detail information-->
-                                <div class="vendor-detail-block">
-                                    <h4 classname="vendorname" style="background-color:#71bc42; vertical-align:middle; line-height:50px;height:50px">
-                                        @item.Name
-                                    </h4>
-
-                                    <address style="font-weight:bold">
-                                        <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-geo-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.319 1.319 0 0 0-.37.265.301.301 0 0 0-.057.09V14l.002.008a.147.147 0 0 0 .016.033.617.617 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.619.619 0 0 0 .146-.15.148.148 0 0 0 .015-.033L12 14v-.004a.301.301 0 0 0-.057-.09 1.318 1.318 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465-1.281 0-2.462-.172-3.34-.465-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411z" />
-                                        </svg>
-                                        Address
-                                    </address>
-                                    <div style="word-wrap:break-word;white-space:pre-wrap ">@item.address</div>
-
-                                    <div style="font-weight:bold">
-                                        <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-filter-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" d="M2 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
-                                        </svg>
-                                        Category
-                                    </div>
-                                    <div>@item.category</div>
-
-                                    <div style="font-weight:bold">
-                                        <svg width="20px" height="20px" style="font-weight:bold" viewBox="0 0 16 16" class="bi bi-telephone-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" d="M2.267.98a1.636 1.636 0 0 1 2.448.152l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.47 17.47 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969z" />
-
-                                        </svg>
-                                        Phone
-
-                                    </div>
-                                    <div>@item.phone</div>
-
-                                    <div>
-                                        @if (item.website.ToLower().Trim().Equals("no details") || item.website == null)
-                                        {
-                                            <p></p>
-                                        }
-                                        else
-                                        {
-                                            <div style="font-weight:bold">
-                                                <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-globe" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4H2.255a7.025 7.025 0 0 1 3.072-2.472 6.7 6.7 0 0 0-.597.933c-.247.464-.462.98-.64 1.539zm-.582 3.5h-2.49c.062-.89.291-1.733.656-2.5H3.82a13.652 13.652 0 0 0-.312 2.5zM4.847 5H7.5v2.5H4.51A12.5 12.5 0 0 1 4.846 5zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5H7.5V11H4.847a12.5 12.5 0 0 1-.338-2.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12H7.5v2.923c-.67-.204-1.335-.82-1.887-1.855A7.97 7.97 0 0 1 5.145 12zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11H1.674a6.958 6.958 0 0 1-.656-2.5h2.49c.03.877.138 1.718.312 2.5zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12h2.355a7.967 7.967 0 0 1-.468 1.068c-.552 1.035-1.218 1.65-1.887 1.855V12zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5h-2.49A13.65 13.65 0 0 0 12.18 5h2.146c.365.767.594 1.61.656 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4H8.5V1.077c.67.204 1.335.82 1.887 1.855.173.324.33.682.468 1.068z" />
-                                                </svg>
-                                                Website
-                                            </div>
-
-                                            <a href="https://@item.website" target="_blank">@item.website.Trim()</a>
-                                        }
-
-                                    </div>
-                                </div>
+                            <!--Set the search to no results-->
+                            <div>
+                                <h4 colspan="3" class="text-center" style="color:#FF0000">
+                                    No matching vendors found
+                                </h4>
                             </div>
                         }
-                    }
+                        else
+                        {
+                            foreach (var item in Model)
+                            {
+                                <div class="vendor-block">
+
+                                    <div id='listings' class='listings'></div>
+
+
+                                    <!--Show vendors' detail information
+                                        <div class="vendor-detail-block">
+                                            <h4 classname="vendorname" style="background-color:#71bc42; vertical-align:middle; line-height:50px;height:50px">
+                                                @item.Name
+                                            </h4>
+
+                                            <address style="font-weight:bold">
+                                                <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-geo-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.319 1.319 0 0 0-.37.265.301.301 0 0 0-.057.09V14l.002.008a.147.147 0 0 0 .016.033.617.617 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.619.619 0 0 0 .146-.15.148.148 0 0 0 .015-.033L12 14v-.004a.301.301 0 0 0-.057-.09 1.318 1.318 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465-1.281 0-2.462-.172-3.34-.465-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411z" />
+                                                </svg>
+                                                Address
+                                            </address>
+                                            <div style="word-wrap:break-word;white-space:pre-wrap ">@item.address</div>
+
+                                            <div style="font-weight:bold">
+                                                <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-filter-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" d="M2 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
+                                                </svg>
+                                                Category
+                                            </div>
+                                            <div>@item.category</div>
+
+                                            <div style="font-weight:bold">
+                                                <svg width="20px" height="20px" style="font-weight:bold" viewBox="0 0 16 16" class="bi bi-telephone-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" d="M2.267.98a1.636 1.636 0 0 1 2.448.152l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.47 17.47 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969z" />
+
+                                                </svg>
+                                                Phone
+
+                                            </div>
+                                            <div>@item.phone</div>
+
+                                            <div>
+                                                @if (item.website.ToLower().Trim().Equals("no details") || item.website == null)
+                                                {
+                                                    <p></p>
+                                                }
+                                                else
+                                                {
+                                                    <div style="font-weight:bold">
+                                                        <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-globe" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4H2.255a7.025 7.025 0 0 1 3.072-2.472 6.7 6.7 0 0 0-.597.933c-.247.464-.462.98-.64 1.539zm-.582 3.5h-2.49c.062-.89.291-1.733.656-2.5H3.82a13.652 13.652 0 0 0-.312 2.5zM4.847 5H7.5v2.5H4.51A12.5 12.5 0 0 1 4.846 5zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5H7.5V11H4.847a12.5 12.5 0 0 1-.338-2.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12H7.5v2.923c-.67-.204-1.335-.82-1.887-1.855A7.97 7.97 0 0 1 5.145 12zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11H1.674a6.958 6.958 0 0 1-.656-2.5h2.49c.03.877.138 1.718.312 2.5zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12h2.355a7.967 7.967 0 0 1-.468 1.068c-.552 1.035-1.218 1.65-1.887 1.855V12zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5h-2.49A13.65 13.65 0 0 0 12.18 5h2.146c.365.767.594 1.61.656 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4H8.5V1.077c.67.204 1.335.82 1.887 1.855.173.324.33.682.468 1.068z" />
+                                                        </svg>
+                                                        Website
+                                                    </div>
+
+                                                    <a href="https://@item.website" target="_blank">@item.website.Trim()</a>
+                                                }
+
+                                                        </div>
+                                    </div>
+                                    -->
+                                </div>
+                            }
+                        }
+                    </div>
                 </div>
             </div>
+
             <br /><br />
             <!--Map-->
-            <div id="map" class="col-sm-12 col-md-8 col-12" style="height:500px;width:100%"></div>
+            <div id="map" class="map col-sm-12 col-md-8 col-12" style="height:500px;width:100%"></div>
 
         </div>
     </div>
+
+    <br /><br />
+
+    <div class='sidebar col-lg-4 col-12'>
+
+    </div>
+
 
     <table style="display:none">
         <tr>
@@ -243,21 +253,11 @@
         <!-- Geocoder plugin -->
         <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
         <script src='https://api.tiles.mapbox.com/mapbox.js/v3.3.1/mapbox.js'></script>
-
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
         <!-- Turf.js plugin -->
         <script src="~/js/turf.min.js"></script>
 
         <script>
-            //Position position = Position.fromCoordinates(145.045837, -37.876823);
-
-            //MapboxGeocoding client = new MapboxGeocoding.Builder()
-            //    .setAccessToken("<your access token here>")
-            //    .setLocation("Empire State Building")
-            //    .setProximity(position)
-            //    .build();
-
-            // Response < GeocodingResponse > response = client.execute();
-
             // mapbox accessToken
             mapboxgl.accessToken = 'pk.eyJ1IjoibHltYW4zNDk5IiwiYSI6ImNrMW44ZXJ0ZDA0aHgzanBoZ2djM2gydm0ifQ.lNs4k9R7vEECWf2x7y09Ww';
 
@@ -270,7 +270,7 @@
             });
 
             //Get all the vendors information shown and put it into an Array for easy invocation
-            var points = [];
+            var datalist = [];
             $(".table").each(function () {
                 var vendor = $(".name", this).text().trim();
                 var address = $(".address", this).text().trim();
@@ -279,36 +279,23 @@
                 var website = $(".website", this).text().trim();
                 var longitude = $(".Longitude", this).text().trim();
                 var latitude = $(".latitude", this).text().trim();
-                var point = {
-                    "Vendor": vendor,
-                    "Address": address,
-                    "Category": category,
-                    "Website": website,
-                    "Phone": phone,
-                    "Longitude": longitude,
-                    "Latitude": latitude
-                }
-                points.push(point);
-            });
-
-            //Collate vendor's data into a specified format which is required by MapBox
-            var datalist = [];
-            for (i = 0; i < points.length; i++) {
-
 
                 var data = {
                     type: 'Feature',
                     geometry: {
                         type: 'Point',
-                        coordinates: [points[i].Longitude, points[i].Latitude]
+                        coordinates: [longitude, latitude]
                     },
                     properties: {
-                        title: points[i].Vendor,
-                        Address: points[i].Address
+                        Title: vendor,
+                        Address: address,
+                        Category: category,
+                        Phone: phone,
+                        Website: website
                     }
                 }
                 datalist.push(data);
-            };
+            });
 
             // Set geojson tamplate
             var geojson = {
@@ -316,23 +303,15 @@
                 features: datalist
             };
 
-            // add markers to map
-            geojson.features.forEach(function (marker) {
-
-                // create a HTML element for each feature
-                var el = document.createElement('div');
-                el.className = 'marker';
-
-                // make a marker for each feature and add to the map, and set the popup
-                new mapboxgl.Marker(el)
-                    .setLngLat(marker.geometry.coordinates)
-                    .setPopup(new mapboxgl.Popup({ offset: 35 }) // add popups
-                        .setHTML('<h4>' + marker.properties.title + '</h4><p>'
-                            + marker.properties.Address + '</p>'
-                            //+ marker.properties.Category + '</p>'
-                        ))
-                    .addTo(map);
+            /**
+            * Assign a unique id to each store. You'll use this `id`
+            * later to associate each point on the map with a listing
+            * in the sidebar.
+            */
+            geojson.features.forEach(function (vendor, i) {
+                vendor.properties.id = i;
             });
+
 
             // Add geolocate control to the map for marking location of user
             map.addControl(
@@ -345,44 +324,302 @@
                 'top-right'
             );
 
-            //Add the geocoder control
-            var geocoder = new MapboxGeocoder({
-                accessToken: mapboxgl.accessToken, // Set the access token
-                placeholder: 'Enter address',
-                mapboxgl: mapboxgl, // Set the mapbox-gl instance
-                marker: false, // Not use the geocoder's default marker style
-                countries: 'au' // Set the bounding box coordinates
-            });
+            // This function will use the .remove() function for sorting list
+            if (!('remove' in Element.prototype)) {
+                Element.prototype.remove = function () {
+                    if (this.parentNode) {
+                        this.parentNode.removeChild(this);
+                    }
+                };
+            }
 
-            map.addControl(geocoder, 'top-left');
-
-            // Listen for a geocoder resultListen for a geocoder result
-            geocoder.on('result', function (ev) {
-                var searchResult = ev.result.geometry;
-
-                //Find distance from all vendors' location
-                var options = { units: 'miles' };
-                stores.features.forEach(function (store) {
-                    Object.defineProperty(store.properties, 'distance', {
-                        value: turf.distance(searchResult, store.geometry, options),
-                        writable: true,
-                        enumerable: true,
-                        configurable: true
-                    });
+            // Wait until the map loads to make changes to the map.
+            map.on('load', function (e) {
+                /**
+                 * This is where your '.addLayer()' used to be, instead
+                 * add only the source without styling a layer
+                */
+                map.addSource("places", {
+                    "type": "geojson",
+                    "data": geojson
                 });
 
+                /**
+                 * Create a new MapboxGeocoder instance.
+                */
+                var geocoder = new MapboxGeocoder({
+                    accessToken: mapboxgl.accessToken,
+                    mapboxgl: mapboxgl,
+                    placeholder: 'Search address',
+                    marker: true,
+                    bbox: [140.092785, -39.081490, 153.044536, -32.543365],
+                    countries: 'au'
+                });
+
+
+                /**
+                 * Add all the things to the page:
+                 * - The location listings on the side of the page
+                 * - The search box (MapboxGeocoder) onto the map
+                 * - The markers onto the map
+                */
+                buildLocationList(geojson);
+                map.addControl(geocoder, 'top-left');
+                addMarkers();
+
+
+                /**
+                 * Listen for when a geocoder result is returned. When one is returned:
+                 * - Calculate distances
+                 * - Sort vendors by distance
+                 * - Rebuild the listings
+                 * - Adjust the map camera
+                 * - Open a popup for the closest vendor
+                 * - Highlight the listing for the closest vendor.
+                */
+                geocoder.on('result', function (ev) {
+
+                    /* Get the coordinate of the search result */
+                    var searchResult = ev.result.geometry;
+
+                    /**
+                     * Calculate distances:
+                     * For each vendor, use turf.disance to calculate the distance
+                     * in miles between the searchResult and the vendor. Assign the
+                     * calculated value to a property called `distance`.
+                    */
+                    var options = { units: 'miles' };
+                    geojson.features.forEach(function (vendor) {
+                        Object.defineProperty(vendor.properties, 'distance', {
+                            value: turf.distance(searchResult, vendor.geometry, options),
+                            writable: true,
+                            enumerable: true,
+                            configurable: true
+                        });
+                    });
+
+                    /**
+                     * Sort vendors by distance from closest to the `searchResult`
+                     * to furthest.
+                    */
+                    geojson.features.sort(function (a, b) {
+                        if (a.properties.distance > b.properties.distance) {
+                            return 1;
+                        }
+                        if (a.properties.distance < b.properties.distance) {
+                            return -1;
+                        }
+                        return 0; // a must be equal to b
+                    });
+
+                    /**
+                     * Rebuild the listings:
+                     * Remove the existing listings and build the location
+                     * list again using the newly sorted vendors.
+                    */
+                    var listings = document.getElementById('listing');
+                    while (listings.firstChild) {
+                        listings.removeChild(listings.firstChild);
+                    }
+                    buildLocationList(geojson);
+
+                    /* Open a popup for the closest vendor. */
+                    createPopUp(geojson.features[0]);
+
+                    /** Highlight the listing for the closest vendor. */
+                    var activeListing = document.getElementById('listing-' + geojson.features[0].properties.id);
+                    activeListing.classList.add('active');
+
+                    /**
+                     * Adjust the map camera:
+                     * Get a bbox that contains both the geocoder result and
+                     * the closest vendor. Fit the bounds to that bbox.
+                    */
+                    var bbox = getBbox(geojson, 0, searchResult);
+                    map.fitBounds(bbox, {
+                        padding: 100
+                    });
+                });
             });
 
-            // Sort Vendor list by distance
-            stores.features.sort(function (a, b) {
-                if (a.properties.distance > b.properties.distance) {
-                    return 1;
-                }
-                if (a.properties.distance < b.properties.distance) {
-                    return -1;
-                }
-                return 0; // a must be equal to b
-            });
+            /**
+            * Using the coordinates (lng, lat) for
+            * (1) the search result and
+            * (2) the closest vendors
+            * construct a bbox that will contain both points
+            */
+            function getBbox(sortedVendors, vendorIdentifier, searchResult) {
+                var lats = [sortedVendors.features[vendorIdentifier].geometry.coordinates[1], searchResult.coordinates[1]]
+                var lons = [sortedVendors.features[vendorIdentifier].geometry.coordinates[0], searchResult.coordinates[0]]
+                var sortedLons = lons.sort(function (a, b) {
+                    if (a > b) { return 1; }
+                    if (a.distance < b.distance) { return -1; }
+                    return 0;
+                });
+                var sortedLats = lats.sort(function (a, b) {
+                    if (a > b) { return 1; }
+                    if (a.distance < b.distance) { return -1; }
+                    return 0;
+                });
+                return [
+                    [sortedLons[0], sortedLats[0]],
+                    [sortedLons[1], sortedLats[1]]
+                ];
+            }
+
+            /**
+             * Add a marker to the map for every vendor listing.
+            **/
+            function addMarkers() {
+                /* For each feature in the GeoJSON object above: */
+                geojson.features.forEach(function (marker) {
+                    /* Create a div element for the marker. */
+                    var el = document.createElement('div');
+                    /* Assign a unique `id` to the marker. */
+                    el.id = "marker-" + marker.properties.id;
+                    /* Assign the `marker` class to each marker for styling. */
+                    el.className = 'marker';
+
+                    /**
+                     * Create a marker using the div element
+                     * defined above and add it to the map.
+                    **/
+                    new mapboxgl.Marker(el, { offset: [0, -23] })
+                        .setLngLat(marker.geometry.coordinates)
+                        .addTo(map);
+
+                    /**
+                     * Listen to the element and when it is clicked, do three things:
+                     * 1. Fly to the point
+                     * 2. Close all other popups and display popup for clicked vendor
+                     * 3. Highlight listing in sidebar (and remove highlight for all other listings)
+                    **/
+                    el.addEventListener('click', function (e) {
+                        flyToVendor(marker);
+                        createPopUp(marker);
+                        var activeItem = document.getElementsByClassName('active');
+                        e.stopPropagation();
+                        if (activeItem[0]) {
+                            activeItem[0].classList.remove('active');
+                        }
+                        var listing = document.getElementById('listing-' + marker.properties.id);
+                        listing.classList.add('active');
+                    });
+                });
+            }
+
+            /**
+             * Add a listing for each vendor to the sidebar.
+            **/
+            function buildLocationList(data) {
+
+                
+
+                    data.features.forEach(function (vendor, i) {
+                        /**
+                         * Create a shortcut for `vendor.properties`,
+                         * which will be used several times below.
+                        **/
+                        var prop = vendor.properties;
+
+                        /* Add a new listing section to the sidebar. */
+                        var listings = document.getElementById('listings');
+                        var listing = listings.appendChild(document.createElement('div'));
+                        /* Assign a unique `id` to the listing. */
+                        listing.id = "listing-" + prop.id;
+                        /* Assign the `item` class to each listing for styling. */
+                        listing.className = 'item';
+
+                        /* Add the link to the individual listing created above. */
+                        var link = listing.appendChild(document.createElement('a'));
+                        link.href = '#';
+                        link.className = 'title';
+                        link.id = "link-" + prop.id;
+                        link.innerHTML = prop.Title;
+
+                        /* Add details to the individual listing. */
+                        var schemaAddress = listing.appendChild(document.createElement('div'));
+                        var detailsAddress = listing.appendChild(document.createElement('div'));
+                        var schemaPhone = listing.appendChild(document.createElement('div'));
+                        var detailsPhone = listing.appendChild(document.createElement('div'));
+
+                        schemaAddress.style.fontWeight = 'bold';
+                        schemaPhone.style.fontWeight = 'bold';
+
+                        schemaAddress.innerHTML = 'Address: ' + '<br/>';
+                        detailsAddress.innerHTML = prop.Address;
+                        schemaPhone.innerHTML = 'Phone: ' + '<br/>';
+                        detailsPhone.innerHTML = prop.Phone;
+
+                        if (prop.Website != "no details" && prop.Website != null) {
+                            var schemaWeb = listing.appendChild(document.createElement('div'));
+
+                            schemaWeb.style.fontWeight = 'bold';
+                            schemaWeb.innerHTML += 'Website: ' + '<br/>';
+
+                            var web = listing.appendChild(document.createElement('a'));
+                            web.href = 'https://' + prop.Website;
+                            web.target = "_blank"
+                            web.innerHTML += prop.Website;
+                            web.style.color = 'blue';
+                        }
+
+
+                        if (prop.distance) {
+                            var roundedDistance = Math.round(prop.distance * 100) / 100;
+                            details.innerHTML += '<p><strong>' + roundedDistance + ' miles away</strong></p>';
+                        }
+                        console.log(prop.distance);
+
+                        /**
+                         * Listen to the element and when it is clicked, do four things:
+                         * 1. Update the `currentFeature` to the vendor associated with the clicked link
+                         * 2. Fly to the point
+                         * 3. Close all other popups and display popup for clicked vendor
+                         * 4. Highlight listing in sidebar (and remove highlight for all other listings)
+                        **/
+                        link.addEventListener('click', function (e) {
+                            for (var i = 0; i < data.features.length; i++) {
+                                if (this.id === "link-" + data.features[i].properties.id) {
+                                    var clickedListing = data.features[i];
+                                    flyToVendor(clickedListing);
+                                    createPopUp(clickedListing);
+                                }
+                            }
+                            var activeItem = document.getElementsByClassName('active');
+                            if (activeItem[0]) {
+                                activeItem[0].classList.remove('active');
+                            }
+                            this.parentNode.classList.add('active');
+                        });
+                    });
+                
+            }
+
+            /**
+             * Use Mapbox GL JS's `flyTo` to move the camera smoothly
+             * a given center point.
+            **/
+            function flyToVendor(currentFeature) {
+                map.flyTo({
+                    center: currentFeature.geometry.coordinates,
+                    zoom: 13
+                });
+            }
+
+            /**
+             * Create a Mapbox GL JS `Popup`.
+            **/
+            function createPopUp(currentFeature) {
+                var popUps = document.getElementsByClassName('mapboxgl-popup');
+                if (popUps[0]) popUps[0].remove();
+
+                var popup = new mapboxgl.Popup({ closeOnClick: false })
+                    .setLngLat(currentFeature.geometry.coordinates)
+                    .setHTML('<h4>' + currentFeature.properties.Title + '</h4>' +
+                        '<p>' + currentFeature.properties.Address + '</p>')
+                    .addTo(map);
+            }
 
         </script>
     }
