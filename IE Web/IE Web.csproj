@@ -311,13 +311,14 @@
     <Content Include="images\stop_plastic.jpg" />
     <Content Include="images\store_correctly.png" />
     <Content Include="images\svg\co2.svg" />
-    <Content Include="images\svg\fishbone.svg" />
     <Content Include="images\svg\jam.svg" />
+    <Content Include="images\svg\no-plastic.svg" />
     <Content Include="images\svg\plastic-bag.svg" />
     <Content Include="images\svg\plastic-bottle.svg" />
     <Content Include="images\svg\potted-plant.svg" />
     <Content Include="images\svg\recycling-bin.svg" />
     <Content Include="images\svg\vendor.svg" />
+    <Content Include="images\svg\waste.svg" />
     <Content Include="images\tomatoes-farming.jpg" />
     <Content Include="images\tomato_farming.jpg" />
     <Content Include="images\topography.png" />
