@@ -131,6 +131,8 @@ body .site-logo img {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align:center;
+    font-size:40px;
+    font-weight:bold;
 }
 
 .page-heading {
