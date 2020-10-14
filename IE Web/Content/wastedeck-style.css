@@ -1,9 +1,10 @@
 ﻿
 /*Home Page Impact Page*/
+
 .site-blocks-cover h2 {
     font-size: 42px;
-    color:#ffffff;
-    font-weight:bold;
+    color: #ffffff;
+    font-weight: bold;
 }
 
 .site-section.first-section {
@@ -47,11 +48,56 @@ body .site-logo img {
     font-size: 21px;
     margin-bottom: 2rem !important;
 }
-/*Home Page*/
 
+.banner_title{
+    margin: 0 0 30px 0;
+}
+
+.scroll_btn {
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.site-menu .link-content {
+    display: flex;
+    padding:5px 20px;
+    margin:0;
+}
+
+.site-menu .icon-style-block {
+    display: flex;
+    width: 25px;
+    align-items: center;
+    text-align: left;
+}
+
+.site-menu .link-content .link-content-block a:hover {
+    color: #71bc42 !important;
+}
+
+.site-mobile-menu .site-nav-wrap .link-content {
+    padding: 10px 20px;
+    margin: 0;
+}
+
+.site-mobile-menu .site-nav-wrap .icon-style-block{
+    width:46px;
+}
+
+.site-mobile-menu .site-nav-wrap .link-content-block{
+    font-size:16px;
+}
+
+.site-mobile-menu .site-nav-wrap .link-content-block.active > a{
+    color:#71bc42;
+    padding:0;
+}
+
+
+/*Home Page*/
 /*Footer*/
-.site-footer{
-    padding:30px 0 20px 0;
+.site-footer {
+    padding: 30px 0 20px 0;
 }
 
 .copyright-block{
@@ -588,13 +634,27 @@ a:hover, a:focus {
 }
 /*Plastic Impact Block*/
 
-/*References*/
+/*Carbon Footprint*/
 
-/*References*/
+.carbon-footprint-banner-block {
+    background-image: url('../images/carbon_footprint_banner.jpg');
+    height: 220px;
+    background-position: left 25% center;
+}
 
+.tableauPlaceholder {
+    margin: 0 auto 30px;
+}
+
+.graph-block, .graph_desc_block {
+    margin: 30px 0 0 0;
+}
+/*Carbon Footprint*/
+/*References*/
+/*References*/
 /*Nav Links*/
-.nav-links{
-    margin:20px auto;
+.nav-links {
+    margin: 20px auto;
 }
 
 .nav-links a {
@@ -623,6 +683,10 @@ a:hover, a:focus {
     flex:1;
     align-self:center;
     line-height:1.4;
+}
+
+.no_margin{
+    margin:0;
 }
 /*Nav Links*/
 /*Quiz*/
