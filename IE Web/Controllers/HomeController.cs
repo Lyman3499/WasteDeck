@@ -157,7 +157,7 @@ namespace IE_Web.Controllers
             return View();
         }
 
-        public ActionResult Quiz()
+        public ActionResult Test_Your_Knowledge()
         {
             ViewBag.Message = "Description Page";
 
