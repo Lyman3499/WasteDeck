@@ -311,6 +311,7 @@
     <Content Include="images\shop_smart.png" />
     <Content Include="images\stop_plastic.jpg" />
     <Content Include="images\store_correctly.png" />
+    <Content Include="images\svg\answer.svg" />
     <Content Include="images\svg\co2-cloud.svg" />
     <Content Include="images\svg\flower-pot.svg" />
     <Content Include="images\svg\jam.svg" />

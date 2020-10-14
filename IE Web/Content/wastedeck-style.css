@@ -107,6 +107,16 @@ body .site-logo img {
 .copyright-block p{
     margin:0;
 }
+
+.services {
+    color: rgba(255, 255, 255, 0.3);
+    cursor:pointer;
+}
+
+.services:hover{
+    color:#ffffff;
+}
+
 /*Footer*/
 
 .about2-img img {
@@ -131,6 +141,11 @@ body .site-logo img {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align:center;
+}
+
+.banner-text-block h1{
+    font-size: 36px;
+    line-height:1.2;
 }
 
 .page-heading {
@@ -695,8 +710,12 @@ a:hover, a:focus {
     height: 220px;
     background-position: center;
 }
-/*Quiz*/
 
+.quiz_links, .quiz_links:hover {
+    color: #71bc42;
+    text-decoration: underline;
+}
+/*Quiz*/
 /*Media Queries for ipad*/
 @media only screen and (max-width: 1024px) and (min-width: 768px) and (orientation:portrait) {
     .alternative {
