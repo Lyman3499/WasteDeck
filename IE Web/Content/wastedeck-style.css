@@ -92,17 +92,20 @@ body .site-logo img {
     padding:0;
 }
 
-.site-mobile-menu .site-nav-wrap > li > ul#collapseItem0 a {
-    color: #ffffff;
+.site-mobile-menu .site-nav-wrap > li > ul#collapseItem0 {
+    background-color: #000;
 }
 
-.site-mobile-menu .site-nav-wrap .link-content-block.active > a{
-    color:#71bc42;
-    padding:0;
+.site-mobile-menu .site-nav-wrap > li > ul#collapseItem0 li.active a {
+    color: #71bc42 !important;
 }
 
-.site-mobile-menu .site-nav-wrap > li > ul#collapseItem0{
-    background-color:#000;
+.site-mobile-menu .site-nav-wrap ul#collapseItem0 li a{ 
+    color:#ffffff;
+}
+
+.site-mobile-menu .link-content .link-content-block.active a {
+    color: #71bc42 !important;
 }
 
 
