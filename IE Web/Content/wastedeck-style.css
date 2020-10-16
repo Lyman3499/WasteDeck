@@ -562,6 +562,7 @@ a:hover, a:focus {
 
 .food-waste-top-block ul{
     padding:0 0 0 15px;
+    margin:0 30px 0 0;
 }
 
 #shop-content-block, #store-content-block, #leftover-content-block, #lunch-content-block, #egg-content-block, #preserve-content-block {
