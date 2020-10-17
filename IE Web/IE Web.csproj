@@ -214,6 +214,7 @@
     <Content Include="images\apple-touch-icon.png" />
     <Content Include="images\banner5.png" />
     <Content Include="images\bin_classification_banner.jpg" />
+    <Content Include="images\bin_classification_slider.jpg" />
     <Content Include="images\carbon_footprint_banner.jpg" />
     <Content Include="images\carrot-farming.jpg" />
     <Content Include="images\carrot_farming.jpg" />
@@ -291,6 +292,7 @@
     <Content Include="images\pack_lunch.png" />
     <Content Include="images\plastic_alternatives_banner.jpg" />
     <Content Include="images\Plastic-Impact.gif" />
+    <Content Include="images\plastic_alternative_slider.jpg" />
     <Content Include="images\plastic_bottle.png" />
     <Content Include="images\plastic_bottle_alt.png" />
     <Content Include="images\plastic_impact.jpg" />

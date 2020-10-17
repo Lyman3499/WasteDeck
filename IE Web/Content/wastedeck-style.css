@@ -666,12 +666,32 @@ a:hover, a:focus {
 }
 
 .dropdown.arrow-top{
-    width:228%;
+    width:156%;
 }
 
-.site-navbar .site-navigation .site-menu .has-children .dropdown.arrow-top::before {
-    left: 18%;
+ul.site-menu li.has-children ul.dropdown.arrow-top li.has-children a.active{
+    color: #71bc42;
 }
+
+.site-mobile-menu #collapseItem0 li.has-children .arrow-collapse.active, .site-mobile-menu #collapseItem0 li.has-children .arrow-collapse.collapsed {
+    color: #ffffff;
+}
+
+.site-mobile-menu-body .site-nav-wrap li.has-children ul#collapseItem0 li.has-children a.active {
+    color: #71bc42;
+}
+
+.site-navbar .site-navigation .site-menu .has-children .dropdown > li {
+    min-width: 0;
+}
+
+.site-navbar .site-navigation .site-menu .has-children .dropdown > li.has-children > .dropdown, .site-navbar .site-navigation .site-menu .has-children .dropdown > li.has-children > ul{
+    min-width:209px;
+}
+
+    .site-navbar .site-navigation .site-menu .has-children .dropdown.arrow-top::before {
+        left: 18%;
+    }
 
 /*Composting*/
 
