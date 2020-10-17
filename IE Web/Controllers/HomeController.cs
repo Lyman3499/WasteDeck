@@ -85,21 +85,30 @@ namespace IE_Web.Controllers
             return View();
         }
 
-        public ActionResult Recycle_Center()
+        WasteDeckdatabaseEntities2 db = new WasteDeckdatabaseEntities2();
+        public ActionResult Recycle_Center(String type, String postcode)
         {
-            ViewBag.Message = "Description Page";
+            ViewBag.Message = "Recycle Center";
+            if (type == null && postcode == null)
+            {
+                return View(db.RecycleCenters.ToList());
+            }
+            else if (type == null && postcode != null)
+            {
+                return View(db.RecycleCenters.Where(x => x.postcode.ToString().Trim().Contains(postcode)));
+            }
+            else if (type != null && postcode == null)
+            {
+                return View(db.RecycleCenters.Where(x => x.type.Trim().ToLower().Contains(type)).ToList());
+            }
+            else
+            {
+                return View(db.RecycleCenters.Where(x => x.postcode.ToString().Trim().Contains(postcode) && x.type.Trim().ToLower().Contains(type)));
+            }
 
-            return View();
         }
 
-        public ActionResult a()
-        {
-            ViewBag.Message = "Description Page";
 
-            return View();
-        }
-
-        WasteDeckdatabaseEntities db = new WasteDeckdatabaseEntities();
         public ActionResult Vendor(String category, String postcode)
         {
             ViewBag.Message = "Vendor";
@@ -109,7 +118,7 @@ namespace IE_Web.Controllers
             }
             else if (category == null && postcode != null)
             {
-                return View(db.Vendors.Where(x => x.postcode.ToString().Trim().Contains(postcode) ||  x.suburb.ToString().Trim().Contains(postcode)).ToList());
+                return View(db.Vendors.Where(x => x.postcode.ToString().Trim().Contains(postcode)));
             }
             else if (category != null && postcode == null)
             {
@@ -117,7 +126,7 @@ namespace IE_Web.Controllers
             }
             else
             {
-                return View(db.Vendors.Where(x => x.postcode.ToString().Trim().Contains(postcode) && (x.category.Trim().ToLower().Contains(category) || x.suburb.ToString().Trim().Contains(postcode))).ToList());
+                return View(db.Vendors.Where(x => x.postcode.ToString().Trim().Contains(postcode) && x.category.Trim().ToLower().Contains(category)));
             }
 
         }

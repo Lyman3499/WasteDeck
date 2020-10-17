@@ -483,7 +483,7 @@
 
                     /* Add the link to the individual listing created above. */
                     var link = listing.appendChild(document.createElement('a'));
-                    link.href = '#';
+                    link.href = '#map';
                     link.className = 'title';
                     link.id = "link-" + prop.id;
                     link.innerHTML = prop.Title;
@@ -491,14 +491,19 @@
                     /* Add details to the individual listing. */
                     var schemaAddress = listing.appendChild(document.createElement('div'));
                     var detailsAddress = listing.appendChild(document.createElement('div'));
+                    var schemaCategory = listing.appendChild(document.createElement('div'));
+                    var detailsCategory = listing.appendChild(document.createElement('div'));
                     var schemaPhone = listing.appendChild(document.createElement('div'));
                     var detailsPhone = listing.appendChild(document.createElement('div'));
 
                     schemaAddress.style.fontWeight = 'bold';
                     schemaPhone.style.fontWeight = 'bold';
+                    schemaCategory.style.fontWeight = 'bold';
 
                     schemaAddress.innerHTML = 'Address: ' + '<br/>';
                     detailsAddress.innerHTML = prop.Address;
+                    schemaCategory.innerHTML = 'Category: ' + '<br/>';
+                    detailsCategory.innerHTML = prop.Category;
                     schemaPhone.innerHTML = 'Phone: ' + '<br/>';
                     detailsPhone.innerHTML = prop.Phone;
 

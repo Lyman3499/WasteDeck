@@ -37,7 +37,7 @@ var json = {
                 {
                     "type": "html",
                     "visibleIf": "{bin_question}='Cummingled recycling bin' or {bin_question}='Glass recycling bin' or {bin_question}='Food & garden bin'",
-                    "html": "<h4 style = 'background-color:#ff0033; padding:8px; color:#ffffff;'>Incorrect answer. Please think again.</h4><b>Recommendation:</b> Please refer to the <a class='quiz_links' target='_blank' href='Garbage_Classification'>bin classification page</a> to find out which waste goes into which bin."
+                    "html": "<h4 style = 'background-color:#ff0033; padding:8px; color:#ffffff;'>Incorrect answer. Please think again.</h4><b>Recommendation:</b> Please refer to the <a class='quiz_links' target='_blank' href='Waste_Seperation'>Garbage classification page</a> to find out which waste goes into which bin."
                 }
             ]
         }, {
