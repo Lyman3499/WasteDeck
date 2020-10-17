@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<IE_Web.Models.RecycleCenter>
 @{
-    ViewBag.Title = "Vendor";
+    ViewBag.Title = "recycleCenter";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -12,14 +12,14 @@
 <link href='https://api.tiles.mapbox.com/mapbox.js/v3.3.1/mapbox.css' rel='stylesheet' />
 
 
-<!--Search Vendors Banner Block-->
+<!--Search recycleCenters Banner Block-->
 <div class="banner">
-    <div class="vendor-banner-block"></div>
+    <div class="recycleCenter-banner-block"></div>
     <div class="banner-text-block">
-        <h1 class="text-uppercase text-bold" style="font-size:30px;font-weight:bold">Search Eco-Friendly Vendors Information</h1>
+        <h1 class="text-uppercase text-bold" style="font-size:30px;font-weight:bold">Search Recycle Centers</h1>
     </div>
 </div>
-<!--Search Vendors Banner Block-->
+<!--Search recycleCenters Banner Block-->
 
 <body>
     <div class="row">
@@ -35,7 +35,7 @@
 
 
     <!--Search Bar-->
-    @using (Html.BeginForm("Vendor", "Home", FormMethod.Get))
+    @using (Html.BeginForm("Recycle_Center", "Home", FormMethod.Get))
     {
         <div class="py-3 bg-primary" style="margin-bottom:-20px">
             <div class="container">
@@ -44,34 +44,13 @@
                     <form class="search-form col-md-12">
 
                         <div class="col-md-4 col-12">
-                            <h5 class="text-uppercase text-white mb-4" for="offer-types">Select Category</h5>
-                            <select name="category" style="height:40px;width:200px;margin-bottom:30px">
+                            <h5 class="text-uppercase text-white mb-4" for="offer-types">Select Type</h5>
+                            <select name="type" style="height:40px;width:200px;margin-bottom:30px">
                                 <option value="">All</option>
-                                <option value="Baby food">Baby food</option>
-                                <option value="Bakery">Bakery</option>
-                                <option value="Bee-products">Bee products</option>
-                                <option value="Cafe">Cafe</option>
-                                <option value="Canned food">Canned food</option>
-                                <option value="Coffee">Coffee</option>
-                                <option value="Condinments">Condinments</option>
-                                <option value="Dairy">Dairy</option>
-                                <option value="Deli">Deli</option>
-                                <option value="Dry products">Dry products</option>
-                                <option value="Eggs">Eggs</option>
-                                <option value="Fruits">Fruits</option>
-                                <option value="Grains">Grains</option>
-                                <option value="HerbsN`Tea">HerbsN`Tea</option>
-                                <option value="Meat">Meat</option>
-                                <option value="Nuts">Nuts</option>
-                                <option value="Oil">Oil</option>
-                                <option value="asta and Noodles">Pasta and Noodles</option>
-                                <option value="Sauces">Sauces</option>
-                                <option value="Seafood">Seafood</option>
-                                <option value="Sweets">Sweets</option>
-                                <option value="Soy">Soy</option>
-                                <option value="Vegetables">Vegetables</option>
-                                <option value="Vinegar">Vinegar</option>
-                                <option value="Wine">Wine</option>
+                                <option value="Landfill">Landfill</option>
+                                <option value="Multi-Purpose">Multi-Purpose</option>
+                                <option value="Reprocessing">Reprocessing</option>
+                                <option value="Transfer Station">Transfer Station</option>                            
                             </select>
                         </div>
 
@@ -100,23 +79,23 @@
         <div class="row">
             <div class="col-sm-12 col-md-4 col-12">
 
-                <!--Vendor List-->
+                <!--Recycle Center List-->
                 <div>
                     <div style="height:500px;overflow-y:auto;overflow-x:hidden">
-                        <h2 class="text-center text-bold">Vendor List</h2>
+                        <h2 class="text-center text-bold">Recycle Center List</h2>
 
                         @if (Model.Count() == 0)
                         {
                             <!--Set the search to no results-->
                             <div>
                                 <h4 colspan="3" class="text-center" style="color:#FF0000">
-                                    No matching vendors found
+                                    No matching recycle center found
                                 </h4>
                             </div>
                         }
                         else
                         {
-                            <div class="vendor-block">
+                            <div class="recycleCenter-block">
                                 <div id='listings' class='listings'></div>
                             </div>
                         }
@@ -138,7 +117,10 @@
     <table style="display:none">
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Name)
+                @Html.DisplayNameFor(model => model.id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.name)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.address)
@@ -147,16 +129,10 @@
                 @Html.DisplayNameFor(model => model.postcode)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.category)
+                @Html.DisplayNameFor(model => model.type)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.website)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.phone)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Longitude)
+                @Html.DisplayNameFor(model => model.longitude)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.latitude)
@@ -168,7 +144,7 @@
         {
             <tr class="table">
                 <td class="name">
-                    @Html.DisplayFor(modelItem => item.Name)
+                    @Html.DisplayFor(modelItem => item.name)
                 </td>
                 <td class="address">
                     @Html.DisplayFor(modelItem => item.address)
@@ -176,17 +152,11 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.postcode)
                 </td>
-                <td class="category">
-                    @Html.DisplayFor(modelItem => item.category)
-                </td>
-                <td class="website">
-                    @Html.DisplayFor(modelItem => item.website)
-                </td>
-                <td class="phone">
-                    @Html.DisplayFor(modelItem => item.phone)
+                <td class="type">
+                    @Html.DisplayFor(modelItem => item.type)
                 </td>
                 <td class="Longitude">
-                    @Html.DisplayFor(modelItem => item.Longitude)
+                    @Html.DisplayFor(modelItem => item.longitude)
                 </td>
                 <td class="latitude">
                     @Html.DisplayFor(modelItem => item.latitude)
@@ -220,14 +190,12 @@
                 zoom: 8
             });
 
-            //Get all the vendors information shown and put it into an Array for easy invocation
+            //Get all the recycleCenters information shown and put it into an Array for easy invocation
             var datalist = [];
             $(".table").each(function () {
-                var vendor = $(".name", this).text().trim();
+                var recycleCenter = $(".name", this).text().trim();
                 var address = $(".address", this).text().trim();
-                var category = $(".category", this).text().trim();
-                var phone = $(".phone", this).text().trim();
-                var website = $(".website", this).text().trim();
+                var type = $(".type", this).text().trim();
                 var longitude = $(".Longitude", this).text().trim();
                 var latitude = $(".latitude", this).text().trim();
 
@@ -238,11 +206,9 @@
                         coordinates: [longitude, latitude]
                     },
                     properties: {
-                        Title: vendor,
-                        Address: address,
-                        Category: category,
-                        Phone: phone,
-                        Website: website
+                        Title: recycleCenter,
+                        Type: type,
+                        Address: address                       
                     }
                 }
                 datalist.push(data);
@@ -259,8 +225,8 @@
             * later to associate each point on the map with a listing
             * in the sidebar.
             */
-            geojson.features.forEach(function (vendor, i) {
-                vendor.properties.id = i;
+            geojson.features.forEach(function (recycleCenter, i) {
+                recycleCenter.properties.id = i;
             });
 
 
@@ -322,11 +288,11 @@
                 /**
                  * Listen for when a geocoder result is returned. When one is returned:
                  * - Calculate distances
-                 * - Sort vendors by distance
+                 * - Sort recycleCenters by distance
                  * - Rebuild the listings
                  * - Adjust the map camera
-                 * - Open a popup for the closest vendor
-                 * - Highlight the listing for the closest vendor.
+                 * - Open a popup for the closest recycleCenter
+                 * - Highlight the listing for the closest recycleCenter.
                 */
                 geocoder.on('result', function (ev) {
 
@@ -335,14 +301,14 @@
 
                     /**
                      * Calculate distances:
-                     * For each vendor, use turf.disance to calculate the distance
-                     * in miles between the searchResult and the vendor. Assign the
+                     * For each recycleCenter, use turf.disance to calculate the distance
+                     * in miles between the searchResult and the recycleCenter. Assign the
                      * calculated value to a property called `distance`.
                     */
                     var options = { units: 'miles' };
-                    geojson.features.forEach(function (vendor) {
-                        Object.defineProperty(vendor.properties, 'distance', {
-                            value: turf.distance(searchResult, vendor.geometry, options),
+                    geojson.features.forEach(function (recycleCenter) {
+                        Object.defineProperty(recycleCenter.properties, 'distance', {
+                            value: turf.distance(searchResult, recycleCenter.geometry, options),
                             writable: true,
                             enumerable: true,
                             configurable: true
@@ -350,7 +316,7 @@
                     });
 
                     /**
-                     * Sort vendors by distance from closest to the `searchResult`
+                     * Sort recycleCenters by distance from closest to the `searchResult`
                      * to furthest.
                     */
                     geojson.features.sort(function (a, b) {
@@ -366,7 +332,7 @@
                     /**
                      * Rebuild the listings:
                      * Remove the existing listings and build the location
-                     * list again using the newly sorted vendors.
+                     * list again using the newly sorted recycleCenters.
                     */
                     var listings = document.getElementById('listings');
                     while (listings.firstChild) {
@@ -374,17 +340,17 @@
                     }
                     buildLocationList(geojson);
 
-                    /* Open a popup for the closest vendor. */
+                    /* Open a popup for the closest recycleCenter. */
                     createPopUp(geojson.features[0]);
 
-                    /** Highlight the listing for the closest vendor. */
+                    /** Highlight the listing for the closest recycleCenter. */
                     var activeListing = document.getElementById('listing-' + geojson.features[0].properties.id);
                     activeListing.classList.add('active');
 
                     /**
                      * Adjust the map camera:
                      * Get a bbox that contains both the geocoder result and
-                     * the closest vendor. Fit the bounds to that bbox.
+                     * the closest recycleCenter. Fit the bounds to that bbox.
                     */
                     var bbox = getBbox(geojson, 0, searchResult);
                     map.fitBounds(bbox, {
@@ -396,12 +362,12 @@
             /**
             * Using the coordinates (lng, lat) for
             * (1) the search result and
-            * (2) the closest vendors
+            * (2) the closest recycleCenters
             * construct a bbox that will contain both points
             */
-            function getBbox(sortedVendors, vendorIdentifier, searchResult) {
-                var lats = [sortedVendors.features[vendorIdentifier].geometry.coordinates[1], searchResult.coordinates[1]]
-                var lons = [sortedVendors.features[vendorIdentifier].geometry.coordinates[0], searchResult.coordinates[0]]
+            function getBbox(sortedrecycleCenters, recycleCenterIdentifier, searchResult) {
+                var lats = [sortedrecycleCenters.features[recycleCenterIdentifier].geometry.coordinates[1], searchResult.coordinates[1]]
+                var lons = [sortedrecycleCenters.features[recycleCenterIdentifier].geometry.coordinates[0], searchResult.coordinates[0]]
                 var sortedLons = lons.sort(function (a, b) {
                     if (a > b) { return 1; }
                     if (a.distance < b.distance) { return -1; }
@@ -419,7 +385,7 @@
             }
 
             /**
-             * Add a marker to the map for every vendor listing.
+             * Add a marker to the map for every recycleCenter listing.
             **/
             function addMarkers() {
                 /* For each feature in the GeoJSON object above: */
@@ -442,11 +408,11 @@
                     /**
                      * Listen to the element and when it is clicked, do three things:
                      * 1. Fly to the point
-                     * 2. Close all other popups and display popup for clicked vendor
+                     * 2. Close all other popups and display popup for clicked recycleCenter
                      * 3. Highlight listing in sidebar (and remove highlight for all other listings)
                     **/
                     el.addEventListener('click', function (e) {
-                        flyToVendor(marker);
+                        flyTorecycleCenter(marker);
                         createPopUp(marker);
                         var activeItem = document.getElementsByClassName('active');
                         e.stopPropagation();
@@ -460,18 +426,18 @@
             }
 
             /**
-             * Add a listing for each vendor to the sidebar.
+             * Add a listing for each recycleCenter to the sidebar.
             **/
             function buildLocationList(data) {
 
 
 
-                data.features.forEach(function (vendor, i) {
+                data.features.forEach(function (recycleCenter, i) {
                     /**
-                     * Create a shortcut for `vendor.properties`,
+                     * Create a shortcut for `recycleCenter.properties`,
                      * which will be used several times below.
                     **/
-                    var prop = vendor.properties;
+                    var prop = recycleCenter.properties;
 
                     /* Add a new listing section to the sidebar. */
                     var listings = document.getElementById('listings');
@@ -491,30 +457,17 @@
                     /* Add details to the individual listing. */
                     var schemaAddress = listing.appendChild(document.createElement('div'));
                     var detailsAddress = listing.appendChild(document.createElement('div'));
-                    var schemaPhone = listing.appendChild(document.createElement('div'));
-                    var detailsPhone = listing.appendChild(document.createElement('div'));
+                    var schemaType = listing.appendChild(document.createElement('div'));
+                    var detailsType = listing.appendChild(document.createElement('div'));
 
                     schemaAddress.style.fontWeight = 'bold';
-                    schemaPhone.style.fontWeight = 'bold';
+                    schemaType.style.fontWeight = 'bold';
+
 
                     schemaAddress.innerHTML = 'Address: ' + '<br/>';
                     detailsAddress.innerHTML = prop.Address;
-                    schemaPhone.innerHTML = 'Phone: ' + '<br/>';
-                    detailsPhone.innerHTML = prop.Phone;
-
-                    if (prop.Website != "no details" && prop.Website != null) {
-                        var schemaWeb = listing.appendChild(document.createElement('div'));
-
-                        schemaWeb.style.fontWeight = 'bold';
-                        schemaWeb.innerHTML += 'Website: ' + '<br/>';
-
-                        var web = listing.appendChild(document.createElement('a'));
-                        web.href = 'https://' + prop.Website;
-                        web.target = "_blank"
-                        web.innerHTML += prop.Website;
-                        web.style.color = 'blue';
-                    }
-
+                    schemaType.innerHTML = 'Type: ' + '<br/>';
+                    detailsType.innerHTML = prop.Type;
 
                     if (prop.distance) {
                         var distance = listing.appendChild(document.createElement('div'));
@@ -525,16 +478,16 @@
 
                     /**
                      * Listen to the element and when it is clicked, do four things:
-                     * 1. Update the `currentFeature` to the vendor associated with the clicked link
+                     * 1. Update the `currentFeature` to the recycleCenter associated with the clicked link
                      * 2. Fly to the point
-                     * 3. Close all other popups and display popup for clicked vendor
+                     * 3. Close all other popups and display popup for clicked recycleCenter
                      * 4. Highlight listing in sidebar (and remove highlight for all other listings)
                     **/
                     link.addEventListener('click', function (e) {
                         for (var i = 0; i < data.features.length; i++) {
                             if (this.id === "link-" + data.features[i].properties.id) {
                                 var clickedListing = data.features[i];
-                                flyToVendor(clickedListing);
+                                flyTorecycleCenter(clickedListing);
                                 createPopUp(clickedListing);
                             }
                         }
@@ -552,7 +505,7 @@
              * Use Mapbox GL JS's `flyTo` to move the camera smoothly
              * a given center point.
             **/
-            function flyToVendor(currentFeature) {
+            function flyTorecycleCenter(currentFeature) {
                 map.flyTo({
                     center: currentFeature.geometry.coordinates,
                     zoom: 13
