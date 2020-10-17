@@ -5,6 +5,26 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="WasteDeckdatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Quiz">
+          <Key>
+            <PropertyRef Name="grade" />
+          </Key>
+          <Property Name="grade" Type="int" Nullable="false" />
+          <Property Name="count" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RecycleCenter">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="type" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="address" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="suburb" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="postcode" Type="numeric" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="longitude" Type="numeric" Precision="11" Scale="8" />
+          <Property Name="latitude" Type="numeric" Precision="11" Scale="8" />
+        </EntityType>
         <EntityType Name="Vendors">
           <Key>
             <PropertyRef Name="Name" />
@@ -17,10 +37,12 @@
           <Property Name="address" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="phone" Type="nvarchar" MaxLength="50" />
           <Property Name="website" Type="nvarchar" MaxLength="80" />
-          <Property Name="Longitude" Type="numeric" Precision="8" Scale="5" />
-          <Property Name="latitude" Type="numeric" Precision="8" Scale="5" />
+          <Property Name="Longitude" Type="numeric" Precision="11" Scale="8" />
+          <Property Name="latitude" Type="numeric" Precision="11" Scale="8" />
         </EntityType>
         <EntityContainer Name="WasteDeckdatabaseModelStoreContainer">
+          <EntitySet Name="Quiz" EntityType="Self.Quiz" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RecycleCenter" EntityType="Self.RecycleCenter" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Vendors" EntityType="Self.Vendors" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema>
@@ -28,6 +50,26 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="WasteDeckdatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Quiz">
+          <Key>
+            <PropertyRef Name="grade" />
+          </Key>
+          <Property Name="grade" Type="Int32" Nullable="false" />
+          <Property Name="count" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RecycleCenter">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="suburb" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="postcode" Type="Decimal" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="longitude" Type="Decimal" Precision="11" Scale="8" />
+          <Property Name="latitude" Type="Decimal" Precision="11" Scale="8" />
+        </EntityType>
         <EntityType Name="Vendor">
           <Key>
             <PropertyRef Name="Name" />
@@ -40,10 +82,12 @@
           <Property Name="address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="website" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
-          <Property Name="Longitude" Type="Decimal" Precision="8" Scale="5" />
-          <Property Name="latitude" Type="Decimal" Precision="8" Scale="5" />
+          <Property Name="Longitude" Type="Decimal" Precision="11" Scale="8" />
+          <Property Name="latitude" Type="Decimal" Precision="11" Scale="8" />
         </EntityType>
-        <EntityContainer Name="WasteDeckdatabaseEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="WasteDeckdatabaseEntities2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Quizs" EntityType="Self.Quiz" />
+          <EntitySet Name="RecycleCenters" EntityType="Self.RecycleCenter" />
           <EntitySet Name="Vendors" EntityType="Self.Vendor" />
         </EntityContainer>
       </Schema>
@@ -51,7 +95,29 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="WasteDeckdatabaseModelStoreContainer" CdmEntityContainer="WasteDeckdatabaseEntities">
+        <EntityContainerMapping StorageEntityContainer="WasteDeckdatabaseModelStoreContainer" CdmEntityContainer="WasteDeckdatabaseEntities2">
+          <EntitySetMapping Name="Quizs">
+            <EntityTypeMapping TypeName="WasteDeckdatabaseModel.Quiz">
+              <MappingFragment StoreEntitySet="Quiz">
+                <ScalarProperty Name="grade" ColumnName="grade" />
+                <ScalarProperty Name="count" ColumnName="count" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RecycleCenters">
+            <EntityTypeMapping TypeName="WasteDeckdatabaseModel.RecycleCenter">
+              <MappingFragment StoreEntitySet="RecycleCenter">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="suburb" ColumnName="suburb" />
+                <ScalarProperty Name="postcode" ColumnName="postcode" />
+                <ScalarProperty Name="longitude" ColumnName="longitude" />
+                <ScalarProperty Name="latitude" ColumnName="latitude" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Vendors">
             <EntityTypeMapping TypeName="WasteDeckdatabaseModel.Vendor">
               <MappingFragment StoreEntitySet="Vendors">
