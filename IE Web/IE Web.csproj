@@ -218,6 +218,7 @@
     <Content Include="images\android-chrome-192x192.png" />
     <Content Include="images\android-chrome-512x512.png" />
     <Content Include="images\apple-touch-icon.png" />
+    <Content Include="images\banner5.png" />
     <Content Include="images\bin_classification_banner.jpg" />
     <Content Include="images\carbon_footprint_banner.jpg" />
     <Content Include="images\carrot-farming.jpg" />

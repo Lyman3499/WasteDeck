@@ -9,15 +9,23 @@
 
 .site-section.first-section {
     margin-top: 0;
-    padding: 50px 0 50px 0;
+    padding: 32px 0 32px 0;
 }
 
 .first-section p{
     font-size:25px;
 }
 
-.services-slider-block{ 
-    padding:0 0 30px 0;
+.hero-function p{
+    margin:0;
+}
+
+.services-slider-block {
+    padding: 0 0 30px 0;
+}
+
+.block-13 .owl-stage-outer, .block-14 .owl-stage-outer, .block-15 .owl-stage-outer{
+    padding-top:0;
 }
 
 .slide-one-item .learn_more {
@@ -92,20 +100,41 @@ body .site-logo img {
     padding:0;
 }
 
-.site-mobile-menu .site-nav-wrap > li > ul#collapseItem0 a {
-    color: #ffffff;
+.site-mobile-menu .site-nav-wrap > li > ul#collapseItem0 {
+    background-color: #000;
 }
 
-.site-mobile-menu .site-nav-wrap .link-content-block.active > a{
-    color:#71bc42;
-    padding:0;
+.site-mobile-menu .site-nav-wrap > li > ul#collapseItem0 li.active a {
+    color: #71bc42 !important;
 }
 
-.site-mobile-menu .site-nav-wrap > li > ul#collapseItem0{
-    background-color:#000;
+.site-mobile-menu .site-nav-wrap ul#collapseItem0 li a{ 
+    color:#ffffff;
 }
 
+.site-mobile-menu .link-content .link-content-block.active a {
+    color: #71bc42 !important;
+}
 
+.home-banner{
+    position:relative;
+}
+
+.home-banner-block {
+    background-image: url('../images/banner5.png');
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+}
+
+.home-banner .banner-text-block h1{
+    font-size:26px;
+    font-weight:bold;
+}
+
+.home-banner .banner-text-block{
+    width:350px;
+}
 /*Home Page*/
 /*Footer*/
 .site-footer {
@@ -559,6 +588,7 @@ a:hover, a:focus {
 
 .food-waste-top-block ul{
     padding:0 0 0 15px;
+    margin:0 30px 0 0;
 }
 
 #shop-content-block, #store-content-block, #leftover-content-block, #lunch-content-block, #egg-content-block, #preserve-content-block {
