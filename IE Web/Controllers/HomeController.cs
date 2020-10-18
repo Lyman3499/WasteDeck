@@ -54,7 +54,7 @@ namespace IE_Web.Controllers
             {
                 return RedirectToAction("Vendor", "Home", new { category = category, postcode = postcode });
             }
-            
+
         }
 
         public ActionResult About()
@@ -179,36 +179,5 @@ namespace IE_Web.Controllers
             return View();
         }
 
-        public ActionResult Contact()
-        {
-            return View(new Models.SendEmailViewModel());
-        }
-
-        [HttpPost]
-        public ActionResult Contact(SendEmailViewModel model)
-        {
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    String toEmail = model.ToEmail;
-                    String fullname = model.fullname;
-                    String contents = model.Contents;
-                    Project.Utils.EmailSender es = new Project.Utils.EmailSender();
-                    es.Send(toEmail, fullname, contents);
-
-                    ViewBag.Result = "Email has been send to admin.";
-
-                    ModelState.Clear();
-
-                    return View(new SendEmailViewModel());
-                }
-                catch
-                {
-                    return View();
-                }
-            }
-            return View();
-        }
     }
 }
