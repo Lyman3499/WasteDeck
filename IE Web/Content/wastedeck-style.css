@@ -816,14 +816,29 @@ ul.site-menu li.has-children ul.dropdown.arrow-top li.has-children a.active{
 
 /*Recycle Centres*/
 
-.recycle-banner{
-    position:relative;
+.recycle-title{
+    font-size:25px;
+}
+
+.recycle-banner {
+    position: relative;
 }
 
 .recycle-centre-banner-block {
     background-image: url('../images/recycle_centre_banner.jpg');
     height: 220px;
     background-position: top center;
+}
+
+.recycleCenter-block .listings .item .title{
+    min-height:0;
+    padding: 15px 10px;
+    text-transform:uppercase;
+}
+
+.recycleCenter-block .listings div, .recycleCenter-block .listings div a {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 /*Recycle Centres*/
