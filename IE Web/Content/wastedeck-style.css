@@ -721,7 +721,7 @@ a:hover, a:focus {
 }
 
 .dropdown.arrow-top{
-    width:180%;
+    width:189%;
 }
 
 ul.site-menu li.has-children ul.dropdown.arrow-top li.has-children a.active{
@@ -741,7 +741,7 @@ ul.site-menu li.has-children ul.dropdown.arrow-top li.has-children a.active{
 }
 
 .site-navbar .site-navigation .site-menu .has-children .dropdown > li.has-children > .dropdown, .site-navbar .site-navigation .site-menu .has-children .dropdown > li.has-children > ul{
-    min-width:216px;
+    min-width:217px;
 }
 
 .site-navbar .site-navigation .site-menu .has-children .dropdown.arrow-top::before {
