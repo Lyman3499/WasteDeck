@@ -142,26 +142,29 @@
 
         @foreach (var item in Model)
         {
-            <tr class="table">
-                <td class="name">
-                    @Html.DisplayFor(modelItem => item.name)
-                </td>
-                <td class="address">
-                    @Html.DisplayFor(modelItem => item.address)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.postcode)
-                </td>
-                <td class="type">
-                    @Html.DisplayFor(modelItem => item.type)
-                </td>
-                <td class="Longitude">
-                    @Html.DisplayFor(modelItem => item.longitude)
-                </td>
-                <td class="latitude">
-                    @Html.DisplayFor(modelItem => item.latitude)
-                </td>
-            </tr>
+    <tr class="table">
+        <td class="name">
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td class="address">
+            @Html.DisplayFor(modelItem => item.address)
+        </td>
+        <td class="suburb">
+            @Html.DisplayFor(modelItem => item.suburb)
+        </td>
+        <td class="postcode">
+            @Html.DisplayFor(modelItem => item.postcode)
+        </td>
+        <td class="type">
+            @Html.DisplayFor(modelItem => item.type)
+        </td>
+        <td class="Longitude">
+            @Html.DisplayFor(modelItem => item.longitude)
+        </td>
+        <td class="latitude">
+            @Html.DisplayFor(modelItem => item.latitude)
+        </td>
+    </tr>
         }
     </table>
 
@@ -195,6 +198,9 @@
             $(".table").each(function () {
                 var recycleCenter = $(".name", this).text().trim();
                 var address = $(".address", this).text().trim();
+                var suburb = $(".suburb", this).text().trim();
+                var postcode = $(".postcode", this).text().trim();
+                postcode = parseFloat(postcode).toFixed(0);
                 var type = $(".type", this).text().trim();
                 var longitude = $(".Longitude", this).text().trim();
                 var latitude = $(".latitude", this).text().trim();
@@ -208,7 +214,7 @@
                     properties: {
                         Title: recycleCenter,
                         Type: type,
-                        Address: address                       
+                        Address: address + ', ' + suburb +', VIC, ' +  postcode                     
                     }
                 }
                 datalist.push(data);
@@ -474,7 +480,6 @@
                         var roundedDistance = Math.round(prop.distance * 100) / 100;
                         distance.innerHTML += '<p><strong>' + roundedDistance + ' miles away</strong></p>';
                     }
-                    console.log(prop.distance);
 
                     /**
                      * Listen to the element and when it is clicked, do four things:
