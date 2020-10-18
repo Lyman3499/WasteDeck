@@ -265,6 +265,7 @@
     <Content Include="images\garlic_farming.jpg" />
     <Content Include="images\general_waste.png" />
     <Content Include="images\glass.png" />
+    <Content Include="images\green_poster.jpg" />
     <Content Include="images\hero_1.jpg" />
     <Content Include="images\content_2.jpg" />
     <Content Include="images\Home-Plastic.jpg" />
@@ -312,6 +313,7 @@
     <Content Include="images\pot_farming_banner.jpg" />
     <Content Include="images\quiz_banner.jpg" />
     <Content Include="images\recycle_centre_banner.jpg" />
+    <Content Include="images\red_poster.jpg" />
     <Content Include="images\rosemary-farming.jpg" />
     <Content Include="images\rosemary_farming.jpg" />
     <Content Include="images\rubber-duck-4432703.jpg" />
@@ -345,6 +347,7 @@
     <Content Include="images\content_3.jpg" />
     <Content Include="images\content_6.jpg" />
     <Content Include="images\vendors.jpg" />
+    <Content Include="images\yellow_poster.jpg" />
     <Content Include="js\aos.js" />
     <Content Include="js\bootstrap-datepicker.min.js" />
     <Content Include="js\bootstrap.min.js" />
