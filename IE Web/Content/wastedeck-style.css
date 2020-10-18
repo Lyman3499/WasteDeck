@@ -308,6 +308,14 @@ body .img-fluid.pic4 {
 }
 /*Bin Seperation*/
 /*Vendor Page Layout*/
+.vendor-banner{
+    position:relative;
+}
+
+.vendor-title {
+    font-size: 25px;
+}
+
 .vendor-banner-block {
     background-image: url('../../images/vendors.jpg');
     height: 220px;
@@ -372,6 +380,10 @@ address {
 }
 /*Vendor Page Layout*/
 /*Plastic Alternative page*/
+.plastic-alt-banner{
+    position:relative;
+}
+
 .plastic-alternatives-banner-block {
     background-image: url('../../images/plastic_alternatives_banner.jpg');
     height: 220px;
