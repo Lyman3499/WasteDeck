@@ -350,8 +350,27 @@ address {
 .vendor-detail-block span {
     display: block;
 }
-/*Vendor Page Layout*/
 
+.vendor-block .listings .item .title{
+    min-height:0;
+    padding: 15px 10px;
+}
+
+.vendor-block .listings div, .vendor-block .listings div a{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.sticky_title{
+    position:fixed;
+    top:0;
+    background-color:#ffffff;
+}
+
+.top-block{
+    min-height:47vh;
+}
+/*Vendor Page Layout*/
 /*Plastic Alternative page*/
 .plastic-alternatives-banner-block {
     background-image: url('../../images/plastic_alternatives_banner.jpg');

@@ -1734,40 +1734,39 @@ a {
     padding-bottom: 60px;
 }
 
-    .listings .item {
-        display: block;
-        border-bottom: 1px solid #eee;
-        padding: 10px;
-        text-decoration: none;
-    }
+.listings .item {
+    display: block;
+    border-bottom: 1px solid #eee;
+    padding: 10px;
+    text-decoration: none;
+}
 
-        .listings .item:last-child {
-            border-bottom: none;
-        }
+.listings .item:last-child {
+    border-bottom: none;
+}
 
-        .listings .item .title {
-            background-color: #71bc42;
-            vertical-align: middle;
-            line-height: 1.5;
-            min-height: 60px;
-            display: block;
-            padding-top: 15px;
-            padding-bottom: 10px;
-            font-weight: 700;
-        }
+.listings .item .title {
+    background-color: #71bc42;
+    vertical-align: middle;
+    line-height: 1.5;
+    min-height: 60px;
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    font-weight: 700;
+}
 
-            .listings .item .title small {
-                font-weight: 400;
-            }
+.listings .item .title small {
+    font-weight: 400;
+}
 
-            .listings .item.active .title,
-            .listings .item .title:hover {
-                color: blue;
-            }
+.listings .item.active .title, .listings .item .title:hover {
+    color: #ffffff;
+}
 
-        .listings .item.active {
-            background-color: #d3e5ed;
-        }
+.listings .item.active {
+    background-color: #d3e5ed;
+}
 
 ::-webkit-scrollbar {
     width: 3px;
