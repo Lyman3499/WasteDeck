@@ -13,7 +13,7 @@
 
 
 <!--Recycle Centre Banner Block-->
-<div class="recycle-banner">
+<div class="banner">
     <div class="recycle-centre-banner-block"></div>
     <div class="banner-text-block">
         <h1 class="banner_text_color" style="font-size:30px;font-weight:bold">Search For Recycling Centers</h1>
@@ -22,15 +22,6 @@
 <!--Recycle Centre Banner Block-->
 
 <body>
-    <div class="row">
-        <div class="col-sm-12 col-md-12 problem-block" style="padding-left:60px">
-            <h4>Do you know only about 9% of all plastic ever made has likely been recycled with 12% of all plastic waste having been incinerated </h4>
-            <p>
-                When you have a lot of garbage to dispose of, hopefully you can choose a nearby recycling center.<br/>
-                This prevents waste from going to the wrong places so that improves recycling rates and reduce pollution.
-            </p>
-        </div>
-    </div>
 
 
 
@@ -55,8 +46,8 @@
                         </div>
 
                         <div class="col-md-4">
-                            <h5 class="text-uppercase text-white mb-4">Input Postcode</h5>
-                            <input type="text" name="postcode" placeholder="Input Postcode" style="height:40px;width:300px" />
+                            <h5 class="text-uppercase text-white mb-4">Postcode</h5>
+                            <input type="text" name="postcode" placeholder="Postcode" style="height:40px;width:300px" />
                         </div>
 
                         <div class="col-md-4 col-12 text-center">
@@ -81,8 +72,8 @@
 
                 <!--Recycle Center List-->
                 <div>
-                    <h2 class="text-center text-bold recycle-title">Recycling Centres List</h2>
                     <div style="height:500px;overflow-y:auto;overflow-x:hidden">
+                        <h2 class="text-center text-bold recycle-title">Recycling Centres List</h2>
 
                         @if (Model.Count() == 0)
                         {
