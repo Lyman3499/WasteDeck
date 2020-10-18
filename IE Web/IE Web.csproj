@@ -163,7 +163,6 @@
     <Compile Include="Models\RecycleCenter.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\SendEmailViewModel.cs" />
     <Compile Include="Models\Vendor.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
