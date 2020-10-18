@@ -20,6 +20,23 @@ namespace IE_Web.Controllers
             return View(db.Quizs.ToList());
         }
 
+        public ActionResult Quiz()
+        {
+            return View(db.Quizs.ToList());
+        }
+
+        public void update(int grade)
+        {
+            Quiz quiz = db.Quizs.Find(grade);
+            quiz.count += 1;
+            if (ModelState.IsValid)
+            {
+                db.Entry(quiz).State = EntityState.Modified;
+                db.SaveChanges();
+            }
+        }
+
+
         // GET: Quizs/Details/5
         public ActionResult Details(int? id)
         {
