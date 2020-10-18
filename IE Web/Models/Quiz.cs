@@ -12,9 +12,10 @@ namespace IE_Web.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Quiz
+    public partial class quiz
     {
+        public int id { get; set; }
         public int grade { get; set; }
-        public int count { get; set; }
+        public Nullable<int> count { get; set; }
     }
 }

@@ -13,10 +13,10 @@ namespace IE_Web.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class WasteDeckdatabaseEntities2 : DbContext
+    public partial class WasteDeckdatabaseEntities3 : DbContext
     {
-        public WasteDeckdatabaseEntities2()
-            : base("name=WasteDeckdatabaseEntities2")
+        public WasteDeckdatabaseEntities3()
+            : base("name=WasteDeckdatabaseEntities3")
         {
         }
     
@@ -25,7 +25,7 @@ namespace IE_Web.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Quiz> Quizs { get; set; }
+        public virtual DbSet<quiz> quizs { get; set; }
         public virtual DbSet<RecycleCenter> RecycleCenters { get; set; }
         public virtual DbSet<Vendor> Vendors { get; set; }
     }

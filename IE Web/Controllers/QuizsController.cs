@@ -10,24 +10,26 @@ using IE_Web.Models;
 
 namespace IE_Web.Controllers
 {
-    public class QuizsController : Controller
+    public class quizsController : Controller
     {
-        private WasteDeckdatabaseEntities2 db = new WasteDeckdatabaseEntities2();
+        private WasteDeckdatabaseEntities3 db = new WasteDeckdatabaseEntities3();
 
-        // GET: Quizs
+        // GET: quizs
         public ActionResult Index()
         {
-            return View(db.Quizs.ToList());
+            return View(db.quizs.ToList());
         }
 
-        public ActionResult Quiz()
+        public ActionResult Quiz(int id)
         {
-            return View(db.Quizs.ToList());
+            update(id);
+            return View(db.quizs.ToList());
         }
 
-        public void update(int grade)
+        public void update(int id)
         {
-            Quiz quiz = db.Quizs.Find(grade);
+
+            quiz quiz = db.quizs.Find(id);
             quiz.count += 1;
             if (ModelState.IsValid)
             {
@@ -36,15 +38,14 @@ namespace IE_Web.Controllers
             }
         }
 
-
-        // GET: Quizs/Details/5
+        // GET: quizs/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Quiz quiz = db.Quizs.Find(id);
+            quiz quiz = db.quizs.Find(id);
             if (quiz == null)
             {
                 return HttpNotFound();
@@ -52,22 +53,22 @@ namespace IE_Web.Controllers
             return View(quiz);
         }
 
-        // GET: Quizs/Create
+        // GET: quizs/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Quizs/Create
+        // POST: quizs/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "grade,count")] Quiz quiz)
+        public ActionResult Create([Bind(Include = "id,grade,count")] quiz quiz)
         {
             if (ModelState.IsValid)
             {
-                db.Quizs.Add(quiz);
+                db.quizs.Add(quiz);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -75,14 +76,14 @@ namespace IE_Web.Controllers
             return View(quiz);
         }
 
-        // GET: Quizs/Edit/5
+        // GET: quizs/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Quiz quiz = db.Quizs.Find(id);
+            quiz quiz = db.quizs.Find(id);
             if (quiz == null)
             {
                 return HttpNotFound();
@@ -90,12 +91,12 @@ namespace IE_Web.Controllers
             return View(quiz);
         }
 
-        // POST: Quizs/Edit/5
+        // POST: quizs/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "grade,count")] Quiz quiz)
+        public ActionResult Edit([Bind(Include = "id,grade,count")] quiz quiz)
         {
             if (ModelState.IsValid)
             {
@@ -106,14 +107,14 @@ namespace IE_Web.Controllers
             return View(quiz);
         }
 
-        // GET: Quizs/Delete/5
+        // GET: quizs/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Quiz quiz = db.Quizs.Find(id);
+            quiz quiz = db.quizs.Find(id);
             if (quiz == null)
             {
                 return HttpNotFound();
@@ -121,13 +122,13 @@ namespace IE_Web.Controllers
             return View(quiz);
         }
 
-        // POST: Quizs/Delete/5
+        // POST: quizs/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Quiz quiz = db.Quizs.Find(id);
-            db.Quizs.Remove(quiz);
+            quiz quiz = db.quizs.Find(id);
+            db.quizs.Remove(quiz);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

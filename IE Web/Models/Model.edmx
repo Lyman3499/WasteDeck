@@ -5,12 +5,13 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="WasteDeckdatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="Quiz">
+        <EntityType Name="quiz">
           <Key>
-            <PropertyRef Name="grade" />
+            <PropertyRef Name="id" />
           </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="grade" Type="int" Nullable="false" />
-          <Property Name="count" Type="int" Nullable="false" />
+          <Property Name="count" Type="int" />
         </EntityType>
         <EntityType Name="RecycleCenter">
           <Key>
@@ -41,7 +42,7 @@
           <Property Name="latitude" Type="numeric" Precision="11" Scale="8" />
         </EntityType>
         <EntityContainer Name="WasteDeckdatabaseModelStoreContainer">
-          <EntitySet Name="Quiz" EntityType="Self.Quiz" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="quiz" EntityType="Self.quiz" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="RecycleCenter" EntityType="Self.RecycleCenter" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Vendors" EntityType="Self.Vendors" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
@@ -50,12 +51,13 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="WasteDeckdatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="Quiz">
+        <EntityType Name="quiz">
           <Key>
-            <PropertyRef Name="grade" />
+            <PropertyRef Name="id" />
           </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="grade" Type="Int32" Nullable="false" />
-          <Property Name="count" Type="Int32" Nullable="false" />
+          <Property Name="count" Type="Int32" />
         </EntityType>
         <EntityType Name="RecycleCenter">
           <Key>
@@ -85,8 +87,8 @@
           <Property Name="Longitude" Type="Decimal" Precision="11" Scale="8" />
           <Property Name="latitude" Type="Decimal" Precision="11" Scale="8" />
         </EntityType>
-        <EntityContainer Name="WasteDeckdatabaseEntities2" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Quizs" EntityType="Self.Quiz" />
+        <EntityContainer Name="WasteDeckdatabaseEntities3" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="quizs" EntityType="Self.quiz" />
           <EntitySet Name="RecycleCenters" EntityType="Self.RecycleCenter" />
           <EntitySet Name="Vendors" EntityType="Self.Vendor" />
         </EntityContainer>
@@ -95,10 +97,11 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="WasteDeckdatabaseModelStoreContainer" CdmEntityContainer="WasteDeckdatabaseEntities2">
-          <EntitySetMapping Name="Quizs">
-            <EntityTypeMapping TypeName="WasteDeckdatabaseModel.Quiz">
-              <MappingFragment StoreEntitySet="Quiz">
+        <EntityContainerMapping StorageEntityContainer="WasteDeckdatabaseModelStoreContainer" CdmEntityContainer="WasteDeckdatabaseEntities3">
+          <EntitySetMapping Name="quizs">
+            <EntityTypeMapping TypeName="WasteDeckdatabaseModel.quiz">
+              <MappingFragment StoreEntitySet="quiz">
+                <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="grade" ColumnName="grade" />
                 <ScalarProperty Name="count" ColumnName="count" />
               </MappingFragment>
