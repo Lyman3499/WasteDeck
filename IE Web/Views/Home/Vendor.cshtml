@@ -22,20 +22,19 @@
 <!--Search Vendors Banner Block-->
 
 <body>
-    <div class="row">
-        <div class="col-sm-12 col-md-12 problem-block" style="padding-left:60px">
-            <h4>Do you want to reduce your carbon footprint? </h4>
-            <p>
-                Choosing sustainable products and foods will significantly reduce carbon emissions<br />
-                (Like buying drinks in glass bottles that can be used multiple times instead of plastic bottles.)<br /><br />
-
-                We will help you to find retailers of eco-friendly products near you that care about our planet.
-            </p>
+    <!--Short Description Block-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 problem-block">
+                <h4>Do you want to reduce your carbon footprint? </h4>
+                <ul>
+                    <li>Choosing sustainable products and foods will significantly reduce carbon emissions (like buying drinks in glass bottles that can be used multiple times instead of plastic bottles).</li>
+                    <li>We will help you to find retailers of eco-friendly products near you that care about our planet.</li>
+                </ul>
+            </div>
         </div>
     </div>
-
-
-
+    <!--Short Description Block-->
     <!--Search Bar-->
     @using (Html.BeginForm("Vendor", "Home", FormMethod.Get))
     {
@@ -78,8 +77,8 @@
                         </div>
 
                         <div class="col-md-4">
-                            <h5 class="text-uppercase text-white mb-4">Input Postcode</h5>
-                            <input type="text" name="postcode" placeholder="Input Postcode" style="height:40px;width:300px" />
+                            <h5 class="text-uppercase text-white mb-4">Postcode</h5>
+                            <input type="text" name="postcode" placeholder="Postcode" style="height:40px;width:300px" />
                         </div>
 
                         <div class="col-md-4 col-12 text-center">
@@ -101,7 +100,6 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 col-md-4 col-12">
-
                 <!--Vendor List-->
                 <div>
                     <h2 class="text-center text-bold vendor-title">Vendor List</h2>
@@ -124,17 +122,11 @@
                     </div>
                 </div>
             </div>
-
             <br /><br />
             <!--Map-->
             <div id="map" class="map col-sm-12 col-md-8 col-12" style="height:500px;width:100%"></div>
-
-
         </div>
-
     </div>
-
-
 
     <table style="display:none">
         <tr>
@@ -195,8 +187,6 @@
             </tr>
         }
     </table>
-
-
     <!--Script for Map-->
     @section Scripts{
         <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
@@ -580,7 +570,6 @@
 
         </script>
     }
-
 </body>
 
 
