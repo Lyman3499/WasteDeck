@@ -101,57 +101,64 @@
                 <div>
                     <div>
                         <div id="suggestion1" style="display:none">
-                            <p>
-                                You are a new environmentalist. Your presence here proves your commitment to environmental protection. You are welcome to join us.<br />
-                                You need to learn more about why and how to reduce carbon emissions, and we will provide you with detailed knowledge.<br />
+                            <h4>
+                                Your grade is P.<br /><br />
+                                You are a new environmentalist. Your presence here proves your commitment to environmental protection. You are welcome to join us.<br /><br />
+                                You need to learn more about why and how to reduce carbon emissions, and we will provide you with detailed knowledge.<br /><br />
                                 When you know this knowledge, I believe you will be more firmly in the position of protecting the environment, to reduce the carbon footprint to contribute their own strength
-                            </p>
+                            </h4>
                         </div>
 
                         <div id="suggestion2" style="display:none">
-                            <p>
-
-                            </p>
+                            <h4>
+                                Your grade is C.<br /><br />
+                                You already have a basic understanding of your carbon footprint, but there's a lot you don't know.<br /><br />
+                                You may have just heard that you need to systematically understand the willingness and means to reduce carbon emissions.<br /><br />
+                                Our website can help you systematically learn and provide some simple ways that you can do on a daily basis to help you improve your lifestyle and reduce your carbon footprint
+                            </h4>
                         </div>
 
                         <div id="suggestion3" style="display:none">
-                            <p>
-
-                            </p>
+                            <h4>
+                                Your grade is D.<br /><br />
+                                You're already a good environmentalist, you understand the impact of carbon dioxide emissions and how to reduce them<br /><br />
+                                All you might need is how to implement a carbon reduction approach, and we offer easy ways to reduce your carbon footprint in your life, which will help you reduce the cost of action to protect the environment
+                            </h4>
                         </div>
 
                         <div id="suggestion4" style="display:none">
-                            <p>
-                                You are a very good environmentalist and you know a lot about how to reduce carbon emissions.<br />
-                                WE hope you can introduce your knowledge to more people. <br />
+                            <h4>
+                                Your grade is HD.<br /><br />
+                                You are a very good environmentalist and you know a lot about how to reduce carbon emissions.<br /><br />
+                                WE hope you can introduce your knowledge to more people. <br /><br />
                                 If you want to learn more about reducing carbon emissions, please read our website.
-                            </p>
+                            </h4>
                         </div>
                     </div>
 
                     <div id="finish1" class="btn-default" style="display:none">
-                        @Html.ActionLink("a", "Quiz", new { id = 1 });
+                        @Html.ActionLink("Check other scores", "Quiz", new { id = 1 });
                     </div>
                     <div id="finish2" class="btn-default" style="display:none">
-                        @Html.ActionLink("a", "Quiz", new { id = 2 });
+                        @Html.ActionLink("Check other scores", "Quiz", new { id = 2 });
                     </div>
                     <div id="finish3" class="btn-default" style="display:none">
-                        @Html.ActionLink("a", "Quiz", new { id = 3 });
+                        @Html.ActionLink("Check other scores", "Quiz", new { id = 3 });
                     </div>
                     <div id="finish4" class="btn-default" style="display:none">
-                        @Html.ActionLink("a", "Quiz", new { id = 4 });
+                        @Html.ActionLink("Check other scores", "Quiz", new { id = 4 });
                     </div>
                     <div id="finish5" class="btn-default" style="display:none">
-                        @Html.ActionLink("a", "Quiz", new { id = 5 });
+                        @Html.ActionLink("Check other scores", "Quiz", new { id = 5 });
                     </div>
                     <div id="finish6" class="btn-default" style="display:none">
-                        @Html.ActionLink("a", "Quiz", new { id = 6 });
+                        @Html.ActionLink("Check other scores", "Quiz", new { id = 6 });
                     </div>
                     <div id="finish7" class="btn-default" style="display:none">
-                        @Html.ActionLink("a", "Quiz", new { id = 7 });
+                        @Html.ActionLink("Check other scores", "Quiz", new { id = 7 });
                     </div>
                     <div id="finish8" class="btn-default" style="display:none">
-                        @Html.ActionLink("a", "Quiz", new { id = 8 });
+                        @Html.ActionLink("Check other scores", "Quiz", new { id = 8 });
                     </div>
 
                 </div>
@@ -202,38 +209,38 @@
                 if (grade <= 2) {
                     $('#suggestion1').fadeIn();
                     if (grade == 0) {
-                        $('#finish1').fadeIn();
+                       // $('#finish1').fadeIn();
                     }
                     else {
-                        $('#finish2').fadeIn();
+                        //$('#finish2').fadeIn();
                     }
 
                 }
                 else if (grade > 2 && grade <= 4) {
                     $('#suggestion2').fadeIn();
                     if (grade == 2) {
-                        $('#finish3').fadeIn();
+                        //$('#finish3').fadeIn();
                     }
                     else {
-                        $('#finish4').fadeIn();
+                        //$('#finish4').fadeIn();
                     }
                 }
                 else if (grade > 4 && grade <= 6) {
                     $('#suggestion3').fadeIn();
                     if (grade == 4) {
-                        $('#finish5').fadeIn();
+                        //$('#finish5').fadeIn();
                     }
                     else {
-                        $('#finish6').fadeIn();
+                        //$('#finish6').fadeIn();
                     }
                 }
                 else {
                     $('#suggestion4').fadeIn();
                     if (grade == 6) {
-                        $('#finish7').fadeIn();
+                        //$('#finish7').fadeIn();
                     }
                     else {
-                        $('#finish8').fadeIn();
+                        //$('#finish8').fadeIn();
                     }
                 }
                 $('#finishbtn').fadeIn();
