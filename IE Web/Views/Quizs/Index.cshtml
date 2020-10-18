@@ -100,10 +100,24 @@
 
                 <div>
                     <div>
-                        <div id="suggestion1" style="display:none">suggestion1</div>
-                        <div id="suggestion2" style="display:none">suggestion2</div>
+                        <div id="suggestion1" style="display:none">
+                            <p>
+                                You are a new environmentalist. Your presence here proves your commitment to environmental protection. You are welcome to join us.<br />
+                                You need to learn more about why and how to reduce carbon emissions, and we will provide you with detailed knowledge.<br />
+                                When you know this knowledge, I believe you will be more firmly in the position of protecting the environment, to reduce the carbon footprint to contribute their own strength
+                            </p>
+                        </div>
+                        <div id="suggestion2" style="display:none">
+
+                        </div>
                         <div id="suggestion3" style="display:none">suggestion3</div>
-                        <div id="suggestion4" style="display:none">suggestion4</div>
+                        <div id="suggestion4" style="display:none">
+                            <p>
+                                You are a very good environmentalist and you know a lot about how to reduce carbon emissions.<br />
+                                WE hope you can introduce your knowledge to more people. <br />
+                                If you want to learn more about reducing carbon emissions, please read our website.
+                            </p>
+                        </div>
                     </div>
 
                     <div id="finish1" class="btn-default" style="display:none">
@@ -140,7 +154,7 @@
                         <a href="~/quizs/index" id="finishbtn" style="float:left;display:none"><span class="text-white btn btn-primary">Test Again</span></a>
                     </div>
                     <div class="col-12 col-lg-6" style="float:right;margin-bottom:30px">
-                        <a id="review" style="float:right;display:none"><span class="text-white btn btn-primary">Review Answers</span></a>
+                        <a id="review" class="btn-default" style="float:right;display:none"><span class="text-white btn btn-primary">Review Answers</span></a>
                     </div>
                 </div>
             </div>
@@ -148,10 +162,10 @@
     </div>
 </div>
 
-<div id="result">
+<div id="result" style="display:none">
     <div>
         <div>
-            <h3><span class="label label-warning" id="q2">1</span> In which bin can we dispose the baking paper?</h3>
+            <h3><span class="label label-warning" id="result">1</span> In which bin can we dispose the baking paper?</h3>
             <div data-toggle="buttons">
                 <label class="element-animation1 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=0>A. Cummingled recycling bin</label>
                 <label class="element-animation2 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=1>B. General waste bin</label>
@@ -159,16 +173,16 @@
                 <label class="element-animation4 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=0>D. Food and garden bin</label>
             </div>
         </div>
-        <div style="display:none">
+        <div>
             <h3><span class="label label-warning" id="q2">2</span> Select the correct alternative for the plastic milk container mentioned on this site?</h3>
-            <div data-toggle="buttons" style="display:none">
+            <div data-toggle="buttons">
                 <label class="element-animation1 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=0>A. Plastic bottle</label>
                 <label class="element-animation2 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=0>B. Stainless steel bottle</label>
                 <label class="element-animation3 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=1>C. Glass bottle</label>
                 <label class="element-animation4 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=0>D. None of the above</label>
             </div>
         </div>
-        <div style="display:none">
+        <div>
             <h3><span class="label label-warning" id="q3">3</span> What vegetables can be grown in pots</h3>
             <div data-toggle="buttons" style="display:none">
                 <label class="element-animation1 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=0>A. Tomatoes</label>
@@ -177,7 +191,7 @@
                 <label class="element-animation4 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=1>D. All of the above</label>
             </div>
         </div>
-        <div style="display:none">
+        <div>
             <h3><span class="label label-warning" id="q4">4</span> How can you utilize your kitchen waste?</h3>
             <div data-toggle="buttons" style="display:none">
                 <label class="element-animation1 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=1>A. To create compost</label>
@@ -186,7 +200,7 @@
                 <label class="element-animation4 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=0>D. None of the above</label>
             </div>
         </div>
-        <div style="display:none">
+        <div>
             <h3><span class="label label-warning" id="q5">5</span> What are good ways to avoid food waste?</h3>
             <div data-toggle="buttons" style="display:none">
                 <label class="element-animation1 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=0>A. Avoid purchasing unnecessary food items</label>
@@ -195,14 +209,14 @@
                 <label class="element-animation4 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=1>D. All of the above</label>
             </div>
         </div>
-        <div style="display:none">
+        <div>
             <h3><span class="label label-warning" id="q6">6</span> Plants have absorbed almost half of the carbon dioxide that is produced by humans over the last decade?"</h3>
             <div id="quiz6" data-toggle="buttons" style="display:none">
                 <label class="element-animation1 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=1> True</label>
                 <label class="element-animation2 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=0> False</label>
             </div>
         </div>
-        <div style="display:none">
+        <div>
             <h3><span class="label label-warning" id="q7">7</span> Which of the following are carbon sinks?</h3>
             <div data-toggle="buttons" style="display:none">
                 <label class="element-animation1 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=0>A. Soil and rocks</label>
@@ -290,9 +304,9 @@
             }
         });
 
-        $("review").on('click', function () {
-
-
+        $("btn-default").on('click', function () {
+            $(result).show();
+            
         });
 
         $ans = 3;

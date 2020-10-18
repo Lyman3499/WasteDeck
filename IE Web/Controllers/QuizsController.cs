@@ -20,6 +20,11 @@ namespace IE_Web.Controllers
             return View(db.quizs.ToList());
         }
 
+        public ActionResult Answer()
+        {
+            return View();
+        }
+
         public ActionResult Quiz(int id)
         {
             update(id);

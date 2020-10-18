@@ -1,0 +1,145 @@
+﻿
+@{
+    ViewBag.Title = "View";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/css/quiz.css" rel="stylesheet" />
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+<!--Pot Farming Banner Block-->
+<div class="banner">
+    <div class="quiz-banner-block"></div>
+    <div class="banner-text-block">
+        <h1 class="text-uppercase" style="font-size:30px;font-weight:bold">Test Your Knowledge</h1>
+    </div>
+</div>
+<!--Pot Farming Banner Block-->
+
+<div id="result" style="margin:40px">
+    <div>
+        <div style="margin-top:50px">
+            <h3><span class="label label-warning" id="result">1</span> In which bin can we dispose the baking paper?</h3>
+            <div data-toggle="buttons">
+                <label class="element-animation1 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=0>A. Cummingled recycling bin</label>
+                <label class="element-animation2 btn btn-lg btn-primary btn-block active"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=1>B. General waste bin</label>
+                <label class="element-animation3 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=0>C. Glass recycling bin</label>
+                <label class="element-animation4 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=0>D. Food and garden bin</label>
+            </div>
+            <div style="margin:40px">
+                <h4>
+                    The righr answer is: General waste bin
+                </h4>
+                <h4>
+                    Why: Baking paper has a thin lining, similar to coffee cups, which makes it difficult for the paper to be separated from the silicone coating. So it's hard to recycle
+                </h4>
+            </div>
+        </div>
+        <div style="margin-top:50px">
+            <h3><span class="label label-warning" id="q2">2</span> Select the correct alternative for the plastic milk container mentioned on this site?</h3>
+            <div data-toggle="buttons">
+                <label class="element-animation1 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=0>A. Plastic bottle</label>
+                <label class="element-animation2 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=0>B. Stainless steel bottle</label>
+                <label class="element-animation3 btn btn-lg btn-primary btn-block active"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=1>C. Glass bottle</label>
+                <label class="element-animation4 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=0>D. None of the above</label>
+            </div>
+            <div style="margin:40px">
+                <h4>
+                    The righr answer is: Glass bottle
+                </h4>
+                <h4>
+                    Why: Only the glass bottles can be reused.
+                </h4>
+            </div>
+        </div>
+        <div style="margin-top:50px">
+            <h3><span class="label label-warning" id="q3">3</span> What vegetables can be grown in pots</h3>
+            <div data-toggle="buttons">
+                <label class="element-animation1 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=0>A. Tomatoes</label>
+                <label class="element-animation2 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=0>B. Garlic</label>
+                <label class="element-animation3 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=0>C. Coriander</label>
+                <label class="element-animation4 btn btn-lg btn-primary btn-block active"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=1>D. All of the above</label>
+            </div>
+            <div style="margin:40px">
+                <h4>
+                    The righr answer is: All of the above
+                </h4>
+                <h4>
+                    Why: Tomatoes, Garlic and Coriander are suitable for pot farming, and they don't need a lot of space to grow. 
+                    You can check out the knowledge on our Pot farming page
+                </h4>
+            </div>
+        </div>
+        <div style="margin-top:50px">
+            <h3><span class="label label-warning" id="q4">4</span> How can you utilize your kitchen waste?</h3>
+            <div data-toggle="buttons">
+                <label class="element-animation1 btn btn-lg btn-primary btn-block active"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=1>A. To create compost</label>
+                <label class="element-animation2 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=0>B. By using it in pot farming</label>
+                <label class="element-animation3 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=0>C. Thrown into the lake</label>
+                <label class="element-animation4 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=0>D. None of the above</label>
+            </div>
+            <div style="margin:40px">
+                <h4>
+                    The righr answer is: To create compost
+                </h4>
+                <h4>
+                    Why: You can compost waste food, produce waste, feed your plants, and reduce waste
+                </h4>
+            </div>
+        </div>
+
+        <div style="margin-top:50px">
+            <h3><span class="label label-warning" id="q5">5</span> What are good ways to avoid food waste?</h3>
+            <div data-toggle="buttons">
+                <label class="element-animation1 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=0>A. Avoid purchasing unnecessary food items</label>
+                <label class="element-animation2 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=0>B. Store food at correct temperatures</label>
+                <label class="element-animation3 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=0>C. Save leftover food</label>
+                <label class="element-animation4 btn btn-lg btn-primary btn-block active"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=1>D. All of the above</label>
+            </div>
+            <div style="margin:40px">
+                <h4>
+                    The righr answer is: All of the above
+                </h4>
+                <h4>
+                    Why: Cutting back on purchases, properly storing and eating up leftovers can all help reduce food waste
+                </h4>
+            </div>
+        </div>
+
+        <div style="margin-top:50px">
+            <h3><span class="label label-warning" id="q6">6</span> Plants have absorbed almost half of the carbon dioxide that is produced by humans over the last decade?"</h3>
+            <div id="quiz6" data-toggle="buttons">
+                <label class="element-animation1 btn btn-lg btn-primary btn-block active"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=1> True</label>
+                <label class="element-animation2 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=0> False</label>
+            </div>
+            <div style="margin:40px">
+                <h4>
+                    The righr answer is: True
+                </h4>
+                <h4>
+                    Why: 
+                </h4>
+            </div>
+        </div>
+
+        <div style="margin-top:50px">
+            <h3><span class="label label-warning" id="q7">7</span> Which of the following are carbon sinks?</h3>
+            <div data-toggle="buttons">
+                <label class="element-animation1 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=0>A. Soil and rocks</label>
+                <label class="element-animation2 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=0>B. Fossil fuels</label>
+                <label class="element-animation3 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=0>C. Forests</label>
+                <label class="element-animation4 btn btn-lg btn-primary btn-block active"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=1>D. All of the above</label>
+            </div>
+            <div style="margin:40px">
+                <h4>
+                    The righr answer is: Glass bottle
+                </h4>
+                <h4>
+                    Why: Only the glass bottles can be reused.
+                </h4>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
