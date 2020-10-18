@@ -12,14 +12,14 @@
 <link href='https://api.tiles.mapbox.com/mapbox.js/v3.3.1/mapbox.css' rel='stylesheet' />
 
 
-<!--Search recycleCenters Banner Block-->
-<div class="banner">
-    <div class="recycleCenter-banner-block"></div>
+<!--Recycle Centre Banner Block-->
+<div class="recycle-banner">
+    <div class="recycle-centre-banner-block"></div>
     <div class="banner-text-block">
-        <h1 class="text-uppercase text-bold" style="font-size:30px;font-weight:bold">Search Recycle Centers</h1>
+        <h1 class="banner_text_color" style="font-size:30px;font-weight:bold">Search For Recycling Centers</h1>
     </div>
 </div>
-<!--Search recycleCenters Banner Block-->
+<!--Recycle Centre Banner Block-->
 
 <body>
     <div class="row">
@@ -50,7 +50,7 @@
                                 <option value="Landfill">Landfill</option>
                                 <option value="Multi-Purpose">Multi-Purpose</option>
                                 <option value="Reprocessing">Reprocessing</option>
-                                <option value="Transfer Station">Transfer Station</option>                            
+                                <option value="Transfer Station">Transfer Station</option>
                             </select>
                         </div>
 
@@ -82,14 +82,14 @@
                 <!--Recycle Center List-->
                 <div>
                     <div style="height:500px;overflow-y:auto;overflow-x:hidden">
-                        <h2 class="text-center text-bold">Recycle Center List</h2>
+                        <h2 class="text-center text-bold">Recycling Centres List</h2>
 
                         @if (Model.Count() == 0)
                         {
                             <!--Set the search to no results-->
                             <div>
                                 <h4 colspan="3" class="text-center" style="color:#FF0000">
-                                    No matching recycle center found
+                                    No matches found
                                 </h4>
                             </div>
                         }
@@ -142,29 +142,29 @@
 
         @foreach (var item in Model)
         {
-    <tr class="table">
-        <td class="name">
-            @Html.DisplayFor(modelItem => item.name)
-        </td>
-        <td class="address">
-            @Html.DisplayFor(modelItem => item.address)
-        </td>
-        <td class="suburb">
-            @Html.DisplayFor(modelItem => item.suburb)
-        </td>
-        <td class="postcode">
-            @Html.DisplayFor(modelItem => item.postcode)
-        </td>
-        <td class="type">
-            @Html.DisplayFor(modelItem => item.type)
-        </td>
-        <td class="Longitude">
-            @Html.DisplayFor(modelItem => item.longitude)
-        </td>
-        <td class="latitude">
-            @Html.DisplayFor(modelItem => item.latitude)
-        </td>
-    </tr>
+            <tr class="table">
+                <td class="name">
+                    @Html.DisplayFor(modelItem => item.name)
+                </td>
+                <td class="address">
+                    @Html.DisplayFor(modelItem => item.address)
+                </td>
+                <td class="suburb">
+                    @Html.DisplayFor(modelItem => item.suburb)
+                </td>
+                <td class="postcode">
+                    @Html.DisplayFor(modelItem => item.postcode)
+                </td>
+                <td class="type">
+                    @Html.DisplayFor(modelItem => item.type)
+                </td>
+                <td class="Longitude">
+                    @Html.DisplayFor(modelItem => item.longitude)
+                </td>
+                <td class="latitude">
+                    @Html.DisplayFor(modelItem => item.latitude)
+                </td>
+            </tr>
         }
     </table>
 
@@ -214,7 +214,7 @@
                     properties: {
                         Title: recycleCenter,
                         Type: type,
-                        Address: address + ', ' + suburb +', VIC, ' +  postcode                     
+                        Address: address + ', ' + suburb + ', VIC, ' + postcode
                     }
                 }
                 datalist.push(data);
