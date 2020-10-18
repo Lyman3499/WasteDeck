@@ -229,10 +229,6 @@ body .img-fluid.pic4 {
     background-position: left -237px center;
 }
 
-.segregation-content-block {
-    text-align: center;
-}
-
 .text-bold {
     font-weight: bold;
 }
@@ -306,6 +302,21 @@ body .img-fluid.pic4 {
 .site-wrap .container.poster-block {
     margin: 30px auto;
 }
+
+.poster-block img{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.col-sm-12.col-md-6.poster-block{
+    margin: 0 0 30px 0;
+}
+
+.download_link, .download_link:hover, .download_link:focus, .download_link:active {
+    color: blue;
+    text-decoration: underline;
+    display: block;
+}
+
 /*Bin Seperation*/
 /*Vendor Page Layout*/
 .vendor-banner{
@@ -710,7 +721,7 @@ a:hover, a:focus {
 }
 
 .dropdown.arrow-top{
-    width:180%;
+    width:189%;
 }
 
 ul.site-menu li.has-children ul.dropdown.arrow-top li.has-children a.active{
@@ -730,7 +741,7 @@ ul.site-menu li.has-children ul.dropdown.arrow-top li.has-children a.active{
 }
 
 .site-navbar .site-navigation .site-menu .has-children .dropdown > li.has-children > .dropdown, .site-navbar .site-navigation .site-menu .has-children .dropdown > li.has-children > ul{
-    min-width:216px;
+    min-width:217px;
 }
 
 .site-navbar .site-navigation .site-menu .has-children .dropdown.arrow-top::before {
@@ -771,6 +782,10 @@ ul.site-menu li.has-children ul.dropdown.arrow-top li.has-children a.active{
 
 .graph-block, .graph_desc_block {
     margin: 30px 0 0 0;
+}
+
+.graph_desc_block ul, .carbon-info ul{
+    padding: 0 0 0 16px;
 }
 /*Carbon Footprint*/
 /*References*/
