@@ -326,13 +326,17 @@
     <Content Include="images\svg\co2-cloud.svg" />
     <Content Include="images\svg\flower-pot.svg" />
     <Content Include="images\svg\jam.svg" />
+    <Content Include="images\svg\junction.svg" />
     <Content Include="images\svg\magnifying-glass.svg" />
     <Content Include="images\svg\no-plastic-bottles.svg" />
     <Content Include="images\svg\no-plastic.svg" />
     <Content Include="images\svg\plant.svg" />
     <Content Include="images\svg\plastic-bag.svg" />
     <Content Include="images\svg\plastic-bottle.svg" />
+    <Content Include="images\svg\plastic.svg" />
+    <Content Include="images\svg\recyclable.svg" />
     <Content Include="images\svg\recycling-bin.svg" />
+    <Content Include="images\svg\toxic-waste.svg" />
     <Content Include="images\svg\vendor.svg" />
     <Content Include="images\svg\waste.svg" />
     <Content Include="images\tomatoes-farming.jpg" />
