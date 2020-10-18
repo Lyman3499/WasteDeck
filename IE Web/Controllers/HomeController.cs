@@ -85,7 +85,7 @@ namespace IE_Web.Controllers
             return View();
         }
 
-        WasteDeckdatabaseEntities2 db = new WasteDeckdatabaseEntities2();
+        WasteDeckdatabaseEntities3 db = new WasteDeckdatabaseEntities3();
         public ActionResult Recycle_Center(String type, String postcode)
         {
             ViewBag.Message = "Recycle Center";
