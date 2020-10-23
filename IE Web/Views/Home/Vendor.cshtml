@@ -42,51 +42,61 @@
             <div class="container">
                 <div class="row">
 
-                    <form class="search-form col-md-12">
+                    <form class="search-form col-md-12" target="iframeForm">
 
                         <div class="col-md-4 col-12">
+
+                            @{
+                                var value = ViewBag.category;
+                                var postcode = ViewBag.postcode;
+                            }
+
                             <h5 class="text-uppercase text-white mb-4" for="offer-types">Select Category</h5>
-                            <select name="category" style="height:40px;width:200px;margin-bottom:30px">
-                                <option value="">All</option>
-                                <option value="Baby food">Baby food</option>
-                                <option value="Bakery">Bakery</option>
-                                <option value="Bee-products">Bee products</option>
-                                <option value="Cafe">Cafe</option>
-                                <option value="Canned food">Canned food</option>
-                                <option value="Coffee">Coffee</option>
-                                <option value="Condinments">Condinments</option>
-                                <option value="Dairy">Dairy</option>
-                                <option value="Deli">Deli</option>
-                                <option value="Dry products">Dry products</option>
-                                <option value="Eggs">Eggs</option>
-                                <option value="Fruits">Fruits</option>
-                                <option value="Grains">Grains</option>
-                                <option value="HerbsN`Tea">HerbsN`Tea</option>
-                                <option value="Meat">Meat</option>
-                                <option value="Nuts">Nuts</option>
-                                <option value="Oil">Oil</option>
-                                <option value="asta and Noodles">Pasta and Noodles</option>
-                                <option value="Sauces">Sauces</option>
-                                <option value="Seafood">Seafood</option>
-                                <option value="Sweets">Sweets</option>
-                                <option value="Soy">Soy</option>
-                                <option value="Vegetables">Vegetables</option>
-                                <option value="Vinegar">Vinegar</option>
-                                <option value="Wine">Wine</option>
+                            <select id="select" name="category" style="height:40px;width:200px;margin-bottom:30px">
+                                <option value="" @if (value == "") { <text> selected</text> }>All</option>
+                                <option value="Baby food" @if (value == "Baby food") { <text> selected</text> }>Baby food</option>
+                                <option value="Bakery" @if (value == "Bakery") { <text> selected</text> }>Bakery</option>
+                                <option value="Bee-products" @if (value == "Bee-products") { <text> selected</text> }>Bee products</option>
+                                <option value="Cafe" @if (value == "Cafe") { <text> selected</text> }>Cafe</option>
+                                <option value="Coffee" @if (value == "Coffee") { <text> selected</text> }>Coffee</option>
+                                <option value="Condinments" @if (value == "Condinments") { <text> selected</text> }>Condinments</option>
+                                <option value="Dairy" @if (value == "Dairy") { <text> selected</text> }>Dairy</option>
+                                <option value="Deli" @if (value == "Deli") { <text> selected</text> }>Deli</option>
+                                <option value="Dry products" @if (value == "Dry products") { <text> selected</text> }>Dry products</option>
+                                <option value="Eggs" @if (value == "Eggs") { <text> selected</text> }>Eggs</option>
+                                <option value="Fruits" @if (value == "Fruits") { <text> selected</text> }>Fruits</option>
+                                <option value="Grains" @if (value == "Grains") { <text> selected</text> }>Grains</option>
+                                <option value="HerbsN`Tea" @if (value == "HerbsN`Tea") { <text> selected</text> }>HerbsN`Tea</option>
+                                <option value="Meat" @if (value == "Meat") { <text> selected</text> }>Meat</option>
+                                <option value="Nuts" @if (value == "Nuts") { <text> selected</text> }>Nuts</option>
+                                <option value="Oil" @if (value == "Oil") { <text> selected</text> }>Oil</option>
+                                <option value="Pasta and Noodles" @if (value == "Pasta and Noodles") { <text> selected</text> }>Pasta and Noodles</option>
+                                <option value="Sauces" @if (value == "Sauces") { <text> selected</text> }>Sauces</option>
+                                <option value="Seafood" @if (value == "Seafood") { <text> selected</text> }>Seafood</option>
+                                <option value="Sweets" @if (value == "Sweets") { <text> selected</text> }>Sweets</option>
+                                <option value="Soy" @if (value == "Soy") { <text> selected</text> }>Soy</option>
+                                <option value="Vegetables" @if (value == "Vegetables") { <text> selected</text> }>Vegetables</option>
+                                <option value="Vinegar" @if (value == "Vinegar") { <text> selected</text> }>Vinegar</option>
+                                <option value="Wine" @if (value == "Wine") { <text> selected</text> }>Wine</option>
+
                             </select>
+
                         </div>
+
 
                         <div class="col-md-4">
                             <h5 class="text-uppercase text-white mb-4">Postcode</h5>
                             <input type="text" name="postcode" placeholder="Postcode" style="height:40px;width:300px" />
-                        </div>
+</div>
 
-                        <div class="col-md-4 col-12 text-center">
+
+
+<div class="col-md-4 col-12 text-center">
                             <h5 class="text-uppercase text-white mb-4"><br /></h5>
                             <input type="submit" value="Search" class="btn btn-bg-primary font-secondary text-uppercase" />
                         </div>
                     </form>
-
+                    <iframe id="from" style="display:none;"></iframe>
                 </div>
             </div>
         </div>
@@ -198,6 +208,15 @@
         <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
         <!-- Turf.js plugin -->
         <script src="~/js/turf.min.js"></script>
+
+        <script>
+
+            var myselect = document.getElementById("select");
+            var index = myselect.selectedIndex;
+            var value = myselect.options[index].value;
+            $("#select").val(value);
+
+        </script>
 
         <script>
             // mapbox accessToken

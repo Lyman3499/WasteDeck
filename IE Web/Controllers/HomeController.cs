@@ -89,6 +89,7 @@ namespace IE_Web.Controllers
         public ActionResult Recycle_Center(String type, String postcode)
         {
             ViewBag.Message = "Recycle Center";
+            ViewBag.type = type;
             if (type == null && postcode == null)
             {
                 return View(db.RecycleCenters.ToList());
@@ -112,6 +113,8 @@ namespace IE_Web.Controllers
         public ActionResult Vendor(String category, String postcode)
         {
             ViewBag.Message = "Vendor";
+            ViewBag.category = category;
+            ViewBag.postcode = postcode;
             if (category == null && postcode == null)
             {
                 return View(db.Vendors.ToList());

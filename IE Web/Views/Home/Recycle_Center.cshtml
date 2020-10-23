@@ -43,13 +43,17 @@
                     <form class="search-form col-md-12">
 
                         <div class="col-md-4 col-12">
+                            @{
+                                var value = ViewBag.type;
+                            }
+
                             <h5 class="text-uppercase text-white mb-4" for="offer-types">Select Type</h5>
                             <select name="type" style="height:40px;width:200px;margin-bottom:30px">
-                                <option value="">All</option>
-                                <option value="Landfill">Landfill</option>
-                                <option value="Multi-Purpose">Multi-Purpose</option>
-                                <option value="Reprocessing">Reprocessing</option>
-                                <option value="Transfer Station">Transfer Station</option>
+                                <option value="" @if (value == "") { <text> selected</text> }>All</option>
+                                <option value="Landfill" @if (value == "Landfill") { <text> selected</text> }>Landfill</option>
+                                <option value="Multi-Purpose" @if (value == "Multi-Purpose") { <text> selected</text> }>Multi-Purpose</option>
+                                <option value="Reprocessing" @if (value == "Reprocessing") { <text> selected</text> }>Reprocessing</option>
+                                <option value="Transfer Station" @if (value == "Transfer Station") { <text> selected</text> }>Transfer Station</option>
                             </select>
                         </div>
 

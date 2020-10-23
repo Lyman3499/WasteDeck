@@ -6,7 +6,7 @@
 }
 
 <link href="~/css/quiz.css" rel="stylesheet" />
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link href="~/css/quizBootstrap.css" rel="stylesheet" />
 
 <!--Pot Farming Banner Block-->
 <div class="banner">
@@ -183,8 +183,8 @@
 <div id="answerPage" style="display:none">
     <div id="result" style="margin:40px">
         <div>
-            <div style="margin-top:50px">
-                <h3><span class="label label-warning" id="result">1</span> In which bin can we dispose the baking paper?</h3>
+            <div id="result1" style="margin-top:50px">
+                <h3><span class="label label-warning">1</span> In which bin can we dispose the baking paper?</h3>
                 <div data-toggle="buttons">
                     <label class="element-animation1 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=0>A. Cummingled recycling bin</label>
                     <label class="element-animation2 btn btn-lg btn-primary btn-block active"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=1>B. General waste bin</label>
@@ -200,7 +200,7 @@
                     </h4>
                 </div>
             </div>
-            <div style="margin-top:50px">
+            <div id="result2" style="margin-top:50px">
                 <h3><span class="label label-warning" id="q2">2</span> Select the correct alternative for the plastic milk container mentioned on this site?</h3>
                 <div data-toggle="buttons">
                     <label class="element-animation1 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=0>A. Plastic bottle</label>
@@ -217,7 +217,7 @@
                     </h4>
                 </div>
             </div>
-            <div style="margin-top:50px">
+            <div id="result3" style="margin-top:50px">
                 <h3><span class="label label-warning" id="q3">3</span> What vegetables can be grown in pots</h3>
                 <div data-toggle="buttons">
                     <label class="element-animation1 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=0>A. Tomatoes</label>
@@ -235,7 +235,7 @@
                     </h4>
                 </div>
             </div>
-            <div style="margin-top:50px">
+            <div id="result4" style="margin-top:50px">
                 <h3><span class="label label-warning" id="q4">4</span> How can you utilize your kitchen waste?</h3>
                 <div data-toggle="buttons">
                     <label class="element-animation1 btn btn-lg btn-primary btn-block active"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=1>A. To create compost</label>
@@ -253,7 +253,7 @@
                 </div>
             </div>
 
-            <div style="margin-top:50px">
+            <div id="result5" style="margin-top:50px">
                 <h3><span class="label label-warning" id="q5">5</span> What are good ways to avoid food waste?</h3>
                 <div data-toggle="buttons">
                     <label class="element-animation1 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=0>A. Avoid purchasing unnecessary food items</label>
@@ -271,7 +271,7 @@
                 </div>
             </div>
 
-            <div style="margin-top:50px">
+            <div id="result6" style="margin-top:50px">
                 <h3><span class="label label-warning" id="q6">6</span> Plants have absorbed almost half of the carbon dioxide that is produced by humans over the last decade?"</h3>
                 <div id="quiz6" data-toggle="buttons">
                     <label class="element-animation1 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=0> True</label>
@@ -287,7 +287,7 @@
                 </div>
             </div>
 
-            <div style="margin-top:50px">
+            <div id="result7" style="margin-top:50px">
                 <h3><span class="label label-warning" id="q7">7</span> Which of the following are carbon sinks?</h3>
                 <div data-toggle="buttons">
                     <label class="element-animation1 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value=0>A. Soil and rocks</label>
@@ -409,14 +409,5 @@
             }
         });
 
-
-        $ans = 3;
-
-        $.fn.checking = function (ck) {
-            if (ck != $ans)
-                return 'INCORRECT';
-            else
-                return 'CORRECT';
-        };
     });
 </script>
