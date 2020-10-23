@@ -266,7 +266,9 @@
     <Content Include="images\garlic_farming.jpg" />
     <Content Include="images\general_waste.png" />
     <Content Include="images\glass.png" />
+    <Content Include="images\green_food_waste.jpg" />
     <Content Include="images\green_poster.jpg" />
+    <Content Include="images\green_waste_leaves.jpg" />
     <Content Include="images\hero_1.jpg" />
     <Content Include="images\content_2.jpg" />
     <Content Include="images\Home-Plastic.jpg" />
@@ -286,6 +288,10 @@
     <Content Include="images\maturing_process.jpg" />
     <Content Include="images\category_cafe.jpg" />
     <Content Include="images\category_meat.jpg" />
+    <Content Include="images\non_green_waste_bottles.jpg" />
+    <Content Include="images\non_green_waste_wrapper.jpg" />
+    <Content Include="images\non_red_bin_battery.jpg" />
+    <Content Include="images\non_yellow_waste_bulb.jpg" />
     <Content Include="images\organic_pulses.jpg" />
     <Content Include="images\organic_syrup.jpg" />
     <Content Include="images\category_veggies.jpg" />
@@ -314,6 +320,8 @@
     <Content Include="images\pot_farming_banner.jpg" />
     <Content Include="images\quiz_banner.jpg" />
     <Content Include="images\recycle_centre_banner.jpg" />
+    <Content Include="images\red_bin_cups.jpg" />
+    <Content Include="images\red_bin_gloves.jpg" />
     <Content Include="images\red_poster.jpg" />
     <Content Include="images\rosemary-farming.jpg" />
     <Content Include="images\rosemary_farming.jpg" />
@@ -349,6 +357,9 @@
     <Content Include="images\content_6.jpg" />
     <Content Include="images\vendors.jpg" />
     <Content Include="images\yellow_poster.jpg" />
+    <Content Include="images\yellow_waste_milk.jpg" />
+    <Content Include="images\non_yellow_waste_tray.jpg" />
+    <Content Include="images\yellow_waste_newspaper.jpg" />
     <Content Include="js\aos.js" />
     <Content Include="js\bootstrap-datepicker.min.js" />
     <Content Include="js\bootstrap.min.js" />

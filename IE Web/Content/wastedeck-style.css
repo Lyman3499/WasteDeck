@@ -789,6 +789,22 @@ ul.site-menu li.has-children ul.dropdown.arrow-top li.has-children a.active{
 }
 /*Carbon Footprint*/
 /*References*/
+.icon-desc-block {
+    text-align: center;
+    display: block;
+    line-height: 1.4;
+    margin:30px 0;
+}
+
+.icons {
+    width: 100px;
+    margin: 0 auto;
+}
+
+.icon-desc-block a {
+    color: #2e8b57;
+}
+
 /*References*/
 /*Nav Links*/
 .nav-links {
