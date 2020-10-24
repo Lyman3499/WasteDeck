@@ -188,6 +188,15 @@ body .site-logo img {
     color:#ffffff;
 }
 
+.site-footer .col-md-6 .footer-heading{
+    margin-bottom: 1.5rem !important;
+}
+
+.site-footer .col-md-6 .list-unstyled {
+    width: 50%;
+    padding: 0 25px 0 0;
+}
+
 /*Footer*/
 
 .about2-img img {
@@ -239,6 +248,10 @@ body .img-fluid.pic4 {
     height: 262px;
 }
 
+.site-footer .col-md-6 .list-unstyled {
+    width:50%;
+    padding: 0 25px 0 0;
+}
 /*Bin Seperation*/
 .waste-segregation-banner-block {
     background-image: url('../../images/bin_classification_banner.jpg');
