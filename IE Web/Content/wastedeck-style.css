@@ -778,6 +778,9 @@ ul.site-menu li.has-children ul.dropdown.arrow-top li.has-children a.active{
     left: 18%;
 }
 
+.site-navbar .site-navigation .site-menu{
+    padding:0;
+}
 /*Composting*/
 
 /*Plastic Impact Block*/
@@ -1051,6 +1054,7 @@ ul.site-menu li.has-children ul.dropdown.arrow-top li.has-children a.active{
     .avoid-waste-block .content-block {
         height: auto;
     }
+
 }
 
 /*Media Queries for iphone X Portrait*/
@@ -1097,5 +1101,9 @@ ul.site-menu li.has-children ul.dropdown.arrow-top li.has-children a.active{
 
     .vendor-form select, .hero-function select{
         width:100% !important;
+    }
+
+    .site-logo {
+        text-align: center;
     }
 }
