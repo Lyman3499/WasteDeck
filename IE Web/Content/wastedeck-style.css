@@ -148,6 +148,22 @@ body .site-logo img {
 .home-banner .banner-text-block{
     width:350px;
 }
+
+.category-label, .postcode-label {
+    margin: 0 0 10px 0 !important;
+}
+
+.hero-function select, .hero-function .form-control{
+    padding:5px 8px;
+    height:40px;
+    border:1px solid #cccccc;
+}
+
+.hero-function .btn-bg-primary{
+    margin: 29px 0 0 0;
+}
+
+
 /*Home Page*/
 /*Footer*/
 .site-footer {
