@@ -565,7 +565,7 @@ a:hover, a:focus {
 
 .modal-body .nav.nav-tabs{
     width:88%;
-    margin: 0 auto;
+    margin: 0 auto 20px;
 }
 
 .modal-body .nav.nav-tabs li{
@@ -720,7 +720,6 @@ a:hover, a:focus {
 .composting-banner-block {
     background-image: url('../images/composting_banners.jpg');
     height: 220px;
-    background-position: top center;
 }
 
 .banner_text_color{
@@ -952,6 +951,10 @@ ul.site-menu li.has-children ul.dropdown.arrow-top li.has-children a.active{
     .avoid-waste-block .content-block {
         height: auto;
     }
+
+    .site-half .img-bg-1 {
+        height: 400px;
+    }
 }
 
 /*Media Queries for ipad landascape*/
@@ -985,6 +988,10 @@ ul.site-menu li.has-children ul.dropdown.arrow-top li.has-children a.active{
 
     .avoid-waste-block .content-block {
         height: 300px;
+    }
+
+    .site-half .img-bg-1 {
+        height: 100%;
     }
 }
 
@@ -1055,6 +1062,9 @@ ul.site-menu li.has-children ul.dropdown.arrow-top li.has-children a.active{
         height: auto;
     }
 
+    .site-half .img-bg-1 {
+        height: 450px;
+    }
 }
 
 /*Media Queries for iphone X Portrait*/
@@ -1105,5 +1115,19 @@ ul.site-menu li.has-children ul.dropdown.arrow-top li.has-children a.active{
 
     .site-logo {
         text-align: center;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .site-half .img-bg-1 {
+        position: relative;
+        height: 450px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 300px){
+    .avoid-waste-block .content-block{
+        height:auto;
     }
 }
