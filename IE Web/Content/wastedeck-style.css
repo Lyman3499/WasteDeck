@@ -55,6 +55,7 @@ body .site-logo img {
 .site-wrap .site-section-heading {
     font-size: 21px;
     margin-bottom: 2rem !important;
+    line-height:1.2;
 }
 
 .banner_title{
@@ -148,6 +149,22 @@ body .site-logo img {
 .home-banner .banner-text-block{
     width:350px;
 }
+
+.category-label, .postcode-label {
+    margin: 0 0 10px 0 !important;
+}
+
+.hero-function select, .hero-function .form-control{
+    padding:5px 8px;
+    height:40px;
+    border:1px solid #cccccc;
+}
+
+.hero-function .btn-bg-primary{
+    margin: 29px 0 0 0;
+}
+
+
 /*Home Page*/
 /*Footer*/
 .site-footer {
@@ -319,6 +336,19 @@ body .img-fluid.pic4 {
 
 /*Bin Seperation*/
 /*Vendor Page Layout*/
+.hero-function .bg-primary, .vendor-form {
+    padding: 25px 0 20px 0 !important;
+}
+
+.vendor-form select, .vendor-form input.postcode-field {
+    padding: 5px;
+    border: 1px solid #cccccc;
+}
+
+.vendor-form-btn .btn-bg-primary {
+    margin: 29px 0 0 0;
+}
+
 .vendor-banner{
     position:relative;
 }
@@ -1063,5 +1093,9 @@ ul.site-menu li.has-children ul.dropdown.arrow-top li.has-children a.active{
 @media only screen and (min-width: 360px) and (max-width: 740px) and (orientation:portrait) {
     .avoid-waste-block .content-block {
         height: auto;
+    }
+
+    .vendor-form select, .hero-function select{
+        width:100% !important;
     }
 }

@@ -38,7 +38,7 @@
     <!--Search Bar-->
     @using (Html.BeginForm("Vendor", "Home", FormMethod.Get))
     {
-        <div class="py-3 bg-primary" style="margin-bottom:-20px">
+        <div class="py-3 bg-primary vendor-form" style="margin-bottom:-20px">
             <div class="container">
                 <div class="row">
 
@@ -51,8 +51,8 @@
                                 var postcode = ViewBag.postcode;
                             }
 
-                            <h5 class="text-uppercase text-white mb-4" for="offer-types">Select Category</h5>
-                            <select id="select" name="category" style="height:40px;width:200px;margin-bottom:30px">
+                            <h5 class="text-uppercase text-white mb-4 category-label" for="offer-types">Select Category</h5>
+                            <select id="select" name="category" style="height:40px;width:200px;margin-bottom:20px">
                                 <option value="" @if (value == "") { <text> selected</text> }>All</option>
                                 <option value="Baby food" @if (value == "Baby food") { <text> selected</text> }>Baby food</option>
                                 <option value="Bakery" @if (value == "Bakery") { <text> selected</text> }>Bakery</option>
@@ -85,14 +85,14 @@
 
 
                         <div class="col-md-4">
-                            <h5 class="text-uppercase text-white mb-4">Postcode</h5>
-                            <input type="text" name="postcode" placeholder="Postcode" style="height:40px;width:300px" />
-</div>
+                            <h5 class="text-uppercase text-white mb-4 postcode-label">Postcode</h5>
+                            <input class="postcode-field" type="text" name="postcode" placeholder="Postcode" style="height:40px;width:100%" />
+                        </div>
 
 
 
-<div class="col-md-4 col-12 text-center">
-                            <h5 class="text-uppercase text-white mb-4"><br /></h5>
+                        <div class="col-md-4 col-12 text-center vendor-form-btn">
+                            <!--<h5 class="text-uppercase text-white mb-4"><br /></h5>-->
                             <input type="submit" value="Search" class="btn btn-bg-primary font-secondary text-uppercase" />
                         </div>
                     </form>
