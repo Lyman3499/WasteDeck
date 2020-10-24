@@ -5,6 +5,10 @@
     border-radius: 20px;
 }
 
+active-wrong{
+    background-color:red;
+}
+
 label.btn {
     padding: 18px 60px;
     white-space: normal;

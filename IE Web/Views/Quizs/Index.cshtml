@@ -353,10 +353,11 @@
             var nextQuestion = "#question" + i;
             var nextQuiz = "#quiz" + i;
 
-            var choice = $(this).find('input:radio').val();
+            var choice = $(this).find('input:radio').val(); 
+
             choice = parseInt(choice);
             grade += choice;
-            ;
+
             $('#loadbar').show();
             $('#quiz').fadeOut();
             $(nowQuestion).hide();
