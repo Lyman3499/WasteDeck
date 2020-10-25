@@ -43,7 +43,7 @@ namespace IE_Web.Controllers
     [BasicAuthenticationAttribute("ma16", "5120", BasicRealm = "your-realm")]
     public class HomeController : Controller
     {
-
+        [ValidateInput(true)]
         public ActionResult Index(String category, String postcode)
         {
             if (category == null && postcode == null)
@@ -86,6 +86,7 @@ namespace IE_Web.Controllers
         }
 
         WasteDeckdatabaseEntities3 db = new WasteDeckdatabaseEntities3();
+        [ValidateInput(true)]
         public ActionResult Recycle_Center(String type, String postcode)
         {
             ViewBag.Message = "Recycle Center";
@@ -109,7 +110,7 @@ namespace IE_Web.Controllers
 
         }
 
-
+        [ValidateInput(true)]
         public ActionResult Vendor(String category, String postcode)
         {
             ViewBag.Message = "Vendor";
