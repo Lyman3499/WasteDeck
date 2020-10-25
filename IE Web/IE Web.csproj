@@ -323,6 +323,7 @@
     <Content Include="images\red_bin_cups.jpg" />
     <Content Include="images\red_bin_gloves.jpg" />
     <Content Include="images\red_poster.jpg" />
+    <Content Include="images\right.png" />
     <Content Include="images\rosemary-farming.jpg" />
     <Content Include="images\rosemary_farming.jpg" />
     <Content Include="images\rubber-duck-4432703.jpg" />
@@ -356,6 +357,7 @@
     <Content Include="images\content_3.jpg" />
     <Content Include="images\content_6.jpg" />
     <Content Include="images\vendors.jpg" />
+    <Content Include="images\wrong.png" />
     <Content Include="images\yellow_poster.jpg" />
     <Content Include="images\yellow_waste_milk.jpg" />
     <Content Include="images\non_yellow_waste_tray.jpg" />
