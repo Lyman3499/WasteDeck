@@ -219,9 +219,10 @@
     <Content Include="images\android-chrome-192x192.png" />
     <Content Include="images\android-chrome-512x512.png" />
     <Content Include="images\apple-touch-icon.png" />
+    <Content Include="images\avoid_food_waste_slider.jpg" />
     <Content Include="images\banner5.png" />
-    <Content Include="images\bin_classification_banner.jpg" />
     <Content Include="images\bin_classification_slider.jpg" />
+    <Content Include="images\bin_classification_banner.jpg" />
     <Content Include="images\carbon_footprint_banner.jpg" />
     <Content Include="images\carrot-farming.jpg" />
     <Content Include="images\carrot_farming.jpg" />
@@ -250,6 +251,7 @@
     <Content Include="images\composting_banners.jpg" />
     <Content Include="images\composting_banner.jpg" />
     <Content Include="images\composting-bin.jpg" />
+    <Content Include="images\composting_bin_slider.jpg" />
     <Content Include="images\coriander-farming.jpg" />
     <Content Include="images\coriander_farming.jpg" />
     <Content Include="images\eat_the_yolk.png" />
@@ -315,8 +317,8 @@
     <Content Include="images\plastic_wrap.png" />
     <Content Include="images\plastic_wrap_alternatives.png" />
     <Content Include="images\Poster.jpeg" />
-    <Content Include="images\pot-farm-slider.jpg" />
     <Content Include="images\pot_farming_banner.jpg" />
+    <Content Include="images\pot_farm_slider.jpg" />
     <Content Include="images\quiz_banner.jpg" />
     <Content Include="images\recycle_centre_banner.jpg" />
     <Content Include="images\red_bin_cups.jpg" />
