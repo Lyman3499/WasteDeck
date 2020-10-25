@@ -13,7 +13,7 @@
 
 
 <!--Recycle Centre Banner Block-->
-<div class="banner">
+<div class="recycle-centre-banner">
     <div class="recycle-centre-banner-block"></div>
     <div class="banner-text-block">
         <h1 class="banner_text_color" style="font-size:30px;font-weight:bold">Search For Recycling Centers</h1>
@@ -22,21 +22,23 @@
 <!--Recycle Centre Banner Block-->
 
 <body>
-    <div class="row">
-        <div class="col-sm-12 col-md-12 problem-block" style="padding-left:60px">
-            <h4>Do you want to reduce your carbon footprint? </h4>
-            <p>
-                Do you have excessive amount of waste and you don't know where to dispose it? 
-                We will help you to find recycling centers near you.
-            </p>
+    <!--Recycle Centre Short Description Block-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 problem-block">
+                <h4>Do you want to reduce your carbon footprint? </h4>
+                <p>
+                    Do you have excessive amount of waste and you don't know where to dispose it?
+                    We will help you to find recycling centers near you.
+                </p>
+            </div>
         </div>
     </div>
-
-
+    <!--Recycle Centre Short Description Block-->
     <!--Search Bar-->
     @using (Html.BeginForm("Recycle_Center", "Home", FormMethod.Get))
     {
-        <div class="py-3 bg-primary" style="margin-bottom:-20px">
+        <div class="py-3 bg-primary recycle-centre-block" style="margin-bottom:-20px">
             <div class="container">
                 <div class="row">
 
@@ -47,8 +49,8 @@
                                 var value = ViewBag.type;
                             }
 
-                            <h5 class="text-uppercase text-white mb-4" for="offer-types">Select Type</h5>
-                            <select name="type" style="height:40px;width:200px;margin-bottom:30px">
+                            <h5 class="text-uppercase text-white mb-4 type-label" for="offer-types">Select Type</h5>
+                            <select name="type" style="height:40px;width:200px;margin-bottom:20px">
                                 <option value="" @if (value == "") { <text> selected</text> }>All</option>
                                 <option value="Landfill" @if (value == "Landfill") { <text> selected</text> }>Landfill</option>
                                 <option value="Multi-Purpose" @if (value == "Multi-Purpose") { <text> selected</text> }>Multi-Purpose</option>
@@ -58,12 +60,11 @@
                         </div>
 
                         <div class="col-md-4">
-                            <h5 class="text-uppercase text-white mb-4">Postcode</h5>
-                            <input type="text" name="postcode" placeholder="Postcode" style="height:40px;width:300px" />
+                            <h5 class="text-uppercase text-white mb-4 recycle-postcode">Postcode</h5>
+                            <input type="text" class="postcode-field" name="postcode" placeholder="Postcode" style="height:40px;width:300px" />
                         </div>
 
                         <div class="col-md-4 col-12 text-center">
-                            <h5 class="text-uppercase text-white mb-4"><br /></h5>
                             <input type="submit" value="Search" class="btn btn-bg-primary font-secondary text-uppercase" />
                         </div>
                     </form>
@@ -72,12 +73,8 @@
             </div>
         </div>
     }
-
-
     <br />
     <br />
-
-
     <div class="container">
         <div class="row">
             <div class="col-sm-12 col-md-4 col-12">
@@ -109,13 +106,8 @@
             <br /><br />
             <!--Map-->
             <div id="map" class="map col-sm-12 col-md-8 col-12" style="height:500px;width:100%"></div>
-
-
         </div>
-
     </div>
-
-
 
     <table style="display:none">
         <tr>
@@ -170,7 +162,6 @@
             </tr>
         }
     </table>
-
 
     <!--Script for Map-->
     @section Scripts{

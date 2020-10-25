@@ -268,6 +268,10 @@ body .img-fluid.pic4 {
     margin: 15px 0 10px 0;
 }
 
+.segregation-content-block ul {
+    padding: 0 0 0 15px;
+}
+
 .yellow-bin-block, .green-bin-block, .red-bin-block {
     margin: 0 0 20px 0;
 }
@@ -903,8 +907,12 @@ ul.site-menu li.has-children ul.dropdown.arrow-top li.has-children a.active{
 
 /*Recycle Centres*/
 
-.recycle-title{
-    font-size:25px;
+.recycle-centre-banner{
+    margin-bottom: 0;
+}
+
+.recycle-title {
+    font-size: 25px;
 }
 
 .recycle-banner {
@@ -926,6 +934,23 @@ ul.site-menu li.has-children ul.dropdown.arrow-top li.has-children a.active{
 .recycleCenter-block .listings div, .recycleCenter-block .listings div a {
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.type-label, .recycle-postcode {
+    margin: 0 0 10px 0 !important;
+}
+
+.recycle-centre-block{
+    padding: 25px 0 20px 0 !important;
+}
+
+.recycle-centre-block select, .recycle-centre-block .postcode-field{
+    padding: 5px;
+    border:1px solid #cccccc;
+}
+
+.recycle-centre-block .btn-bg-primary {
+    margin: 29px 0 0 0;
 }
 
 /*Recycle Centres*/
@@ -1121,8 +1146,8 @@ ul.site-menu li.has-children ul.dropdown.arrow-top li.has-children a.active{
         height: auto;
     }
 
-    .vendor-form select, .hero-function select{
-        width:100% !important;
+    .vendor-form select, .hero-function select, .recycle-centre-block select, .recycle-centre-block .postcode-field {
+        width: 100% !important;
     }
 
     .site-logo {
