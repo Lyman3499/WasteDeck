@@ -953,10 +953,7 @@ ul.site-menu li.has-children ul.dropdown.arrow-top li.has-children a.active{
     margin: 29px 0 0 0;
 }
 
-select {
-    -webkit-appearance: none; /* for webkit (safari, chrome) compatibility */
-    -moz-appearance: none; /* for firefox compatibility */
-}
+
 /*Recycle Centres*/
 /*Media Queries for ipad*/
 @media only screen and (max-width: 1024px) and (min-width: 768px) and (orientation:portrait) {
