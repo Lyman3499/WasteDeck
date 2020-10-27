@@ -69,17 +69,19 @@
             labels: ['2014 - 15', '2015 - 16', '2016 - 17', '2017 - 18'],
 
             datasets: [{
-                type: "line",
+                type: "bar",
                 data: [160533.84, 149127.57, 130695.1, 137167.42],
-                label: 'Plastic waste recovered for reprocessing',
+                label: 'Plastic waste recovered for ',
                 borderColor: "#3e95cd",
+                backgroundColor: "3e95cd",
                 fill: false
             }, {
                 type: "bar",
                 label: "Plastic waste produced",
                 borderColor: "ffff00",
+
                 data: [3167000, 2912000, 2955400, 3407300],
-                fill: false
+                fill: true
             }]
         },
         options: {
@@ -88,11 +90,22 @@
                 display: true,
                 text: "Comparison of platic waste produced vs recycled in Australia"
 
+            },
+            scales: {
+                yAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'tonnes'
+                    }
+                }]
             }
         }
 
     });
 </script>
+
+
 <!--Data Visualisation script-->
 <!--Bottom Nav Links-->
 <div class="nav-links container">

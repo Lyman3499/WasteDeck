@@ -273,12 +273,15 @@
     <Content Include="images\hero_1.jpg" />
     <Content Include="images\content_2.jpg" />
     <Content Include="images\Home-Plastic.jpg" />
+    <Content Include="images\homepage_banner.png" />
     <Content Include="images\homepage_banner1.jpg" />
     <Content Include="images\homepage_banner2.jpg" />
     <Content Include="images\homepage_banner3.jpg" />
     <Content Include="images\homepage_banner4.jpg" />
     <Content Include="images\homepage_banner5.jpg" />
     <Content Include="images\homepage_banner6.jpg" />
+    <Content Include="images\homepage_main_banner1.png" />
+    <Content Include="images\homepage_main_banner3.png" />
     <Content Include="images\image_coming_soon.jpg" />
     <Content Include="images\kitchen_waste.jpg" />
     <Content Include="images\kumquats-farming.jpg" />
@@ -576,7 +579,9 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Video\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
