@@ -154,6 +154,16 @@ body .site-logo img {
     width:350px;
 }
 
+.home-banner .banner-text-block {
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
 .category-label, .postcode-label {
     margin: 0 0 10px 0 !important;
 }
@@ -244,7 +254,7 @@ body .site-logo img {
 
 .banner-text-block {
     position: absolute;
-    top: 44%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -735,7 +745,7 @@ a:hover, a:focus {
     transform:translate(-50%, -50%);
     text-align:center;
     font-weight:bold;
-    font-size:50px;
+    font-size:40px;
     color:#ffffff;
     line-height:1;
     text-transform:uppercase;
@@ -946,9 +956,13 @@ ul.site-menu li.has-children ul.dropdown.arrow-top li.has-children a.active{
 /*Quiz*/
 
 /*Recycle Centres*/
+.bg-primary.recycle-centre-block {
+    background-color: #0d4c80 !important;
+}
 
-.recycle-centre-banner{
+.recycle-centre-banner {
     margin-bottom: 0;
+    position: relative;
 }
 
 .recycle-title {
