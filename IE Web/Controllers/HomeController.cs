@@ -64,6 +64,13 @@ namespace IE_Web.Controllers
             return View();
         }
 
+        public ActionResult NotFound()
+        {
+            Response.StatusCode = 404;
+
+            return View();
+        }
+
         public ActionResult Services()
         {
             ViewBag.Message = "Services Page";
