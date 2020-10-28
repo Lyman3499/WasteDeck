@@ -254,6 +254,7 @@
     <Content Include="images\composting_bin_slider.jpg" />
     <Content Include="images\coriander-farming.jpg" />
     <Content Include="images\coriander_farming.jpg" />
+    <Content Include="images\eat-yolk.png" />
     <Content Include="images\eat_the_yolk.png" />
     <Content Include="images\ecofriendly.jpg" />
     <Content Include="images\favicon-16x16.png" />
@@ -286,6 +287,7 @@
     <Content Include="images\kitchen_waste.jpg" />
     <Content Include="images\kumquats-farming.jpg" />
     <Content Include="images\kumquats_farming.jpg" />
+    <Content Include="images\learn-preserve.png" />
     <Content Include="images\learn_preserve.png" />
     <Content Include="images\Logo1.ico" />
     <Content Include="images\map_pin.png" />
@@ -308,7 +310,6 @@
     <Content Include="images\img_3.jpg" />
     <Content Include="images\img_4.jpg" />
     <Content Include="images\img_6.jpg" />
-    <Content Include="images\pack_lunch.png" />
     <Content Include="images\plastic_alternatives_banner.jpg" />
     <Content Include="images\Plastic-Impact.gif" />
     <Content Include="images\plastic_alternative_slider.jpg" />
@@ -327,17 +328,18 @@
     <Content Include="images\red_bin_cups.jpg" />
     <Content Include="images\red_bin_gloves.jpg" />
     <Content Include="images\red_poster.jpg" />
+    <Content Include="images\repurpose-food.jpg" />
     <Content Include="images\right.png" />
     <Content Include="images\rosemary-farming.jpg" />
     <Content Include="images\rosemary_farming.jpg" />
     <Content Include="images\rubber-duck-4432703.jpg" />
-    <Content Include="images\save_leftovers.png" />
+    <Content Include="images\save-leftovers.png" />
     <Content Include="images\service_img_7.jpg" />
     <Content Include="images\content_4.jpg" />
     <Content Include="images\hero_2.jpg" />
-    <Content Include="images\shop_smart.png" />
+    <Content Include="images\smart-shop.png" />
     <Content Include="images\stop_plastic.jpg" />
-    <Content Include="images\store_correctly.png" />
+    <Content Include="images\store-correctly.png" />
     <Content Include="images\svg\answer.svg" />
     <Content Include="images\svg\co2-cloud.svg" />
     <Content Include="images\svg\flower-pot.svg" />

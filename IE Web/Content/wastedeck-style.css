@@ -173,6 +173,8 @@ body .site-logo img {
 /*Footer*/
 .site-footer {
     padding: 30px 0 20px 0;
+    font-size:14px;
+    color:rgba(255, 255, 255, 0.3);
 }
 
 .copyright-block{
@@ -726,9 +728,22 @@ a:hover, a:focus {
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
+.center-align{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    text-align:center;
+    font-weight:bold;
+    font-size:50px;
+    color:#ffffff;
+    line-height:1;
+    text-transform:uppercase;
+}
 
 .food-tip-img {
     cursor: pointer;
+    position:relative;
 }
 
 .food-tip-img img {
